@@ -1,0 +1,954 @@
+<svg version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" width="965" height="804">
+    <defs/>
+    <g>
+        <g>
+            <rect fill="#C0C0C0" stroke="none" x="39" y="63" width="269.2" height="15" transform="matrix(1 0 0 1 -22 -46)" fill-opacity="0.2"/>
+        </g>
+        <g>
+            <rect fill="#C0C0C0" stroke="none" x="39" y="77" width="673" height="242" transform="matrix(1 0 0 1 -22 -46)" fill-opacity="0.2"/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="32" y="71" width="673" height="241" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 10 25 L 683 25 L 683 266 L 10 266 L 10 25 Z Z" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="32" y="56" width="269.2" height="15" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 10 10 L 279.2 10 L 279.2 25 L 10 25 L 10 10 Z Z" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="32" y="70" width="673" height="242" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 10 24 L 683 24 L 683 266 L 10 266 L 10 24 Z Z" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="undefined" x="369" y="84.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">RescueTeam</text>
+            </g>
+        </g>
+        <g>
+            <rect fill="#C0C0C0" stroke="none" x="39" y="351" width="377.6" height="15" transform="matrix(1 0 0 1 -22 -46)" fill-opacity="0.2"/>
+        </g>
+        <g>
+            <rect fill="#C0C0C0" stroke="none" x="39" y="365" width="944" height="482" transform="matrix(1 0 0 1 -22 -46)" fill-opacity="0.2"/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="32" y="359" width="944" height="481" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 10 313 L 954 313 L 954 794 L 10 794 L 10 313 Z Z" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="32" y="344" width="377.6" height="15" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 10 298 L 387.6 298 L 387.6 313 L 10 313 L 10 298 Z Z" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="32" y="358" width="944" height="482" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 10 312 L 954 312 L 954 794 L 10 794 L 10 312 Z Z" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="undefined" x="504.5" y="372.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">Mission</text>
+            </g>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 818 50 L 850 50 L 850 122" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="#FFFFFF" stroke="none" paint-order="stroke fill markers" d=" M 845.790482243984 111.83732514237585 L 850 122 L 854.209517756016 111.83732514237585 L 850 100"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 845.790482243984 111.83732514237585 L 850 122 L 854.209517756016 111.83732514237585 L 850 100 L 845.790482243984 111.83732514237585" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="848" y="79" width="74.7880859375" height="13" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="885.39404296875" y="85.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-vehiclesList</text>
+            </g>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 850 474 L 850 266" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 854.209517756016 276.16267485762415 L 850 266 L 845.790482243984 276.16267485762415" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="880" y="423" width="92.1171875" height="13" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="926.05859375" y="429.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-currentMission</text>
+            </g>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 498 362 L 754 362 L 754 266" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="#FFFFFF" stroke="none" paint-order="stroke fill markers" d=" M 758.209517756016 276.16267485762415 L 754 266 L 749.790482243984 276.16267485762415 L 754 288"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 758.209517756016 276.16267485762415 L 754 266 L 749.790482243984 276.16267485762415 L 754 288 L 758.209517756016 276.16267485762415" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="679" y="392" width="71.88720703125" height="13" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="714.943603515625" y="398.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-missionList</text>
+            </g>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 314 98 L 370 98" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="#000000" stroke="none" paint-order="stroke fill markers" d=" M 359.83732514237585 102.209517756016 L 370 98 L 359.83732514237585 93.790482243984 L 348 98"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 359.83732514237585 102.209517756016 L 370 98 L 359.83732514237585 93.790482243984 L 348 98 L 359.83732514237585 102.209517756016" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="347" y="150" width="21.68359375" height="13" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="357.841796875" y="156.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">1..4</text>
+            </g>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 594 98 L 594 66 L 544 66" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="#000000" stroke="none" paint-order="stroke fill markers" d=" M 554.1626748576241 61.790482243984016 L 544 66 L 554.1626748576241 70.20951775601598 L 566 66"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 554.1626748576241 61.790482243984016 L 544 66 L 554.1626748576241 70.20951775601598 L 566 66 L 554.1626748576241 61.790482243984016" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 642 98 L 642 66 L 730 66" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="#000000" stroke="none" paint-order="stroke fill markers" d=" M 719.8373251423759 70.20951775601598 L 730 66 L 719.8373251423758 61.790482243984016 L 708 66"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 719.8373251423759 70.20951775601598 L 730 66 L 719.8373251423758 61.790482243984016 L 708 66 L 719.8373251423759 70.20951775601598" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="672" y="121" width="14.45361328125" height="13" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="679.226806640625" y="127.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">1..</text>
+            </g>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 544 210 L 738 210" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="#FFFFFF" stroke="none" paint-order="stroke fill markers" d=" M 727.8373251423759 214.209517756016 L 738 210 L 727.8373251423758 205.790482243984 L 716 210"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 727.8373251423759 214.209517756016 L 738 210 L 727.8373251423758 205.790482243984 L 716 210 L 727.8373251423759 214.209517756016" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="645" y="240" width="36.49267578125" height="13" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="663.246337890625" y="246.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-team</text>
+            </g>
+        </g>
+        <g>
+            <rect fill="#C0C0C0" stroke="none" x="767" y="175" width="149.81982421875" height="144" transform="matrix(1 0 0 1 -22 -46)" fill-opacity="0.2"/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="760" y="168" width="149.81982421875" height="144" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 738 122 L 887.81982421875 122 L 887.81982421875 266 L 738 266 L 738 122 Z Z" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 738 160 L 888.81982421875 160" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 738 198 L 888.81982421875 198" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="835.409912109375" y="179.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">«singleton»</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="undefined" x="835.409912109375" y="194.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">Session</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="765" y="217.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-instance</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="765" y="232.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-sessionMode</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="765" y="255.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">+Init(): Session</text>
+                <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 743 216 L 830.064453125 216" stroke-miterlimit="10" stroke-dasharray=""/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="765" y="270.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">+GetInstance(): Session</text>
+                <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 743 231 L 882.81982421875 231" stroke-miterlimit="10" stroke-dasharray=""/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="765" y="285.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">+GetTeam()</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="765" y="300.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">+GetAllVehicles()</text>
+            </g>
+        </g>
+        <g>
+            <rect fill="#C0C0C0" stroke="none" x="759" y="79" width="88" height="57" transform="matrix(1 0 0 1 -22 -46)" fill-opacity="0.2"/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="752" y="72" width="88" height="57" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 730 26 L 818 26 L 818 83 L 730 83 L 730 26 Z Z" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 730 51 L 819 51" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 730 61 L 819 61" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="undefined" x="796.5" y="85.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">VehiclesList</text>
+            </g>
+        </g>
+        <g>
+            <rect fill="#C0C0C0" stroke="none" x="743" y="527" width="153.19677734375" height="161" transform="matrix(1 0 0 1 -22 -46)" fill-opacity="0.2"/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="736" y="520" width="153.19677734375" height="161" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 714 474 L 867.19677734375 474 L 867.19677734375 635 L 714 635 L 714 474 Z Z" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 714 499 L 868.19677734375 499" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 714 597 L 868.19677734375 597" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="undefined" x="813.098388671875" y="533.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">MissionReport</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="741" y="556.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-reportType</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="741" y="571.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-missionId</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="741" y="586.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-dateOfCreation</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="741" y="601.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-missionDispatch</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="741" y="616.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-lastEdit</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="741" y="631.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-isActive</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="741" y="654.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">+GetDispatch()</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="741" y="669.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">+UpdateData(key, value)</text>
+            </g>
+        </g>
+        <g>
+            <rect fill="#C0C0C0" stroke="none" x="263" y="135" width="80" height="45" transform="matrix(1 0 0 1 -22 -46)" fill-opacity="0.2"/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="256" y="128" width="80" height="45" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 234 82 L 314 82 L 314 127 L 234 127 L 234 82 Z Z" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 234 107 L 315 107" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 234 117 L 315 117" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="undefined" x="296.5" y="141.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">User</text>
+            </g>
+        </g>
+        <g>
+            <rect fill="#C0C0C0" stroke="none" x="399" y="103" width="174.41259765625" height="204" transform="matrix(1 0 0 1 -22 -46)" fill-opacity="0.2"/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="392" y="96" width="174.41259765625" height="204" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 370 50 L 544.41259765625 50 L 544.41259765625 254 L 370 254 L 370 50 Z Z" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 370 88 L 545.41259765625 88" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 370 156 L 545.41259765625 156" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="479.706298828125" y="107.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">«subject»</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="undefined" x="479.706298828125" y="122.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">RescueTeam</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="397" y="145.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-members</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="397" y="160.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-vehicle</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="397" y="175.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-driver</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="397" y="190.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-leader</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="397" y="213.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">+AddRescuer(rescuer)</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="397" y="228.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">+SetDriver(rescuer)</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="397" y="243.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">+SetLeader(rescuer)</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="397" y="258.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">+RemoveRescuer(rescuer)</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="397" y="273.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">+SetVehicle(vehicle)</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="397" y="288.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-Notify()</text>
+            </g>
+        </g>
+        <g>
+            <rect fill="#C0C0C0" stroke="none" x="607" y="151" width="74.27001953125" height="70" transform="matrix(1 0 0 1 -22 -46)" fill-opacity="0.2"/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="600" y="144" width="74.27001953125" height="70" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 578 98 L 652.27001953125 98 L 652.27001953125 168 L 578 168 L 578 98 Z Z" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 578 123 L 653.27001953125 123" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 578 146 L 653.27001953125 146" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="undefined" x="637.635009765625" y="157.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">Vehicle</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="605" y="180.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-info</text>
+            </g>
+        </g>
+        <g>
+            <rect fill="#C0C0C0" stroke="none" x="47" y="535" width="284.91064453125" height="95" transform="matrix(1 0 0 1 -22 -46)" fill-opacity="0.2"/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="40" y="528" width="284.91064453125" height="95" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 18 482 L 302.91064453125 482 L 302.91064453125 577 L 18 577 L 18 482 Z Z" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 18 520 L 303.91064453125 520" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="182.955322265625" y="539.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">«interface»</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="italic" font-weight="bold" text-decoration="undefined" x="182.955322265625" y="554.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">IMissionReportFactory</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="italic" font-weight="normal" text-decoration="undefined" x="45" y="577.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">+CreateReportModel(missionId): MissionReport</text>
+            </g>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 377 485 L 304 500" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="#FFFFFF" stroke="none" paint-order="stroke fill markers" d=" M 322.21485431407564 487.66229023209735 L 304 500 L 325.6039252450034 504.1557687626124"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 322.21485431407564 487.66229023209735 L 304 500 L 325.6039252450034 504.1557687626124 L 322.21485431407564 487.66229023209735" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <rect fill="#C0C0C0" stroke="none" x="407" y="495" width="136.42626953125" height="58" transform="matrix(1 0 0 1 -22 -46)" fill-opacity="0.2"/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="400" y="488" width="136.42626953125" height="58" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 378 442 L 514.42626953125 442 L 514.42626953125 500 L 378 500 L 378 442 Z Z" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 378 467 L 515.42626953125 467" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 378 490 L 515.42626953125 490" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="undefined" x="468.713134765625" y="501.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">DriverReportFactory</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="405" y="524.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-reportPrototype</text>
+            </g>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 378 530 L 303 530" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="#FFFFFF" stroke="none" paint-order="stroke fill markers" d=" M 323.3253497152483 521.580964487968 L 303 530 L 323.3253497152483 538.419035512032"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 323.3253497152483 521.580964487968 L 303 530 L 323.3253497152483 538.419035512032 L 323.3253497152483 521.580964487968" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <rect fill="#C0C0C0" stroke="none" x="407" y="623" width="124.84814453125" height="58" transform="matrix(1 0 0 1 -22 -46)" fill-opacity="0.2"/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="400" y="616" width="124.84814453125" height="58" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 378 570 L 502.84814453125 570 L 502.84814453125 628 L 378 628 L 378 570 Z Z" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 378 595 L 503.84814453125 595" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 378 618 L 503.84814453125 618" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="undefined" x="462.924072265625" y="629.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">ALSReportFactory</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="405" y="652.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-reportPrototype</text>
+            </g>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 514 490 L 714 490" stroke-miterlimit="10" stroke-dasharray="3"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 703.8373251423759 494.209517756016 L 714 490 L 703.8373251423758 485.790482243984" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="592" y="519" width="73.7216796875" height="13" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="628.86083984375" y="525.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">«instantiate»</text>
+            </g>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 503 546 L 714 546" stroke-miterlimit="10" stroke-dasharray="3"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 703.8373251423759 550.209517756016 L 714 546 L 703.8373251423758 541.790482243984" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="594" y="576" width="73.7216796875" height="13" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="630.86083984375" y="582.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">«instantiate»</text>
+            </g>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 503 602 L 714 602" stroke-miterlimit="10" stroke-dasharray="3"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 703.8373251423759 606.209517756016 L 714 602 L 703.8373251423758 597.790482243984" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="596" y="629" width="73.7216796875" height="13" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="632.86083984375" y="635.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">«instantiate»</text>
+            </g>
+        </g>
+        <g>
+            <rect fill="#C0C0C0" stroke="none" x="407" y="559" width="124.84814453125" height="58" transform="matrix(1 0 0 1 -22 -46)" fill-opacity="0.2"/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="400" y="552" width="124.84814453125" height="58" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 378 506 L 502.84814453125 506 L 502.84814453125 564 L 378 564 L 378 506 Z Z" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 378 531 L 503.84814453125 531" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 378 554 L 503.84814453125 554" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="undefined" x="462.924072265625" y="565.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">BLSReportFactory</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="405" y="588.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-reportPrototype</text>
+            </g>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 377 583 L 304 565" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="#FFFFFF" stroke="none" paint-order="stroke fill markers" d=" M 325.74984316769576 561.6917796051898 L 304 565 L 321.7187266684515 578.0401965187916"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 325.74984316769576 561.6917796051898 L 304 565 L 321.7187266684515 578.0401965187916 L 325.74984316769576 561.6917796051898" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <rect fill="#C0C0C0" stroke="none" x="647" y="711" width="141.142578125" height="116" transform="matrix(1 0 0 1 -22 -46)" fill-opacity="0.2"/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="640" y="704" width="141.142578125" height="116" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 618 658 L 759.142578125 658 L 759.142578125 774 L 618 774 L 618 658 Z Z" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 618 683 L 760.142578125 683" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 618 721 L 760.142578125 721" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="italic" font-weight="bold" text-decoration="undefined" x="711.0712890625" y="717.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">DataPair</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="645" y="740.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-key</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="645" y="755.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-isLocked</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="italic" font-weight="normal" text-decoration="undefined" x="645" y="778.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">+CanModify(): bool</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="italic" font-weight="normal" text-decoration="undefined" x="645" y="793.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">+AllowEdit(allow: bool)</text>
+            </g>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 759 682 L 826 682 L 826 635" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="#FFFFFF" stroke="none" paint-order="stroke fill markers" d=" M 830.209517756016 645.1626748576241 L 826 635 L 821.790482243984 645.1626748576241 L 826 657"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 830.209517756016 645.1626748576241 L 826 635 L 821.790482243984 645.1626748576241 L 826 657 L 830.209517756016 645.1626748576241" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="855" y="695" width="59.2490234375" height="13" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="884.62451171875" y="701.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-dataPairs</text>
+            </g>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="788" y="735" width="5.05908203125" height="13" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="790.529541015625" y="741.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">*</text>
+            </g>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 730 474 L 730 402 L 498 402" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="#FFFFFF" stroke="none" paint-order="stroke fill markers" d=" M 508.1626748576241 397.790482243984 L 498 402 L 508.1626748576241 406.209517756016 L 520 402"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 508.1626748576241 397.790482243984 L 498 402 L 508.1626748576241 406.209517756016 L 520 402 L 508.1626748576241 397.790482243984" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="720" y="431" width="54.89453125" height="13" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="747.447265625" y="437.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-missions</text>
+            </g>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="760" y="500" width="5.05908203125" height="13" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="762.529541015625" y="506.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">*</text>
+            </g>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 574 738 L 618 738" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="#FFFFFF" stroke="none" paint-order="stroke fill markers" d=" M 597.6746502847517 746.419035512032 L 618 738 L 597.6746502847517 729.580964487968"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 597.6746502847517 746.419035512032 L 618 738 L 597.6746502847517 729.580964487968 L 597.6746502847517 746.419035512032" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 575 674 L 618 674" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="#FFFFFF" stroke="none" paint-order="stroke fill markers" d=" M 597.6746502847517 682.419035512032 L 618 674 L 597.6746502847517 665.580964487968"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 597.6746502847517 682.419035512032 L 618 674 L 597.6746502847517 665.580964487968 L 597.6746502847517 682.419035512032" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <rect fill="#C0C0C0" stroke="none" x="439" y="695" width="164.58642578125" height="71" transform="matrix(1 0 0 1 -22 -46)" fill-opacity="0.2"/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="432" y="688" width="164.58642578125" height="71" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 410 642 L 574.58642578125 642 L 574.58642578125 713 L 410 713 L 410 642 Z Z" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 410 667 L 575.58642578125 667" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 410 690 L 575.58642578125 690" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="undefined" x="514.793212890625" y="701.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">SimpleDataPair</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="437" y="724.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-value</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="437" y="747.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">+UpdateValue(newValue)</text>
+            </g>
+        </g>
+        <g>
+            <rect fill="#C0C0C0" stroke="none" x="439" y="775" width="164.27978515625" height="58" transform="matrix(1 0 0 1 -22 -46)" fill-opacity="0.2"/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="432" y="768" width="164.27978515625" height="58" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 410 722 L 574.27978515625 722 L 574.27978515625 780 L 410 780 L 410 722 Z Z" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 410 747 L 575.27978515625 747" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 410 757 L 575.27978515625 757" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="undefined" x="514.639892578125" y="781.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">GraphicalDataPair</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="437" y="814.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">+UpdateImage(newImage)</text>
+            </g>
+        </g>
+        <g>
+            <rect fill="#C0C0C0" stroke="none" x="263" y="719" width="136.43359375" height="58" transform="matrix(1 0 0 1 -22 -46)" fill-opacity="0.2"/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="256" y="712" width="136.43359375" height="58" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 234 666 L 370.43359375 666 L 370.43359375 724 L 234 724 L 234 666 Z Z" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 234 704 L 371.43359375 704" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 234 714 L 371.43359375 714" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="324.716796875" y="723.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">«adapter interface»</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="italic" font-weight="bold" text-decoration="undefined" x="324.716796875" y="738.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">Image</text>
+            </g>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 346 724 L 346 746 L 410 746" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="#FFFFFF" stroke="none" paint-order="stroke fill markers" d=" M 399.83732514237585 750.209517756016 L 410 746 L 399.83732514237585 741.790482243984 L 388 746"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 399.83732514237585 750.209517756016 L 410 746 L 399.83732514237585 741.790482243984 L 388 746 L 399.83732514237585 750.209517756016" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="360" y="799" width="39.736328125" height="13" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="379.8681640625" y="805.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">-image</text>
+            </g>
+        </g>
+        <g>
+            <rect fill="#C0C0C0" stroke="none" x="375" y="407" width="152" height="71" transform="matrix(1 0 0 1 -22 -46)" fill-opacity="0.2"/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="368" y="400" width="152" height="71" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 346 354 L 498 354 L 498 425 L 346 425 L 346 354 Z Z" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 346 392 L 499 392" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 346 402 L 499 402" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="444.5" y="411.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">«observer»</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="undefined" x="444.5" y="426.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">MissionsList</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="373" y="459.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">+GetAll()</text>
+            </g>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 346 378 L 170 378 L 170 222" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="#FFFFFF" stroke="none" paint-order="stroke fill markers" d=" M 178.41903551203197 242.3253497152483 L 170 222 L 161.58096448796803 242.3253497152483"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 178.41903551203197 242.3253497152483 L 170 222 L 161.58096448796803 242.3253497152483 L 178.41903551203197 242.3253497152483" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <rect fill="#C0C0C0" stroke="none" x="55" y="199" width="277.48388671875" height="76" transform="matrix(1 0 0 1 -22 -46)" fill-opacity="0.2"/>
+        </g>
+        <g>
+            <rect fill="#ffffff" stroke="none" x="48" y="192" width="277.48388671875" height="76" transform="matrix(1 0 0 1 -22 -46)"/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 26 146 L 303.48388671875 146 L 303.48388671875 222 L 26 222 L 26 146 Z Z" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <path fill="none" stroke="#000000" paint-order="fill stroke markers" d=" M 26 184 L 304.48388671875 184" stroke-miterlimit="10" stroke-dasharray=""/>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="undefined" x="187.241943359375" y="203.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">«interface»</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="italic" font-weight="bold" text-decoration="undefined" x="187.241943359375" y="218.5" text-anchor="middle" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">TeamObserver</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="italic" font-weight="normal" text-decoration="undefined" x="53" y="241.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">+OnRescueTeamChange(team: RescueTeam)</text>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path fill="none" stroke="none"/>
+                <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="italic" font-weight="normal" text-decoration="undefined" x="53" y="256.5" text-anchor="start" dominant-baseline="central" transform="matrix(1 0 0 1 -22 -46)">+WatchRescueTeam(team: RescueTeam)</text>
+            </g>
+        </g>
+    </g>
+</svg>
