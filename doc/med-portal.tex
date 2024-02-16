@@ -1,0 +1,781 @@
+\documentclass{article}
+
+\usepackage[italian]{babel}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2.5cm,right=2.5cm,marginparwidth=1cm]{geometry}
+
+% Useful packages
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[inkscapeformat=png]{svg}
+\usepackage[table]{colortbl}
+
+\title{Med Portal - applicativo di supporto nei servizi di emergenza per il personale 118}
+\author{Matteo Simonetti}
+\date{}
+
+\begin{document}
+    \maketitle
+
+    \section{Statement iniziale}
+
+    Si vuole realizzare un applicativo telematico che faciliti la comunicazione tra la squadra sul campo e la centrale in remoto. Tale sistema deve gestire lo scambio di informazioni tra centrale, squadra e triage, permettere il monitoraggio della missione durante il servizio sanitario, e fornire funzionalità di base per gestire schede di missione, login-logout dei mezzi e della squadra, credenziali dei soccorritori registrati, e visualizzare lo storico degli interventi per fini di fatturazione.
+
+    \subsection{Ruolo della centrale}
+    Il cittadino in difficoltà chiama il NUE 112 oppure il 118 e dichiara di aver bisogno di assistenza sanitaria comunicando al centralino la propria posizione. Qualora si utilizzi l’applicazione mobile “Where Are U” la centrale riceve automaticamente il nome e la posizione geo-localizzata del paziente. Successivamente comunica l’accaduto e lo stato di salute del paziente. Il tecnico della centrale esegue una prima valutazione e in base allo scenario decide di attivare sul luogo uno o più mezzi di soccorso, che possono essere un’ambulanza BLSD, ambulanza con infermiere oppure auto-medica. Per fare ciò l’operatore inizia una nuova scheda-missione che viene compilata con la prima valutazione, luogo di obiettivo e un riferimento (solitamente è il nome del chiamante). Viene deciso anche il codice di attivazione (verde, giallo o rosso) e se i mezzi inviati sono autorizzati ad usare i dispositivi acustici.
+    A questo punto la scheda viene inviata alle squadre attivate.
+    La data e l’ora della chiamata e dell’inizio della missione (quando la squadra riceve la scheda) vengono automaticamente registrati sulla scheda.
+    La centrale può osservare in tempo reale la posizione dei mezzi grazie al loro transponder integrato.
+    La squadra, formata da al più 4 soccorritori (3 se il mezzo è l’auto-medica), riceve sul tablet il dispatch della missione con codice di attivazione, posizione e la prima valutazione che ha redatto l’infermiere al telefono.
+
+    \subsection{Ruolo dell’autista}
+    A questo punto l’autista della squadra invia lo stato di partenza dalla sede inserendo il chilometraggio del mezzo utilizzato. Facoltativamente, può poi scegliere di usufruire del navigatore.
+    L’autista ha sempre l’obbligo di aggiornare il proprio stato quando arriva sull’obiettivo, rientra in pronto soccorso (con l’opportuno codice concordato con la centrale), finisce la missione e rientra in sede. Ogni stato che viene inviato viene registrato sulla scheda con allegati data e ora.
+    Alternativamente il paziente può rifiutare il trasporto. In tal caso, invece di andare in pronto soccorso, la missione finisce e la squadra rientra.
+    Quando il mezzo è rientrato in sede, l’autista invia lo stato e firma la scheda inserendo il chilometraggio finale del mezzo. A quel punto la scheda rimane immutabile e a disposizione per essere consultata in seguito.
+    Può succedere che la centrale invii una nuova missione alla squadra prima del loro rientro in sede.
+    Allora l’autista, invece di inviare lo stato di rientro in sede, clicca su “Passa a prossima missione”. L’applicativo richiede di inserire il chilometraggio del mezzo, fa firmare la scheda e passa automaticamente sulla scheda della nuova missione.
+
+    \subsection{Ruolo della squadra}
+    La squadra di soccorritori ha il compito di valutare la situazione del paziente, acquisendo parametri vitali e dati anagrafici (se disponibili). Tutti i dati devono essere scritti sulla piattaforma e sincronizzati con la centrale. In base ai parametri, la centrale comunica (via cavo/radio) il codice di rientro e il pronto soccorso di destinazione. Alternativamente il tecnico della centrale può decidere se impiegare risorse aggiuntive come un’altra ambulanza, auto-medica o elisoccorso.
+    Eventualmente il paziente può rifiutare il trasporto firmando digitalmente un modulo.
+    Nel caso in cui il mezzo di soccorso deve fare rendez-vous con un altro mezzo (eg: elisoccorso), l’autista (o la squadra) del primo mezzo deve selezionare sull’applicativo la voce “Rendez-vous con altro mezzo” nel campo “Esito trattamento”. Questa procedura abilita l’invio tramite l’interfaccia grafica dello stato di rendez-vous.
+
+    \subsection{Durante interventi congiunti}
+    Le squadre attivate per la missione possono sincronizzarsi i dati anagrafici e i parametri vitali del paziente per evitare perdite di tempo. Per fare ciò bisogna seguire la seguente procedura: la squadra che invia i dati inserisce in un campo il numero della squadra ricevente, mentre quest’ultima deve avere la scheda della missione aperta. La squadra ricevente può o meno accettare i dati in arrivo.
+
+    \subsection{Interazione con il triage}
+    Quando l’autista invia lo stato “partenza da obiettivo”, la scheda della missione viene inviata al terminale del triage del pronto soccorso di destinazione, così da essere consultata dall’infermiere di turno.
+
+    \subsection{Login della squadra}
+    A inizio turno la squadra smontante effettua il logout, mentre la squadra operativa fa il login.
+    Ogni membro della squadra per effettuare il login deve inserire username (il proprio codice fiscale) e la  password personale. Il soccorritore dovrà essere regolarmente registrato sul portale dell’associazione. Nel caso di primo login la password sarà del tipo “nomecognome”, e successivamente l’utente verrà rimandato a una schermata dove dovrà decidere la propria password privata.
+    Sempre tramite l’applicativo si devono specificare trai soccorritori chi è l’autista e chi è il caposquadra.
+    Se non era stato fatto in precedenza, bisogna selezionare il mezzo tra quelli disponibili della propria associazione.
+
+    \subsection{Ruolo dell’associazione}
+    Anche l’associazione ha delle credenziali che permettono l’uso della piattaforma. I responsabili possono gestire i mezzi disponibili, registrare nuovi soccorritori e consultare le schede di missione per fini di fatturazione.
+    Per registrare un nuovo soccorritore bisogna inserire i dati anagrafici e una copia delle certificazioni da lui conseguite (incluse data di conseguimento e di scadenza).
+    È possibile che un soccorritore sia iscritto a più associazioni. In tal caso l’inserimento di alcune certificazioni (tipo quelle rilasciate dal 118) non è necessario e verranno recuperate automaticamente dalla base dati.
+    Comunque il passaggio della registrazione è obbligatorio. Questo per far sì che sia possibile tracciare le associazioni a cui il soccorritore appartiene (per esempio per fini di assicurazione da infortuni) e per impedire che altre associazioni utilizzino le credenziali di personale non associato.
+
+    \section{Struttura e diagrammi}
+    \subsection{Casi d'uso}
+    \subsubsection{Diagrammi}
+
+    \begin{figure}
+        \centering
+        \includesvg[width=4in]{UC-controlcenter.svg}
+        \caption{Diagramma casi d'uso per la centrale}
+        \label{fig:uc-controlcenter}
+    \end{figure}
+    \begin{figure}
+        \centering
+        \includesvg[width=5in]{UC-rescueteam.svg}
+        \caption{Diagramma casi d'uso per la squadra}
+        \label{fig:uc-rescueteam}
+    \end{figure}
+    \begin{figure}
+        \centering
+        \includesvg[width=4in]{UC-autista.svg}
+        \caption{Diagramma casi d'uso per l'autista}
+        \label{fig:uc-autista}
+    \end{figure}
+    \begin{figure}
+        \centering
+        \includesvg[width=3in]{UC-organization.svg}
+        \caption{Diagramma casi d'uso per l'organizzazione}
+        \label{fig:uc-organization}
+    \end{figure}
+
+
+    \subsubsection{Templates}
+
+% così? n'è male
+    \def\graycolor{gray!15}
+    \iffalse
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case &  \\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & \\
+            Description & \\
+            Scope & \\
+            Actors & \\
+            Pre-conditions & \\
+            Post-conditions & \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:base-template}
+    \end{table}
+    \fi
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 3.1 – Riceve informazioni del chiamante \\
+            \hline
+            History & ...                                     \\
+            Source & Estratto dallo statement iniziale \\
+            Abstraction level & User-goal \\
+            Description & La centrale riceve informazioni del chiamante e la posizione della chiamata se questa viene fatta con l’ausilio dell’app di geolocalizzazione. \\
+            Scope & Applicativo telematico della sala di controllo \\
+            Actors & Centrale \\
+            Pre-conditions & \dots \\
+            Post-conditions & Deve essere salvato l’orario di ricezione della chiamata. \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase3.1}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 3.2 - Inizia nuova missione\\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & User-goal\\
+            Description & La centrale crea una nuova missione tramite l’interfaccia.\\
+            Scope & \\
+            Actors & Centrale\\
+            Pre-conditions & \dots \\
+            Post-conditions & Deve essere salvato l’orario di creazione della missione.\\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase3.2}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 3.3 - Inserisci informazioni reperite \\
+            \hline
+            History & ...                                     \\
+            Source & Estratto dallo statement iniziale \\
+            Abstraction level & User-goal \\
+            Description & La centrale scrive il dispatch e le informazioni fornite dal chiamante che vengono successivamente allegate alla missione. \\
+            Scope & Applicativo telematico della sala di controllo \\
+            Actors & Centrale \\
+            Pre-conditions & La missione deve essere creata. \\
+            Post-conditions & \dots \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase3.3}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 3.4 - Assegna missione e invia scheda \\
+            \hline
+            History & ...                                     \\
+            Source & Estratto dallo statement iniziale \\
+            Abstraction level & User-goal \\
+            Description & La centrale assegna la missione appena creata a una o più squadre di soccorso. \\
+            Scope & Applicativo telematico della sala di controllo \\
+            Actors & Centrale, squadre di soccorso \\
+            Pre-conditions & La missione deve essere creata. \\
+            Post-conditions & Ciascuna squadra ottiene una scheda relativa alla missione \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase3.4}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 3.5 - Specifica codice di attivazione \\
+            \hline
+            History & ...                                     \\
+            Source & Estratto dallo statement iniziale \\
+            Abstraction level & User-goal \\
+            Description & La centrale specifica il codice di attivazione della missione. \\
+            Actors & Centrale, squadre di soccorso \\
+            Pre-conditions & La missione deve essere creata. \\
+            Post-conditions & Ciascuna squadra ottiene la scheda con il codice di attivazione della missione. \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase3.5}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 3.6 - Aggiorna dispatch \\
+            \hline
+            History & ...                                     \\
+            Source &  \\
+            Abstraction level & User-goal \\
+            Description & La centrale aggiorna le informazioni nel dispatch della missione. \\
+            Actors & Centrale, squadre di soccorso \\
+            Pre-conditions & La missione deve essere creata. \\
+            Post-conditions & Ciascuna squadra riceve le modifiche effettuate al dispatch nella scheda della missione. \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase3.6}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 3.7 - Modifica stato di un mezzo di soccorso \\
+            \hline
+            History & ...                                     \\
+            Source &  \\
+            Abstraction level & User-goal \\
+            Description & La centrale può mettere un mezzo di soccorso in non operatività (esempio: Mezzo fuori uso o assegnato a un servizio straordinario) oppure ripristinare lo stato di operatività \\
+            Actors & Centrale, squadre di soccorso \\
+            Pre-conditions & La squadra non deve essere impegnata in un’altra missione. \\
+            Post-conditions & \dots \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase3.7}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 3.8 - Osserva posizioni mezzi \\
+            \hline
+            History & ...                                     \\
+            Source & Estratto dallo statement iniziale \\
+            Abstraction level & User-goal \\
+            Description & La centrale può osservare la posizione attuale di ogni squadra. \\
+            Actors & Centrale, squadre di soccorso \\
+            Pre-conditions & \dots \\
+            Post-conditions & \dots \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase3.8}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 2.1 – Inserisci dati anagrafici\\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & User-goal\\
+            Description & Il soccorritore annota i dati anagrafici del paziente\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Squadra\\
+            Pre-conditions & \dots \\
+            Post-conditions & \dots \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase2.1}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 2.2 – Calcola dati anagrafici da codice fiscale\\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & User-goal\\
+            Description & Il soccorritore compila i dati anagrafici del paziente automaticamente inserendo solamente il codice fiscale\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Squadra\\
+            Pre-conditions & \dots \\
+            Post-conditions & \dots \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase2.2}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 2.3 – Inserisci parametri vitali\\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & User-goal\\
+            Description & Il soccorritore inserisce i parametri vitali del paziente.\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Squadra\\
+            Pre-conditions & \dots \\
+            Post-conditions & \dots \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase2.3}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & \textbf{2.4 – Inserisci firma del paziente}\\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & User-goal\\
+            Description & Il soccorritore fa firmare il rifiuto di trasporto al paziente.\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Squadra\\
+            Pre-conditions & Esito trattamento “rifiuto trasporto”. \\
+            Post-conditions & \dots \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase2.4}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 2.5 – Sincronizza dati e parametri con la centrale\\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & User-goal\\
+            Description & Il soccorritore sincronizza i dati e i parametri vitali con la centrale.\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Squadra\\
+            Pre-conditions & \dots \\
+            Post-conditions & \dots \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase2.5}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 2.6 – Condividi dati e parametri con altre squadre\\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & User-goal\\
+            Description & Il soccorritore condivide i dati anagrafici e parametri vitali con altre squadre giunte in supporto.\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Squadra\\
+            Pre-conditions & \dots \\
+            Post-conditions & \dots \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase2.6}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 2.7 – Riceve scheda missione\\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & User-goal\\
+            Description & La squadra riceve la scheda missione\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Squadra\\
+            Pre-conditions & \dots \\
+            Post-conditions & \dots \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase2.7}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 2.8 – Apre scheda missione\\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & Function\\
+            Description & La squadra apre la scheda missione per iniziare la compilazione dei dati/parametri.\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Squadra\\
+            Pre-conditions & \dots \\
+            Post-conditions & \dots \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase2.8}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 2.9 – Passa a nuova missione appena ricevuta\\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & Function\\
+            Description & La squadra apre la scheda missione appena ricevuta per iniziare la compilazione dei dati/parametri.\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Squadra\\
+            Pre-conditions & \dots \\
+            Post-conditions & \dots \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase2.9}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 2.10 – Seleziona mezzo\\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & Function\\
+            Description & La squadra cambia il mezzo di soccorso selezionandone uno diverso tra quelli disponibili\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Squadra\\
+            Pre-conditions & \dots \\
+            Post-conditions & \dots \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase2.10}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 2.11 – Seleziona caposquadra\\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & Function\\
+            Description & La squadra cambia il caposquadra selezionando uno dei soccorritori loggati.\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Squadra\\
+            Pre-conditions & Almeno un soccorritore loggato. \\
+            Post-conditions & \dots \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase2.11}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 2.12 – Seleziona autista\\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & Function\\
+            Description & La squadra cambia l’autista selezionando uno dei soccorritori loggati.\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Squadra\\
+            Pre-conditions & Almeno un soccorritore loggato. \\
+            Post-conditions & \dots \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase2.12}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 2.13 – Login\\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & Function\\
+            Description & Il soccorritore effettua il login inserendo le proprie credenziali.\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Soccorritore\\
+            Pre-conditions & Il soccorritore deve essere correttamente registrato presso l’associazione. \\
+            Post-conditions & \dots \\
+            Normal flow & a. Inserisce nome utente e password\newline b. Login effettuato \\
+            Variations (da rivedere) & a1. Password errata. Ritorna al punto (a) \newline a2. Password scaduta. Cambia password: vedi 2.16 \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase2.13}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 2.14 – Recupera password\\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & Function\\
+            Description & Il soccorritore recupera la password ricevendo via email il link per il reset della password.\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Soccorritore\\
+            Pre-conditions & Il soccorritore deve essere correttamente registrato presso l’associazione. \\
+            Post-conditions & \dots \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase2.14}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 2.15 – Primo login\\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & Function\\
+            Description & Il soccorritore effettua il primo login con le credenziali provvisorie.\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Soccorritore\\
+            Pre-conditions & Il soccorritore deve essere correttamente registrato presso l’associazione. \\
+            Post-conditions & \dots \\
+            Normal flow & a. Inserisce nome utente e password provvisoria\newline b. Cambia password: vedi 2.16.\newline c. Effettua login con la nuova password: vedi 2.13 \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase2.15}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 2.16 – Cambia password\\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & Function\\
+            Description & Il soccorritore cambia password inserendo quella vecchia e quella nuova.\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Soccorritore\\
+            Pre-conditions & Il soccorritore deve essere correttamente registrato presso l’associazione. \\
+            Post-conditions & Il soccorritore ha una nuova password \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase2.16}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 2.17 – Logout\\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & Function\\
+            Description & Il soccorritore effettua il logout\\
+            Actors & Soccorritore\\
+            Pre-conditions & Il soccorritore deve essere correttamente registrato e loggato nella sessione. \\
+            Post-conditions & Il soccorritore viene sloggato dalla sessione. \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase2.17}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 2.18 – Firma la scheda\\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & Function\\
+            Description & La squadra firma e chiude la scheda della missione.\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Squadra\\
+            Pre-conditions & Tutti i campi devono essere compilati \\
+            Post-conditions & La scheda rimane immutabile \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase2.18}
+    \end{table}
+
+% TODO templates dell'autista una volta definiti
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 1.1 - Gestisci mezzi \\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & Summary\\
+            Description & Operazioni CRUD sul database dei veicoli dell’associazione \\
+            Scope & \dots\\
+            Actors & Associazione\\
+            Pre-conditions & Deve essere effettuato il login\\
+            Post-conditions & \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase1.1}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 1.2 - Registra soccorritore \\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & Summary\\
+            Description & L’associazione registra un nuovo soccorritore con i dati anagrafici e email\\
+            Scope & \dots\\
+            Actors & Associazione\\
+            Pre-conditions & Deve essere effettuato il login\\
+            Post-conditions & \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase1.2}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 1.3 - Inserisci certificazione \\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & Summary\\
+            Description & L’associazione inserisce le certificazioni ottenute dal  soccorritore appena registrato\\
+            Scope & \dots\\
+            Actors & Associazione\\
+            Pre-conditions & Deve essere effettuato il login. Il soccorritore deve essere registrato.\\
+            Post-conditions & \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase1.3}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & 1.4 - Consulta schede-missione \\
+            \hline
+            History & \dots \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & Summary\\
+            Description & L’associazione scarica tramite un identificativo tutto il report della missione\\
+            Scope & \dots\\
+            Actors & Associazione\\
+            Pre-conditions & Deve essere effettuato il login.\\
+            Post-conditions & \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase1.4}
+    \end{table}
+
+    \subsubsection{Prototipo di interfaccia}
+    \subsection{Diagramma delle classi}
+
+    \begin{figure}
+        \centering
+        \includesvg[width=6in]{uml-controlcenter.svg}
+        \caption{Diagramma delle classi di controlcenter}
+        \label{fig:uml-controlcenter}
+    \end{figure}
+
+    \begin{figure}
+        \centering
+        \includesvg[width=6in]{uml-ems.svg}
+        \caption{Diagramma delle classi di ems}
+        \label{fig:uml-ems}
+    \end{figure}
+
+    \begin{figure}
+        \centering
+        \includesvg[width=6in]{uml-organization.svg}
+        \caption{Diagramma delle classi di organization}
+        \label{fig:uml-organization}
+    \end{figure}
+
+    \subsubsection{Domain model}
+    \begin{figure}
+        \centering
+        \includesvg[width=5.4in]{uml-ems-domainmodel.svg}
+        \caption{Domain model del package Ems}
+        \label{fig:uml-ems-domainmodel}
+    \end{figure}
+
+    \section{Documentazione}
+    \subsection{Codice}
+
+\end{document}
