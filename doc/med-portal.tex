@@ -59,31 +59,33 @@
     È possibile che un soccorritore sia iscritto a più associazioni. In tal caso l’inserimento di alcune certificazioni (tipo quelle rilasciate dal 118) non è necessario e verranno recuperate automaticamente dalla base dati.
     Comunque il passaggio della registrazione è obbligatorio. Questo per far sì che sia possibile tracciare le associazioni a cui il soccorritore appartiene (per esempio per fini di assicurazione da infortuni) e per impedire che altre associazioni utilizzino le credenziali di personale non associato.
 
+    \newpage
+
     \section{Struttura e diagrammi}
     \subsection{Casi d'uso}
     \subsubsection{Diagrammi}
 
     \begin{figure}
         \centering
-        \includesvg[width=4in]{UC-controlcenter.svg}
+        \includesvg[width=4in]{diagrams/svg/ControlCenter!UseCaseDiagram_Centrale_0}
         \caption{Diagramma casi d'uso per la centrale}
         \label{fig:uc-controlcenter}
     \end{figure}
     \begin{figure}
         \centering
-        \includesvg[width=5in]{UC-rescueteam.svg}
+        \includesvg[width=5in]{diagrams/svg/RescueTeam!UseCaseDiagram_Squadra_1}
         \caption{Diagramma casi d'uso per la squadra}
         \label{fig:uc-rescueteam}
     \end{figure}
     \begin{figure}
         \centering
-        \includesvg[width=4in]{UC-autista.svg}
+        \includesvg[width=4in]{diagrams/svg/Autista!UseCaseDiagram_Autista_2}
         \caption{Diagramma casi d'uso per l'autista}
         \label{fig:uc-autista}
     \end{figure}
     \begin{figure}
         \centering
-        \includesvg[width=3in]{UC-organization.svg}
+        \includesvg[width=3in]{diagrams/svg/Organization!UseCaseDiagram_Associazione_3}
         \caption{Diagramma casi d'uso per l'organizzazione}
         \label{fig:uc-organization}
     \end{figure}
@@ -725,21 +727,21 @@
 
     \begin{figure}
         \centering
-        \includesvg[width=6in]{uml-controlcenter.svg}
+        \includesvg[width=6in]{diagrams/svg/ControlCenter!ControlCenter_0}
         \caption{Diagramma delle classi di controlcenter}
         \label{fig:uml-controlcenter}
     \end{figure}
 
     \begin{figure}
         \centering
-        \includesvg[width=6in]{uml-ems.svg}
+        \includesvg[width=6in]{diagrams/svg/Ems!Ems_1}
         \caption{Diagramma delle classi di ems}
         \label{fig:uml-ems}
     \end{figure}
 
     \begin{figure}
         \centering
-        \includesvg[width=6in]{uml-organization.svg}
+        \includesvg[width=6in]{diagrams/svg/Organization!Organization_3}
         \caption{Diagramma delle classi di organization}
         \label{fig:uml-organization}
     \end{figure}
@@ -747,7 +749,7 @@
     \subsubsection{Domain model}
     \begin{figure}
         \centering
-        \includesvg[width=5.4in]{uml-ems-domainmodel.svg}
+        \includesvg[width=5.4in]{diagrams/svg/Ems!EmsDomainModel_2}
         \caption{Domain model del package Ems}
         \label{fig:uml-ems-domainmodel}
     \end{figure}
