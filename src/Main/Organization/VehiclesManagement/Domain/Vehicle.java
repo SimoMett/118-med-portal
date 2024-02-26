@@ -1,4 +1,6 @@
 package src.Main.Organization.VehiclesManagement.Domain;
 
-public class Vehicle {
+public class Vehicle
+{
+
 }
