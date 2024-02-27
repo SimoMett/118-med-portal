@@ -1,6 +1,6 @@
 package src.Main.Organization.VehiclesManagement.DataAccess;
 
-import src.Main.Organization.VehiclesManagement.BusinessLogic.VehicleInfo;
+import src.Main.Organization.VehiclesManagement.VehicleInfo;
 import src.Main.Organization.VehiclesManagement.Domain.Vehicle;
 import src.Main.Organization.VehiclesManagement.Domain.VehiclesRegistry;
 

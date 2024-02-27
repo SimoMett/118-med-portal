@@ -3,6 +3,7 @@ package src.Main.Organization.VehiclesManagement.BusinessLogic;
 import src.Main.Organization.VehiclesManagement.DataAccess.IVehicleDao;
 import src.Main.Organization.VehiclesManagement.Domain.Vehicle;
 import src.Main.Organization.VehiclesManagement.Domain.VehiclesRegistry;
+import src.Main.Organization.VehiclesManagement.VehicleInfo;
 
 public class VehicleRegistrationController
 {

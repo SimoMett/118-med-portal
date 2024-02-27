@@ -1,4 +1,4 @@
-package src.Main.Organization.UsersManagement.BusinessLogic;
+package src.Main.Organization.UsersManagement;
 
 import java.util.Date;
 

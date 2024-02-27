@@ -1,6 +1,6 @@
 package src.Main.Organization.UsersManagement.Domain;
 
-import src.Main.Organization.UsersManagement.BusinessLogic.UserInfo;
+import src.Main.Organization.UsersManagement.UserInfo;
 
 import java.util.HashMap;
 

@@ -3,15 +3,16 @@ package src.Main.Organization.VehiclesManagement.BusinessLogic;
 import src.Main.Organization.VehiclesManagement.DataAccess.IVehicleDao;
 import src.Main.Organization.VehiclesManagement.Domain.Vehicle;
 import src.Main.Organization.VehiclesManagement.Domain.VehiclesRegistry;
+import src.Main.Organization.VehiclesManagement.VehicleInfo;
 
 import java.util.ArrayList;
 
-public class VehiclesController
+public class VehicleController
 {
     private final IVehicleDao vehicleDao;
     private final VehiclesRegistry vehiclesRegistry;
 
-    public VehiclesController(IVehicleDao vehicleDao)
+    public VehicleController(IVehicleDao vehicleDao)
     {
         this.vehicleDao = vehicleDao;
         this.vehiclesRegistry = vehicleDao.getVehiclesRegistry();

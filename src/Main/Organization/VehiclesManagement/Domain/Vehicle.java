@@ -1,6 +1,6 @@
 package src.Main.Organization.VehiclesManagement.Domain;
 
-import src.Main.Organization.VehiclesManagement.BusinessLogic.VehicleInfo;
+import src.Main.Organization.VehiclesManagement.VehicleInfo;
 
 import java.util.HashMap;
 
