@@ -53,4 +53,9 @@ public class RescueTeam
             observer.onRescueTeamChange(this);
         }
     }
+
+    public void addObserver(ITeamObserver observer)
+    {
+        teamObservers.add(observer);
+    }
 }
