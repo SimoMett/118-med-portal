@@ -27,8 +27,11 @@ public class RescueTeam
         return status;
     }
 
-    public void changeCurrentMission(Mission newMission)
+    public void changeCurrentMission(Mission newMission, Object activationCode) throws RuntimeException
     {
+        if(currentMission!=null)
+            throw new RuntimeException("Rescue team already doing a mission. Cannot activate");
+
         currentMission = newMission;
     }
 

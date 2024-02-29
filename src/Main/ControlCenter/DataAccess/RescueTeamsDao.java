@@ -6,9 +6,9 @@ import src.Main.ControlCenter.Domain.RescueTeamsList;
 
 public class RescueTeamsDao
 {
-    public RescueTeamsList getAllTeams()
+    public RescueTeamsList getAllTeams()//TODO revisit
     {
-        RescueTeamsList rescueTeamsList = new RescueTeamsList();
+        RescueTeamsList rescueTeamsList = RescueTeamsList.getInstance();
         //TODO populate with operating teams
         return rescueTeamsList;
     }
@@ -17,7 +17,7 @@ public class RescueTeamsDao
         return null;
     }*/
     public void setTeamStatus(RescueTeam rescueTeam, Object status){}
-    public void assignMission(RescueTeam rescueTeam, Mission mission){}
+    public boolean assignMission(RescueTeam rescueTeam, Mission mission, Object activationCode){return false;}
     public void abortMission(RescueTeam rescueTeam) {}
     public Object getTeamPosition(RescueTeam rescueTeam){return null;}
 }
