@@ -1,13 +1,15 @@
 package src.Main.Ems.Domain.Mission;
 
+import java.util.ArrayList;
+
 public class ALSReportFactory implements IMissionReportFactory
 {
-    private static final MissionReport reportPrototype = new MissionReport();
+    private static final ArrayList<DataPair> reportDataPairs = new ArrayList<>();
 
     @Override
     public MissionReport createReportModel(Object missionId)
     {
-        //TODO return a clone of reportPrototype with missionId
+        //TODO create a MissionReport with missionId and the DataPairs from reportDataPairs
         return null;
     }
 }

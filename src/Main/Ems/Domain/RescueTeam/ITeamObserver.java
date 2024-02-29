@@ -1,6 +1,6 @@
 package src.Main.Ems.Domain.RescueTeam;
 
-import src.Main.ControlCenter.Domain.RescueTeam;
+import src.Main.Ems.Domain.RescueTeam.RescueTeam;
 
 public interface ITeamObserver
 {
