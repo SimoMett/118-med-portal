@@ -1,5 +1,7 @@
 package src.Main.Ems.Domain;
 
+import src.Main.Ems.Domain.RescueTeam.RescueTeam;
+
 public class Session
 {
     //static
@@ -27,7 +29,7 @@ public class Session
     private final VehiclesList vehiclesList;
 
     //methods
-    public Object getTeam()
+    public RescueTeam getTeam()
     {
         return null;
     }
