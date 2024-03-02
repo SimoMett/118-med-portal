@@ -40,6 +40,6 @@ public class UserLoginController
 
     public void changePassword(Object credentials, String newPsw)
     {
-        this.changePassword(credentials, newPsw);
+        this.userDao.changePassword(credentials, newPsw);
     }
 }
