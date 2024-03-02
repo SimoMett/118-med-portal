@@ -22,8 +22,8 @@ public class UserLoginController
         try
         {
             User user = userDao.getUser(credentials);
-            result.user = user;
             Session.instance().getTeam().addRescuer(user);
+            result.user = user;
         }
         catch (Exception e)
         {

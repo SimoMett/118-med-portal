@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class RescueTeam
 {
     //attributes
-    private ArrayList<User> members;
+    private final ArrayList<User> members;
     private User driver;
     private User leader;
     private Vehicle vehicle;
@@ -17,9 +17,12 @@ public class RescueTeam
         this.members = new ArrayList<>(MAX_COUNT_OF_MEMBERS);
         this.vehicle = vehicle;
     }
-    public void addRescuer(User user)
+    public void addRescuer(User user) throws RuntimeException
     {
+        if(members.size() >= 4)
+            throw new RuntimeException("Max members count of rescue team has been reached");
         members.add(user);
+        notifyObservers();
     }
 
     public void setDriver(User user)
@@ -27,6 +30,7 @@ public class RescueTeam
         if(!members.contains(user))
             throw new RuntimeException("Cannot set user as driver: user not belonging to rescue team");
         driver = user;
+        notifyObservers();
     }
 
     public void setLeader(User user)
@@ -34,16 +38,24 @@ public class RescueTeam
         if(!members.contains(user))
             throw new RuntimeException("Cannot set user as leader: user not belonging to rescue team");
         leader = user;
+        notifyObservers();
     }
 
     public void removeRescuer(User user)
     {
         members.remove(user);
+        notifyObservers();
     }
 
     public void setVehicle(Vehicle vehicle)
     {
         this.vehicle = vehicle;
+        notifyObservers();
+    }
+
+    public void addObserver(ITeamObserver observer)
+    {
+        teamObservers.add(observer);
     }
 
     private void notifyObservers()
@@ -52,10 +64,5 @@ public class RescueTeam
         {
             observer.onRescueTeamChange(this);
         }
-    }
-
-    public void addObserver(ITeamObserver observer)
-    {
-        teamObservers.add(observer);
     }
 }

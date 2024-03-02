@@ -6,7 +6,7 @@ public class Session
 {
     //static
     private static Session INSTANCE;
-    enum Mode
+    public enum Mode
     {
         DRIVER,
         BLS,
@@ -15,6 +15,11 @@ public class Session
     public static void init(Mode mode)
     {
         INSTANCE = new Session(mode);
+    }
+
+    public static void destroy()
+    {
+        INSTANCE = null;
     }
 
     public static Session instance() throws NullPointerException
