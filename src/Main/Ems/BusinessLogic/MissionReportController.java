@@ -1,15 +1,15 @@
 package src.Main.Ems.BusinessLogic;
 
-import src.Main.Ems.DataAccess.MissionDao;
+import src.Main.Ems.DataAccess.IMissionDao;
 import src.Main.Ems.Domain.Mission.MissionReport;
 import src.Main.Ems.Domain.RescueTeam.RescueTeam;
 
 public class MissionReportController
 {
     private final MissionReport report;
-    private final MissionDao missionDao;
+    private final IMissionDao missionDao;
 
-    public MissionReportController(MissionDao missionDao, MissionReport report)
+    public MissionReportController(IMissionDao missionDao, MissionReport report)
     {
         this.missionDao = missionDao;
         this.report = report;

@@ -1,12 +1,12 @@
 package src.Main.Ems.BusinessLogic;
 
-import src.Main.Ems.DataAccess.MissionDao;
+import src.Main.Ems.DataAccess.IMissionDao;
 
 public class MissionsListController
 {
-    private final MissionDao missionDao;
+    private final IMissionDao missionDao;
 
-    public MissionsListController(MissionDao missionDao)
+    public MissionsListController(IMissionDao missionDao)
     {
         this.missionDao = missionDao;
     }

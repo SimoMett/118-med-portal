@@ -1,15 +1,15 @@
 package src.Main.Ems.BusinessLogic;
 
-import src.Main.Ems.DataAccess.UserDao;
+import src.Main.Ems.DataAccess.IUserDao;
 import src.Main.Ems.Domain.RescueTeam.User;
 import src.Main.Ems.Domain.Session;
 
 public class UserLoginController
 {
     //attributes
-    private final UserDao userDao;
+    private final IUserDao userDao;
     //methods
-    public UserLoginController(UserDao userDao)
+    public UserLoginController(IUserDao userDao)
     {
         this.userDao = userDao;
     }
