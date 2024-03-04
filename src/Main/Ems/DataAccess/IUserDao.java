@@ -7,7 +7,7 @@ public interface IUserDao
 {
     //if credentials are correct, return user
     // otherwise throw exceptions
-    User getUser(Credentials credentials) throws Exception;
+    LoginResult getUser(Credentials credentials);
 
     //if credentials are correct, change password with newPsw
     boolean changePassword(Credentials credentials, String newPsw);

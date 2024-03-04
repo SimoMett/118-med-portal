@@ -1,7 +1,7 @@
 package src.Main.Ems.BusinessLogic;
 
 import src.Main.Ems.DataAccess.IUserDao;
-import src.Main.Ems.Domain.RescueTeam.User;
+import src.Main.Ems.DataAccess.LoginResult;
 import src.Main.Ems.Domain.Session;
 
 public class UserLoginController
@@ -17,18 +17,9 @@ public class UserLoginController
 
     public LoginResult logInUser(Credentials credentials)
     {
-        LoginResult result = new LoginResult();
-
-        try
-        {
-            User user = userDao.getUser(credentials);
-            Session.instance().getTeam().addRescuer(user);
-            result.user = user;
-        }
-        catch (Exception e)
-        {
-            result.message = e.getMessage();
-        }
+        LoginResult result = userDao.getUser(credentials);
+        if(result.success)
+            Session.instance().getTeam().addRescuer(result.user);
         return result;
     }
 

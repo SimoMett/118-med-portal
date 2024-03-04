@@ -1,4 +1,8 @@
 package src.Main.Ems.DataAccess;
 
-public interface IVehicleDao {
+import src.Main.Ems.Domain.VehiclesList;
+
+public interface IVehicleDao
+{
+    void updateVehiclesList(VehiclesList vehiclesList);
 }

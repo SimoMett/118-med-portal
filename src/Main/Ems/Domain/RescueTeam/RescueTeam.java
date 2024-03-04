@@ -11,11 +11,11 @@ public class RescueTeam
     private Vehicle vehicle;
     private ArrayList<ITeamObserver> teamObservers;
 
-    public RescueTeam(Vehicle vehicle)
+    public RescueTeam()
     {
         int MAX_COUNT_OF_MEMBERS = 4;
         this.members = new ArrayList<>(MAX_COUNT_OF_MEMBERS);
-        this.vehicle = vehicle;
+        this.teamObservers = new ArrayList<>(2);
     }
     public void addRescuer(User user) throws RuntimeException
     {

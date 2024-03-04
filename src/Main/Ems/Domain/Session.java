@@ -1,5 +1,7 @@
 package src.Main.Ems.Domain;
 
+import src.Main.Ems.Domain.Mission.MissionReport;
+import src.Main.Ems.Domain.Mission.MissionsList;
 import src.Main.Ems.Domain.RescueTeam.RescueTeam;
 
 public class Session
@@ -32,11 +34,24 @@ public class Session
     //attributes
     private final Mode mode;
     private final VehiclesList vehiclesList;
+    private RescueTeam rescueTeam;
+    private MissionsList missionsList;
+    private MissionReport currentMission;
 
     //methods
+    public Mode getMode()
+    {
+        return mode;
+    }
+
     public RescueTeam getTeam()
     {
-        return null;
+        return rescueTeam;
+    }
+
+    public MissionReport getCurrentMission()
+    {
+        return currentMission;
     }
 
     public Object getAllVehicles()
@@ -48,5 +63,7 @@ public class Session
     {
         this.mode = mode;
         this.vehiclesList = new VehiclesList();
+        this.rescueTeam = new RescueTeam();
+        this.missionsList = new MissionsList();
     }
 }
