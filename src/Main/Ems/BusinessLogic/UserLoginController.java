@@ -15,7 +15,7 @@ public class UserLoginController
     }
 
 
-    public LoginResult logInUser(Object credentials)
+    public LoginResult logInUser(Credentials credentials)
     {
         LoginResult result = new LoginResult();
 
@@ -33,12 +33,12 @@ public class UserLoginController
     }
 
     //TODO error management
-    public void recoverPassword(String email)
+    public void recoverPassword(String email) throws IllegalArgumentException
     {
         userDao.recoverPassword(email);
     }
 
-    public void changePassword(Object credentials, String newPsw)
+    public void changePassword(Credentials credentials, String newPsw)
     {
         this.userDao.changePassword(credentials, newPsw);
     }
