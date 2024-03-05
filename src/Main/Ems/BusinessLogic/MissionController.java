@@ -4,20 +4,21 @@ import src.Main.Ems.DataAccess.IMissionDao;
 import src.Main.Ems.Domain.Mission.MissionReport;
 import src.Main.Ems.Domain.RescueTeam.RescueTeam;
 
-public class MissionReportController
+public class MissionController
 {
     private final MissionReport report;
     private final IMissionDao missionDao;
 
-    public MissionReportController(IMissionDao missionDao, MissionReport report)
+    public MissionController(IMissionDao missionDao, MissionReport report)
     {
         this.missionDao = missionDao;
         this.report = report;
     }
 
-    public void updateData(Object key, Object val)
+    public void updateData(String key, Object val)
     {
         this.report.updateData(key, val);
+        this.missionDao.updateMissionData(report, key, val);
     }
 
     public void saveReport()
