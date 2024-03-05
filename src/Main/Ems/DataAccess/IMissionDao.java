@@ -10,7 +10,7 @@ public interface IMissionDao
 {
     MissionReport getReceivedMission(IMissionReportFactory factory);
     List<MissionReport> getAllActiveMissionsOfUser(User user);
-    boolean updateMissionData(MissionReport missionReport, Object key, Object val);
+    boolean updateMissionData(MissionReport missionReport, String key, Object val);
     boolean closeMission(MissionReport missionReport);
     boolean sendMissionReport(MissionReport missionReport);
 }
