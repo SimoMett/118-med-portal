@@ -1,6 +1,8 @@
 package src.Main.Ems.Domain.RescueTeam;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class RescueTeam
 {
@@ -33,6 +35,11 @@ public class RescueTeam
         notifyObservers();
     }
 
+    public User getDriver()
+    {
+        return driver;
+    }
+
     public void setLeader(User user)
     {
         if(!members.contains(user))
@@ -41,10 +48,20 @@ public class RescueTeam
         notifyObservers();
     }
 
+    public User getLeader()
+    {
+        return leader;
+    }
+
     public void removeRescuer(User user)
     {
         members.remove(user);
         notifyObservers();
+    }
+
+    public List<User> getMembers()
+    {
+        return Collections.unmodifiableList(members);
     }
 
     public void setVehicle(Vehicle vehicle)

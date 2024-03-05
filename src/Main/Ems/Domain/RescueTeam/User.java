@@ -1,9 +1,6 @@
 package src.Main.Ems.Domain.RescueTeam;
 
-public class User
+public record User(String username)
 {
-    public User(String username)
-    {
 
-    }
 }
