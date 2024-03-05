@@ -1,5 +1,7 @@
 package src.Test.Ems;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import src.Main.Ems.BusinessLogic.Credentials;
 import src.Main.Ems.BusinessLogic.UserLoginController;
@@ -8,13 +10,18 @@ import src.Main.Ems.Domain.Session;
 
 public class LoginTests
 {
+    UserLoginController userLoginController = new UserLoginController(new DummyUserDao());
+
+    @Before
+    public void initSession()
+    {
+        Session.init(Session.Mode.BLS);
+    }
+
     @Test
     public void successfulLogin()
     {
-        Session.init(Session.Mode.BLS);
-        DummyUserDao userDao = new DummyUserDao();
         Credentials credentials = new Credentials("mariorossi24", "RossiM123");
-        UserLoginController userLoginController = new UserLoginController(userDao);
         LoginResult result = userLoginController.logInUser(credentials);
         assert result.success;
     }
@@ -22,24 +29,26 @@ public class LoginTests
     @Test
     public void wrongPasswordLogin()
     {
-        Session.init(Session.Mode.BLS);
-        DummyUserDao userDao = new DummyUserDao();
         Credentials credentials = new Credentials("mariorossi24", "abcd");
-        UserLoginController userLoginController = new UserLoginController(userDao);
         LoginResult result = userLoginController.logInUser(credentials);
         assert !result.success;
+
         System.out.println(result.message);
     }
 
     @Test
     public void noUsernameLogin()
     {
-        Session.init(Session.Mode.BLS);
-        DummyUserDao userDao = new DummyUserDao();
-        Credentials credentials = new Credentials("carlo27", "abcd");
-        UserLoginController userLoginController = new UserLoginController(userDao);
+        Credentials credentials = new Credentials("carlo27", "RossiM123");
         LoginResult result = userLoginController.logInUser(credentials);
         assert !result.success;
+
         System.out.println(result.message);
+    }
+
+    @After
+    public void stopSession()
+    {
+        Session.destroy();
     }
 }
