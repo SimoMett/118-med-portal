@@ -3,6 +3,7 @@ package src.Main.Ems.Domain;
 import src.Main.Ems.Domain.RescueTeam.Vehicle;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 
 public class VehiclesList implements Iterable<Vehicle>
@@ -37,6 +38,7 @@ public class VehiclesList implements Iterable<Vehicle>
     @Override
     public Iterator<Vehicle> iterator()
     {
-        return vehiclesList.iterator();
+        //this should be safe now
+        return Collections.unmodifiableList(vehiclesList).iterator();
     }
 }
