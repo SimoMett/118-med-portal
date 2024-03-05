@@ -1,11 +1,11 @@
 package src.Main.Ems.Domain.Mission;
 
-public abstract class DataPair
+public abstract class DataPair<T>
 {
-    private final Object key;
+    private final T key;
     private boolean isLocked;
 
-    protected DataPair(Object key)
+    protected DataPair(T key)
     {
         this.key = key;
     }

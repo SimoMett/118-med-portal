@@ -4,12 +4,73 @@ import java.util.ArrayList;
 
 public class BLSReportFactory implements IMissionReportFactory
 {
-    private static final ArrayList<DataPair> reportDataPairs = new ArrayList<>();
+    enum BLSFields
+    {
+        DATE,
+        LOCATION,
+        REFERENCE,
+
+        //Patient data
+        TAX_ID,
+        NAME,
+        SURNAME,
+        GENRE,
+        AGE,
+        DATE_OF_BIRTH,
+        PLACE_OF_BIRTH,
+        RESIDENCE_STREET,
+        CITY,
+
+        //Medical parameters
+        CONSCIOUSNESS,
+        AIRWAYS,
+        BREATHING,
+        BREATH_FRQ,
+        DYSPNEA,
+        NOISES,
+        SPO2,
+        SPO2_WITH_OXYGEN,
+        O2_FLOW,
+        BLOOD_PRESSURE_MAX,
+        BLOOD_PRESSURE_MIN,
+        HEART_RATE,
+        HEMORRHAGE,
+        PULSE_PRESENT,
+        PULSE_REGULAR,
+        SKIN_COLOR,
+        SWEAT,
+        CHEST_PAIN,
+        CHEST_PAIN_TIME,
+        AVPU,
+        AVPU_SYNTOMS_TIME,
+        FACE_SIMMETRY,
+        ARMS_SIMMETRY,
+        SPEECH_QUALITY,
+        PATIENT_POSITION,
+        PATHOLOGIES,
+        ALLERGIES,
+        CURRENT_THERAPY,
+        SCENE_DYNAMIC,
+        INJURIES,
+        PERFORMED_MANEUVERS,
+        PAIN_SCALE,
+
+        //Outcome
+        ALS,
+        PATHOLOGY_CLASS,
+        OUTCOME,
+        RETURN_CODE,
+        PATIENT_SIGNATURE,
+        WITNESS_SIGNATURE
+    }
+
+    private static final ArrayList<DataPair<BLSFields>> reportDataPairs = new ArrayList<>();
 
     @Override
-    public MissionReport createReportModel(Object missionId)
+    public MissionReport createReportModel(String missionId)
     {
         //TODO create a MissionReport with missionId and the DataPairs from reportDataPairs
-        return null;
+        MissionReport missionReport = new MissionReport(missionId, MissionReport.ReportType.BLS);
+        return missionReport;
     }
 }
