@@ -53,6 +53,11 @@ public class RescueTeam
         notifyObservers();
     }
 
+    public Vehicle getVehicle()
+    {
+        return vehicle;
+    }
+
     public void addObserver(ITeamObserver observer)
     {
         teamObservers.add(observer);

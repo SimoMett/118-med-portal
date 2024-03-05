@@ -56,9 +56,9 @@ public class Session
         return currentMission;
     }
 
-    public Object getAllVehicles()
+    public VehiclesList getAllVehicles()
     {
-        return null;
+        return vehiclesList;
     }
 
     private Session(Mode mode)

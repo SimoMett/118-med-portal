@@ -1,13 +1,6 @@
 package src.Main.Ems.Domain.RescueTeam;
 
-import src.Main.Organization.VehiclesManagement.VehicleInfo;
-
-public class Vehicle
+public record Vehicle(String numberPlate, String designation, String radioId, String classification)
 {
-    private VehicleInfo info;
 
-    public Vehicle(VehicleInfo info)
-    {
-        this.info = info;
-    }
 }
