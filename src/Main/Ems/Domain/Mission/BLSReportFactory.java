@@ -64,13 +64,14 @@ public class BLSReportFactory implements IMissionReportFactory
         WITNESS_SIGNATURE
     }
 
-    private static final ArrayList<DataPair<BLSFields>> reportDataPairs = new ArrayList<>();
-
     @Override
     public MissionReport createReportModel(String missionId)
     {
-        //TODO create a MissionReport with missionId and the DataPairs from reportDataPairs
         MissionReport missionReport = new MissionReport(missionId, MissionReport.ReportType.BLS);
+        for(BLSFields key : BLSFields.values())
+        {
+            missionReport.updateData(key.name(), null);
+        }
         return missionReport;
     }
 }

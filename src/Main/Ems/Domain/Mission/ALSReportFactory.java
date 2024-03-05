@@ -13,7 +13,11 @@ public class ALSReportFactory implements IMissionReportFactory
     @Override
     public MissionReport createReportModel(String missionId)
     {
-        //TODO create a MissionReport with missionId and the DataPairs from reportDataPairs
+        MissionReport missionReport = new MissionReport(missionId, MissionReport.ReportType.ALS);
+        for(ALSFields key : ALSFields.values())
+        {
+            missionReport.updateData(key.name(), null);
+        }
         return null;
     }
 }

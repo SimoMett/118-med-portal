@@ -38,7 +38,11 @@ public class DriverReportFactory implements IMissionReportFactory
     @Override
     public MissionReport createReportModel(String missionId)
     {
-        //TODO create a MissionReport with missionId and the DataPairs from reportDataPairs
+        MissionReport missionReport = new MissionReport(missionId, MissionReport.ReportType.DRIVER);
+        for(DriverFields key : DriverFields.values())
+        {
+            missionReport.updateData(key.name(), null);
+        }
         return null;
     }
 }
