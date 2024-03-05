@@ -1,8 +1,8 @@
 package src.Main.Ems.Domain.Mission;
 
 import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 
 public class MissionReport
 {
@@ -15,20 +15,20 @@ public class MissionReport
 
     //attributes
     public final ReportType reportType;
-    private final Object missionId;
+    private final String missionId;
     private Date dateOfCreation;
     private String dispatch;
     private Timestamp lastEdit;
     private boolean isActive;
-    private ArrayList<DataPair> dataPairs;
+    private HashMap<String, Object> dataPairs;
 
     //methods
-    public MissionReport(Object missionId, ReportType type)
+    public MissionReport(String missionId, ReportType type)
     {
         this.missionId = missionId;
         this.reportType = type;
         //TODO init dateOfCreation
-        this.dataPairs = new ArrayList<>();
+        this.dataPairs = new HashMap<>();
     }
 
     public String getDispatch()
@@ -36,8 +36,8 @@ public class MissionReport
         return dispatch;
     }
 
-    public void updateData(Object key, Object value)
+    public void updateData(String key, Object value)
     {
-
+        dataPairs.replace(key, value);
     }
 }
