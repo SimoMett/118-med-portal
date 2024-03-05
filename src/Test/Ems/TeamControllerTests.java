@@ -22,6 +22,9 @@ public class TeamControllerTests
     UserLoginController userLoginController = new UserLoginController(new DummyUserDao());
     private TeamController teamController;
     private DummyTeamDao dummyTeamDao;
+
+    private static final int DRIVER_INDEX = 0;
+    private static final int LEADER_INDEX = 2;
     @Before
     public void initSession()
     {
@@ -79,7 +82,7 @@ public class TeamControllerTests
         }
 
         //pick random user
-        User user = members.get(2);
+        User user = members.get(LEADER_INDEX);
         System.out.println("Picked "+user.toString());
         Session.instance().getTeam().setLeader(user);
 
@@ -98,11 +101,46 @@ public class TeamControllerTests
         }
 
         //pick random user
-        User user = members.get(0);
+        User user = members.get(DRIVER_INDEX);
         System.out.println("Picked "+user.toString());
         Session.instance().getTeam().setDriver(user);
 
         assert dummyTeamDao.getRemoteTeam().getDriver().equals(user);
+    }
+
+    @Test
+    public void logoutUser()
+    {
+        //first set driver and leader as in the previous tests
+        List<User> members = Session.instance().getTeam().getMembers();
+        Session.instance().getTeam().setDriver(members.get(DRIVER_INDEX));
+        Session.instance().getTeam().setLeader(members.get(LEADER_INDEX));
+
+        //print all logged users
+
+        System.out.println("Members of the rescue team:");
+        for (User u : members)
+            System.out.println("\t"+u.toString());
+
+        //logout all users one at the time
+        User user = Session.instance().getTeam().getDriver();
+        Session.instance().getTeam().removeRescuer(user);
+        assert !dummyTeamDao.getRemoteTeam().getMembers().contains(user);
+        assert dummyTeamDao.getRemoteTeam().getDriver() == null;
+
+        user = Session.instance().getTeam().getLeader();
+        Session.instance().getTeam().removeRescuer(user);
+        assert !dummyTeamDao.getRemoteTeam().getMembers().contains(user);
+        assert dummyTeamDao.getRemoteTeam().getLeader() == null;
+
+        user = Session.instance().getTeam().getMembers().get(0);
+        Session.instance().getTeam().removeRescuer(user);
+        assert !dummyTeamDao.getRemoteTeam().getMembers().contains(user);
+
+        user = Session.instance().getTeam().getMembers().get(0);
+        Session.instance().getTeam().removeRescuer(user);
+        assert !dummyTeamDao.getRemoteTeam().getMembers().contains(user);
+
     }
 
     @After

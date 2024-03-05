@@ -55,6 +55,12 @@ public class RescueTeam
 
     public void removeRescuer(User user)
     {
+        if(driver != null && driver.equals(user))
+            driver = null;
+
+        if(leader != null && leader.equals(user))
+            leader = null;
+
         members.remove(user);
         notifyObservers();
     }
