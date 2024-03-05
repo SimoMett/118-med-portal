@@ -16,6 +16,8 @@ public class Session
     }
     public static void init(Mode mode)
     {
+        if(INSTANCE != null)
+            throw new RuntimeException("Session has already been initialized");
         INSTANCE = new Session(mode);
     }
 
