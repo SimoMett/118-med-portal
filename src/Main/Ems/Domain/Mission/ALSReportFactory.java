@@ -8,7 +8,7 @@ public class ALSReportFactory implements IMissionReportFactory
     {
         //TODO
     }
-    private static final ArrayList<DataPair<ALSFields>> reportDataPairs = new ArrayList<>();
+    private static final ArrayList<DataField<ALSFields>> reportDataPairs = new ArrayList<>();
 
     @Override
     public MissionReport createReportModel(String missionId)

@@ -33,7 +33,7 @@ public class DriverReportFactory implements IMissionReportFactory
         DESTINATION,
         DESTINATION_UNIT,
     }
-    private static final ArrayList<DataPair<DriverFields>> reportDataPairs = new ArrayList<>();
+    private static final ArrayList<DataField<DriverFields>> reportDataPairs = new ArrayList<>();
 
     @Override
     public MissionReport createReportModel(String missionId)

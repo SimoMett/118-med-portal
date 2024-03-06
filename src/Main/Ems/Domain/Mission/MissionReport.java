@@ -20,7 +20,7 @@ public class MissionReport
     private String dispatch;
     private Timestamp lastEdit;
     private boolean isActive;
-    private final HashMap<String, Object> dataPairs;
+    private final HashMap<String, DataField> dataPairs;
 
     //methods
     public MissionReport(String missionId, ReportType type)
@@ -47,24 +47,30 @@ public class MissionReport
     {
         if(dataPairs.containsKey(key))
             throw new RuntimeException("Key "+key+" has already been initialized");
-        dataPairs.put(key, null);
+        dataPairs.put(key, new SimpleDataField(""));
     }
 
-    public void updateData(String key, Object value)
+    public void updateData(String key, DataField value) throws IllegalArgumentException
     {
-        dataPairs.replace(key, value);
+        if(!dataPairs.containsKey(key))
+            throw new IllegalArgumentException("Provided invalid key for "+reportType.name()+" report: "+key);
+        dataPairs.get(key).setValue(value);
+        Object ret = dataPairs.replace(key, value);
         lastEdit = Timestamp.from(Instant.now());
     }
 
-    public Object getData(String key) throws IllegalArgumentException
+    public DataField getData(String key) throws IllegalArgumentException
     {
         if(!dataPairs.containsKey(key))
             throw new IllegalArgumentException("Provided invalid key for "+reportType.name()+" report: "+key);
         return dataPairs.get(key);
     }
 
-    public void setInactive()
+    public void close()
     {
         isActive = false;
+        dataPairs.forEach( (key, val) -> {
+            val.setImmutable();
+        });
     }
 }

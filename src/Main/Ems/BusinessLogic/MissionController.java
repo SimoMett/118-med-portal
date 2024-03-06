@@ -1,6 +1,7 @@
 package src.Main.Ems.BusinessLogic;
 
 import src.Main.Ems.DataAccess.IMissionDao;
+import src.Main.Ems.Domain.Mission.DataField;
 import src.Main.Ems.Domain.Mission.MissionReport;
 import src.Main.Ems.Domain.RescueTeam.RescueTeam;
 
@@ -15,7 +16,7 @@ public class MissionController
         this.report = report;
     }
 
-    public boolean updateData(String key, Object val)
+    public boolean updateData(String key, DataField val)
     {
         //Update data locally (in the domain model) and remotely (via data access).
         //If data access fails (eg: lost connection) at least we have a local mission report to work with
@@ -24,7 +25,7 @@ public class MissionController
         return this.missionDao.updateMissionData(report, key, val);
     }
 
-    public Object get(String key) throws IllegalArgumentException
+    public DataField get(String key) throws IllegalArgumentException
     {
         //Get data from domain model
         return this.report.getData(key);
@@ -43,8 +44,8 @@ public class MissionController
 
     public void closeMission()
     {
-        //TODO
-        report.setInactive();
+        report.close();
+        //TODO close mission via data access
     }
 
     public void invokeExternalFunctionality(Object func) throws RuntimeException
