@@ -7,17 +7,12 @@ public class SimpleDataField extends DataField<String>
         super(initialValue);
     }
 
-    public void updateValue(String newValue) throws IllegalAccessException
+    @Override
+    public void setValue(String newVal) throws IllegalAccessException
     {
         if(!canModify() || isImmutable())
             throw new IllegalAccessException("Data field is locked or immutable");
-        this.value = newValue;
-    }
-
-    @Override
-    public void setValue(String newVal)
-    {
-        value = newVal;
+        this.value = newVal;
     }
 
     public String getValue()

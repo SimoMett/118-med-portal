@@ -43,19 +43,22 @@ public class MissionReport
         this.dispatch = newDispatch;
     }
 
-    public void initField(String key)
+    public void initField(String key, DataField value)
     {
         if(dataPairs.containsKey(key))
             throw new RuntimeException("Key "+key+" has already been initialized");
-        dataPairs.put(key, new SimpleDataField(""));
+        dataPairs.put(key, value);
     }
 
-    public void updateData(String key, DataField value) throws IllegalArgumentException
+    public void updateData(String key, Object value) throws IllegalArgumentException, IllegalAccessException
     {
         if(!dataPairs.containsKey(key))
             throw new IllegalArgumentException("Provided invalid key for "+reportType.name()+" report: "+key);
+
         dataPairs.get(key).setValue(value);
-        Object ret = dataPairs.replace(key, value);
+        // Although, a value can still be overwritten by replacing the entire DataField like in the line below
+        //   -> dataPairs.replace(key, value);
+
         lastEdit = Timestamp.from(Instant.now());
     }
 

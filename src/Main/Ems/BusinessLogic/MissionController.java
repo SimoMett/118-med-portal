@@ -16,7 +16,7 @@ public class MissionController
         this.report = report;
     }
 
-    public boolean updateData(String key, DataField val)
+    public boolean updateData(String key, Object val) throws IllegalAccessException
     {
         //Update data locally (in the domain model) and remotely (via data access).
         //If data access fails (eg: lost connection) at least we have a local mission report to work with

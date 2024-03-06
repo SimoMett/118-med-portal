@@ -33,5 +33,5 @@ public abstract class DataField<T>
         return isImmutable;
     }
 
-    public abstract void setValue(T newValue);
+    public abstract void setValue(T newValue) throws IllegalAccessException;
 }
