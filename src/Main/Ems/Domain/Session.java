@@ -61,6 +61,8 @@ public class Session
         return vehiclesList;
     }
 
+    public MissionsList getMissionsList() { return missionsList; }
+
     private Session(Mode mode)
     {
         this.mode = mode;
