@@ -1,12 +1,10 @@
 package src.Test.Ems;
 
+import com.sun.jdi.InvalidTypeException;
 import org.junit.Before;
 import org.junit.Test;
 import src.Main.Ems.BusinessLogic.MissionController;
-import src.Main.Ems.Domain.Mission.BLSReportFactory;
-import src.Main.Ems.Domain.Mission.IMissionReportFactory;
-import src.Main.Ems.Domain.Mission.MissionReport;
-import src.Main.Ems.Domain.Mission.SimpleDataField;
+import src.Main.Ems.Domain.Mission.*;
 import src.Test.Ems.DummyDao.DummyMissionDao;
 
 import src.Main.Ems.Domain.Mission.BLSReportFactory.BLSFields;
@@ -18,26 +16,26 @@ public class MissionControllerTests
     private MissionController missionController;
 
     @Before
-    public void init()
-    {
+    public void init() throws IllegalAccessException {
         IMissionReportFactory reportFactory = new BLSReportFactory();
         report = reportFactory.createReportModel("03/24/1");
         missionController = new MissionController(missionDao, report);
-        missionController.updateData(BLSFields.SKIN_COLOR.name(), new SimpleDataField("pale"));
+        missionController.updateData(BLSFields.SKIN_COLOR.name(), "pale");
     }
 
     @Test
-    public void correctKeyUpdateData()
-    {
-        missionController.updateData(BLSFields.CHEST_PAIN.name(), new SimpleDataField(String.valueOf(true)));
-        SimpleDataField data = (SimpleDataField) missionDao.getMissionData(report, BLSFields.CHEST_PAIN.name());
-        assert data.getValue().equals(String.valueOf(true));
+    public void correctKeyUpdateData() throws InvalidTypeException, IllegalAccessException {
+        missionController.updateData(BLSFields.CHEST_PAIN.name(), String.valueOf(true));
+        DataField data = missionDao.getMissionData(report, BLSFields.CHEST_PAIN.name());
+        if(data instanceof SimpleDataField simpleData)
+            assert simpleData.getValue().equals(String.valueOf(true));
+        else
+            throw new InvalidTypeException(BLSFields.CHEST_PAIN.name()+" attribute is not a string");
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void invalidKeyUpdateData()
-    {
-        missionController.updateData("INVALID_KEY", new SimpleDataField(String.valueOf(true)));
+    public void invalidKeyUpdateData() throws IllegalAccessException {
+        missionController.updateData("INVALID_KEY", String.valueOf(true));
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -54,10 +52,10 @@ public class MissionControllerTests
         assert data.getValue().equals("pale");
     }
 
-    @Test(expected = Exception.class)
-    public void editingClosedMission()
+    @Test(expected = IllegalAccessException.class)
+    public void editingClosedMission() throws IllegalAccessException
     {
         missionController.closeMission();
-        missionController.updateData(BLSFields.SKIN_COLOR.name(), new SimpleDataField("reddish"));
+        missionController.updateData(BLSFields.SKIN_COLOR.name(), "reddish");
     }
 }
