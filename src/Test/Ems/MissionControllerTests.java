@@ -1,10 +1,12 @@
 package src.Test.Ems;
 
 import com.sun.jdi.InvalidTypeException;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import src.Main.Ems.BusinessLogic.MissionController;
 import src.Main.Ems.Domain.Mission.*;
+import src.Main.Ems.Domain.Session;
 import src.Test.Ems.DummyDao.DummyMissionDao;
 
 import src.Main.Ems.Domain.Mission.BLSReportFactory.BLSFields;
@@ -18,6 +20,7 @@ public class MissionControllerTests
     @Before
     public void init() throws IllegalAccessException
     {
+        Session.init(Session.Mode.BLS);
         IMissionReportFactory reportFactory = new BLSReportFactory();
         report = reportFactory.createReportModel("03/24/1");
         missionController = new MissionController(missionDao, report);
@@ -66,5 +69,11 @@ public class MissionControllerTests
     public void saveReport()
     {
         assert missionController.saveReport();
+    }
+
+    @After
+    public void stopSession()
+    {
+        Session.destroy();
     }
 }

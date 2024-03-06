@@ -49,7 +49,7 @@ public class MissionController
 
         //If this report is the current mission
         //      set current mission to null
-        if(Session.instance().getCurrentMission().equals(report))
+        if(Session.instance().getCurrentMission() != null && Session.instance().getCurrentMission().equals(report))
             Session.instance().setCurrentMission(null);
 
         //Close mission via data access
