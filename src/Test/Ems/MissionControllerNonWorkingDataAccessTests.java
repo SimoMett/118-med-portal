@@ -5,13 +5,13 @@ import org.junit.Before;
 import org.junit.Test;
 import src.Main.Ems.BusinessLogic.MissionController;
 import src.Main.Ems.Domain.Mission.*;
-import src.Test.Ems.DummyDao.DummyMissionDao;
+import src.Test.Ems.DummyDao.NonWorkingMissionDao;
 
 import src.Main.Ems.Domain.Mission.BLSReportFactory.BLSFields;
 
-public class MissionControllerTests
+public class MissionControllerNonWorkingDataAccessTests
 {
-    private final DummyMissionDao missionDao = new DummyMissionDao();
+    private final NonWorkingMissionDao missionDao = new NonWorkingMissionDao();
     private MissionReport report;
     private MissionController missionController;
 
@@ -27,18 +27,19 @@ public class MissionControllerTests
     @Test
     public void correctKeyUpdateData() throws InvalidTypeException, IllegalAccessException
     {
-        missionController.updateData(BLSFields.CHEST_PAIN.name(), String.valueOf(true));
+        missionController.updateData(BLSFields.CHEST_PAIN.name(), "true");
         DataField data = missionDao.getMissionData(report, BLSFields.CHEST_PAIN.name());
-        if(data instanceof SimpleDataField simpleData)
-            assert simpleData.getValue().equals(String.valueOf(true));
-        else
-            throw new InvalidTypeException(BLSFields.CHEST_PAIN.name()+" attribute is not a string");
+        if(data instanceof SimpleDataField)
+            throw new InvalidTypeException(BLSFields.CHEST_PAIN.name()+" attribute somehow is initialized");
+        data = missionController.get(BLSFields.CHEST_PAIN.name());
+        assert data.getValue().equals("true");
+
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void invalidKeyUpdateData() throws IllegalAccessException
     {
-        missionController.updateData("INVALID_KEY", String.valueOf(true));
+        missionController.updateData("INVALID_KEY", "true");
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -51,7 +52,7 @@ public class MissionControllerTests
     public void accessingClosedMission()
     {
         missionController.closeMission();
-        SimpleDataField data = (SimpleDataField) missionController.get(BLSFields.SKIN_COLOR.name());
+        SimpleDataField data = (SimpleDataField) missionController.get(BLSReportFactory.BLSFields.SKIN_COLOR.name());
         assert data.getValue().equals("pale");
     }
 
@@ -59,12 +60,12 @@ public class MissionControllerTests
     public void editingClosedMission() throws IllegalAccessException
     {
         missionController.closeMission();
-        missionController.updateData(BLSFields.SKIN_COLOR.name(), "reddish");
+        missionController.updateData(BLSReportFactory.BLSFields.SKIN_COLOR.name(), "reddish");
     }
 
     @Test
     public void saveReport()
     {
-        assert missionController.saveReport();
+        assert !missionController.saveReport();
     }
 }

@@ -2,7 +2,9 @@ package src.Main.Ems.Domain.Mission;
 
 import java.sql.Timestamp;
 import java.time.Instant;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.Set;
 
 public class MissionReport
 {
@@ -65,6 +67,11 @@ public class MissionReport
         //   -> dataPairs.replace(key, value);
 
         lastEdit = Timestamp.from(Instant.now());
+    }
+
+    public Set<String> getKeys()
+    {
+        return Collections.unmodifiableSet(dataPairs.keySet());
     }
 
     public DataField getData(String key) throws IllegalArgumentException

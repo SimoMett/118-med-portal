@@ -31,10 +31,9 @@ public class MissionController
         return this.report.getData(key);
     }
 
-    public void saveReport()
+    public boolean saveReport()
     {
-        //TODO save all the data to remote via data access
-
+        return missionDao.sendMissionReport(report);
     }
 
     public void syncPatientData(RescueTeam receivingTeam)
