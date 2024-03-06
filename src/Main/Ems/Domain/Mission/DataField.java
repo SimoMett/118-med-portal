@@ -12,15 +12,13 @@ public abstract class DataField<T>
         this.isImmutable = false;
     }
 
-    public boolean canModify()
-    {
-        return !isLocked;
-    }
+    public abstract void setValue(T newValue) throws IllegalAccessException;
 
-    protected void allowEdit(boolean allow)
-    {
-        isLocked=!allow;
-    }
+    public final T getValue() { return value; }
+
+    public boolean canModify() { return !isLocked; }
+
+    protected void allowEdit(boolean allow) { isLocked=!allow; }
 
     protected void setImmutable()
     {
@@ -28,10 +26,5 @@ public abstract class DataField<T>
         isImmutable = true;
     }
 
-    public final boolean isImmutable()
-    {
-        return isImmutable;
-    }
-
-    public abstract void setValue(T newValue) throws IllegalAccessException;
+    public final boolean isImmutable() { return isImmutable; }
 }

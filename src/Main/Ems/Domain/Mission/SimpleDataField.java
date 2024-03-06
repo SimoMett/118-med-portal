@@ -14,9 +14,4 @@ public class SimpleDataField extends DataField<String>
             throw new IllegalAccessException("Data field is locked or immutable");
         this.value = newVal;
     }
-
-    public String getValue()
-    {
-        return value;
-    }
 }
