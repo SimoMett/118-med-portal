@@ -58,8 +58,7 @@ public class BLSReportFactory implements IMissionReportFactory
         PATHOLOGY_CLASS,
         OUTCOME,
         RETURN_CODE,
-        PATIENT_SIGNATURE,
-        WITNESS_SIGNATURE
+        PATIENT_SIGNATURE
     }
 
     private static void populate(MissionReport missionReport)
@@ -113,7 +112,6 @@ public class BLSReportFactory implements IMissionReportFactory
         missionReport.initField(BLSFields.OUTCOME.name(), new SimpleDataField(""));
         missionReport.initField(BLSFields.RETURN_CODE.name(), new SimpleDataField(""));
         missionReport.initField(BLSFields.PATIENT_SIGNATURE.name(), new GraphicalDataPair(""));
-        missionReport.initField(BLSFields.WITNESS_SIGNATURE.name(), new GraphicalDataPair(""));
     }
 
     @Override
