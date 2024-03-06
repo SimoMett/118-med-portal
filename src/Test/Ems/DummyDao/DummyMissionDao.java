@@ -4,6 +4,7 @@ import src.Main.Ems.DataAccess.IMissionDao;
 import src.Main.Ems.Domain.Mission.DataField;
 import src.Main.Ems.Domain.Mission.IMissionReportFactory;
 import src.Main.Ems.Domain.Mission.MissionReport;
+import src.Main.Ems.Domain.RescueTeam.RescueTeam;
 import src.Main.Ems.Domain.RescueTeam.User;
 
 import java.util.ArrayList;
@@ -52,5 +53,10 @@ public class DummyMissionDao implements IMissionDao
     public boolean sendMissionReport(MissionReport missionReport)
     {
         return storage.add(missionReport);
+    }
+
+    @Override
+    public boolean sendPatientData(RescueTeam team) {
+        return false;
     }
 }

@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import src.Main.Ems.BusinessLogic.MissionController;
 import src.Main.Ems.Domain.Mission.*;
+import src.Main.Ems.Domain.RescueTeam.RescueTeam;
 import src.Main.Ems.Domain.Session;
 import src.Test.Ems.DummyDao.DummyMissionDao;
 
@@ -69,6 +70,14 @@ public class MissionControllerTests
     public void saveReport()
     {
         assert missionController.saveReport();
+    }
+
+    @Test
+    public void patientDataSharing()
+    {
+        //TODO
+        RescueTeam receivingTeam = new RescueTeam();
+        missionController.syncPatientData(receivingTeam);
     }
 
     @After
