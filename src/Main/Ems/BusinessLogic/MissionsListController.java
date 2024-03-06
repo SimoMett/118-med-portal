@@ -24,6 +24,9 @@ public class MissionsListController
             case ALS -> factory = new ALSReportFactory();
             default -> factory = new DriverReportFactory();
         }
-        return missionDao.getReceivedMission(factory);
+        MissionReport mission = missionDao.getReceivedMission(factory);
+        missionsList.add(mission);
+        Session.instance().setCurrentMission(mission);
+        return mission;
     }
 }

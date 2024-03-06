@@ -56,6 +56,14 @@ public class Session
         return currentMission;
     }
 
+    public void setCurrentMission(MissionReport mission)
+    {
+        if(currentMission != null)
+            throw new RuntimeException("Current mission is not null");
+
+        currentMission = currentMission;
+    }
+
     public VehiclesList getAllVehicles()
     {
         return vehiclesList;
