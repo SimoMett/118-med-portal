@@ -29,4 +29,9 @@ public class MissionsListController
         Session.instance().setCurrentMission(mission);
         return mission;
     }
+
+    public MissionReport openMission(String missionId)
+    {
+        return missionsList.get(missionId);
+    }
 }
