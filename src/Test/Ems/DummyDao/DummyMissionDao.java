@@ -1,6 +1,7 @@
 package src.Test.Ems.DummyDao;
 
 import src.Main.Ems.DataAccess.IMissionDao;
+import src.Main.Ems.Domain.Mission.DataField;
 import src.Main.Ems.Domain.Mission.IMissionReportFactory;
 import src.Main.Ems.Domain.Mission.MissionReport;
 import src.Main.Ems.Domain.RescueTeam.User;
@@ -21,18 +22,21 @@ public class DummyMissionDao implements IMissionDao
     }
 
     @Override
-    public boolean updateMissionData(MissionReport missionReport, String key, Object val) {
+    public boolean updateMissionData(MissionReport missionReport, String key, Object val)
+    {
         return false;
     }
 
     @Override
-    public Object getMissionData(MissionReport missionReport, String key)
+    public DataField getMissionData(MissionReport missionReport, String key)
     {
         return missionReport.getData(key);
     }
 
     @Override
-    public boolean closeMission(MissionReport missionReport) {
+    public boolean closeMission(MissionReport missionReport)
+    {
+        missionReport.close();
         return false;
     }
 
