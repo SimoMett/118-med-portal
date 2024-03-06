@@ -1,7 +1,5 @@
 package src.Main.Ems.Domain.Mission;
 
-import java.util.ArrayList;
-
 public class DriverReportFactory implements IMissionReportFactory
 {
     public enum DriverFields
@@ -33,16 +31,35 @@ public class DriverReportFactory implements IMissionReportFactory
         DESTINATION,
         DESTINATION_UNIT,
     }
-    private static final ArrayList<DataField<DriverFields>> reportDataPairs = new ArrayList<>();
+    private static void populate(MissionReport missionReport)
+    {
+        missionReport.initField(DriverFields.DATE.name(), new SimpleDataField(""));
+        missionReport.initField(DriverFields.LOCATION.name(), new SimpleDataField(""));
+        missionReport.initField(DriverFields.REFERENCE.name(), new SimpleDataField(""));
+        missionReport.initField(DriverFields.VEHICLE_PLATE.name(), new SimpleDataField(""));
+        missionReport.initField(DriverFields.VEHICLE_CLASS.name(), new SimpleDataField(""));
+        missionReport.initField(DriverFields.IS_DEPARTING_FROM_HQ.name(), new SimpleDataField(""));
+        missionReport.initField(DriverFields.KM_AT_START.name(), new SimpleDataField(""));
+        missionReport.initField(DriverFields.KM_AT_END.name(), new SimpleDataField(""));
+        missionReport.initField(DriverFields.TIME_MISSION_START.name(), new SimpleDataField(""));
+        missionReport.initField(DriverFields.TIME_TARGET_REACHED.name(), new SimpleDataField(""));
+        missionReport.initField(DriverFields.TIME_TARGET_DEPARTURE.name(), new SimpleDataField(""));
+        missionReport.initField(DriverFields.TIME_RENDEZ_VOUS.name(), new SimpleDataField(""));
+        missionReport.initField(DriverFields.TIME_DESTINATION_REACHED.name(), new SimpleDataField(""));
+        missionReport.initField(DriverFields.TIME_MISSION_END.name(), new SimpleDataField(""));
+        missionReport.initField(DriverFields.TIME_RETURN_TO_HQ.name(), new SimpleDataField(""));
+        missionReport.initField(DriverFields.OUTCOME.name(), new SimpleDataField(""));
+        missionReport.initField(DriverFields.DESTINATION.name(), new SimpleDataField(""));
+        missionReport.initField(DriverFields.DESTINATION_UNIT.name(), new SimpleDataField(""));
+    }
 
     @Override
     public MissionReport createReportModel(String missionId)
     {
         MissionReport missionReport = new MissionReport(missionId, MissionReport.ReportType.DRIVER);
-        for(DriverFields key : DriverFields.values())
-        {
-            missionReport.updateData(key.name(), null);
-        }
-        return null;
+
+        populate(missionReport);
+
+        return missionReport;
     }
 }
