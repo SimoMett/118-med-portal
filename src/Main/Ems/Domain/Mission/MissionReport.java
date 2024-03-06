@@ -33,6 +33,11 @@ public class MissionReport
         this.lastEdit = Timestamp.from(Instant.now());
     }
 
+    public String getId()
+    {
+        return missionId;
+    }
+
     public String getDispatch()
     {
         return dispatch;

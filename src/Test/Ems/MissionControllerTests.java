@@ -16,7 +16,8 @@ public class MissionControllerTests
     private MissionController missionController;
 
     @Before
-    public void init() throws IllegalAccessException {
+    public void init() throws IllegalAccessException
+    {
         IMissionReportFactory reportFactory = new BLSReportFactory();
         report = reportFactory.createReportModel("03/24/1");
         missionController = new MissionController(missionDao, report);
@@ -24,7 +25,8 @@ public class MissionControllerTests
     }
 
     @Test
-    public void correctKeyUpdateData() throws InvalidTypeException, IllegalAccessException {
+    public void correctKeyUpdateData() throws InvalidTypeException, IllegalAccessException
+    {
         missionController.updateData(BLSFields.CHEST_PAIN.name(), String.valueOf(true));
         DataField data = missionDao.getMissionData(report, BLSFields.CHEST_PAIN.name());
         if(data instanceof SimpleDataField simpleData)
@@ -34,7 +36,8 @@ public class MissionControllerTests
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void invalidKeyUpdateData() throws IllegalAccessException {
+    public void invalidKeyUpdateData() throws IllegalAccessException
+    {
         missionController.updateData("INVALID_KEY", String.valueOf(true));
     }
 
