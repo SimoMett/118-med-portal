@@ -15,30 +15,36 @@ public class MissionController
         this.report = report;
     }
 
-    public void updateData(String key, Object val)
+    public boolean updateData(String key, Object val)
     {
+        //Update data locally (in the domain model) and remotely (via data access).
+        //If data access fails (eg: lost connection) at least we have a local mission report to work with
+        //In such case the user can trigger manually the synchronization with remote via 'saveReport()'
         this.report.updateData(key, val);
-        this.missionDao.updateMissionData(report, key, val);
+        return this.missionDao.updateMissionData(report, key, val);
     }
 
-    public Object get(String key)
+    public Object get(String key) throws IllegalArgumentException
     {
-        return this.missionDao.getMissionData(report, key);
+        //Get data from domain model
+        return this.report.getData(key);
     }
 
     public void saveReport()
     {
-        //TODO
+        //TODO save all the data to remote via data access
+
     }
 
     public void syncPatientData(RescueTeam receivingTeam)
     {
-//TODO
+        //TODO send patient data to the receivingTeam via data access
     }
 
     public void closeMission()
     {
-//TODO
+        //TODO
+        report.setInactive();
     }
 
     public void invokeExternalFunctionality(Object func) throws RuntimeException

@@ -30,6 +30,7 @@ public class MissionReport
         this.dateOfCreation = Timestamp.from(Instant.now());
         this.dataPairs = new HashMap<>();
         this.isActive = true;
+        this.lastEdit = Timestamp.from(Instant.now());
     }
 
     public String getDispatch()
@@ -40,6 +41,13 @@ public class MissionReport
     public void updateDispatch(String newDispatch)
     {
         this.dispatch = newDispatch;
+    }
+
+    public void initField(String key)
+    {
+        if(dataPairs.containsKey(key))
+            throw new RuntimeException("Key "+key+" has already been initialized");
+        dataPairs.put(key, null);
     }
 
     public void updateData(String key, Object value)
@@ -53,5 +61,10 @@ public class MissionReport
         if(!dataPairs.containsKey(key))
             throw new IllegalArgumentException("Provided invalid key for "+reportType.name()+" report: "+key);
         return dataPairs.get(key);
+    }
+
+    public void setInactive()
+    {
+        isActive = false;
     }
 }

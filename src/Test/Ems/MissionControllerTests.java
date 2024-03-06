@@ -28,5 +28,6 @@ public class MissionControllerTests
     public void updateData()
     {
         missionController.updateData(BLSFields.CHEST_PAIN.name(), true);
+        assert (boolean) missionDao.getMissionData(report, BLSFields.CHEST_PAIN.name());
     }
 }

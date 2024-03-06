@@ -28,7 +28,7 @@ public class DummyMissionDao implements IMissionDao
     @Override
     public Object getMissionData(MissionReport missionReport, String key)
     {
-        return null;
+        return missionReport.getData(key);
     }
 
     @Override

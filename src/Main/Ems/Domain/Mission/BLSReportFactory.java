@@ -70,7 +70,7 @@ public class BLSReportFactory implements IMissionReportFactory
         MissionReport missionReport = new MissionReport(missionId, MissionReport.ReportType.BLS);
         for(BLSFields key : BLSFields.values())
         {
-            missionReport.updateData(key.name(), null);
+            missionReport.initField(key.name());
         }
         return missionReport;
     }
