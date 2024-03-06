@@ -21,6 +21,11 @@ public class MissionController
         this.missionDao.updateMissionData(report, key, val);
     }
 
+    public Object get(String key)
+    {
+        return this.missionDao.getMissionData(report, key);
+    }
+
     public void saveReport()
     {
         //TODO

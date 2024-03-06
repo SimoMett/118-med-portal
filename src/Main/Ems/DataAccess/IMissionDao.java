@@ -11,6 +11,7 @@ public interface IMissionDao
     MissionReport getReceivedMission(IMissionReportFactory factory);
     List<MissionReport> getAllActiveMissionsOfUser(User user);
     boolean updateMissionData(MissionReport missionReport, String key, Object val);
+    Object getMissionData(MissionReport missionReport, String key);
     boolean closeMission(MissionReport missionReport);
     boolean sendMissionReport(MissionReport missionReport);
 }
