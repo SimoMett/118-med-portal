@@ -4,6 +4,7 @@ import src.Main.Ems.DataAccess.IMissionDao;
 import src.Main.Ems.Domain.Mission.DataField;
 import src.Main.Ems.Domain.Mission.MissionReport;
 import src.Main.Ems.Domain.RescueTeam.RescueTeam;
+import src.Main.Ems.Domain.Session;
 
 public class MissionController
 {
@@ -43,8 +44,16 @@ public class MissionController
 
     public void closeMission()
     {
+        //Set report immutable
         report.close();
-        //TODO close mission via data access
+
+        //If this report is the current mission
+        //      set current mission to null
+        if(Session.instance().getCurrentMission().equals(report))
+            Session.instance().setCurrentMission(null);
+
+        //Close mission via data access
+        missionDao.closeMission(report);
     }
 
     public void invokeExternalFunctionality(Object func) throws RuntimeException
