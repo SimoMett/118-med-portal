@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class BLSReportFactory implements IMissionReportFactory
 {
-    enum BLSFields
+    public enum BLSFields
     {
         DATE,
         LOCATION,

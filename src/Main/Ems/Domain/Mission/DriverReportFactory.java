@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class DriverReportFactory implements IMissionReportFactory
 {
-    enum DriverFields
+    public enum DriverFields
     {
         DATE,
         LOCATION,

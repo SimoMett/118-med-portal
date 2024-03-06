@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ALSReportFactory implements IMissionReportFactory
 {
-    enum ALSFields
+    public enum ALSFields
     {
         //TODO
     }

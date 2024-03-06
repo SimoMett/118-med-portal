@@ -8,6 +8,8 @@ import src.Main.Ems.Domain.Mission.IMissionReportFactory;
 import src.Main.Ems.Domain.Mission.MissionReport;
 import src.Test.Ems.DummyDao.DummyMissionDao;
 
+import src.Main.Ems.Domain.Mission.BLSReportFactory.BLSFields;
+
 public class MissionControllerTests
 {
     private final DummyMissionDao missionDao = new DummyMissionDao();
@@ -25,6 +27,6 @@ public class MissionControllerTests
     @Test
     public void updateData()
     {
-
+        missionController.updateData(BLSFields.CHEST_PAIN.name(), true);
     }
 }
