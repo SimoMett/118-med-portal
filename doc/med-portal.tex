@@ -164,13 +164,13 @@
         \begin{tabularx}{\textwidth}{l|X}
             Use case & \textbf{3.4 - Assegna missione e invia scheda} \\
             \hline
-            History & \creationDate \\
+            History & \creationDate Ultima modifica il 06/03/24.\\
             Source & Estratto dallo statement iniziale \\
             Abstraction level & User-goal \\
             Description & La centrale assegna la missione appena creata a una o più squadre di soccorso. \\
             Scope & Applicativo telematico della sala di controllo \\
             Actors & Centrale, squadre di soccorso \\
-            Pre-conditions & La missione deve essere creata. \\
+            Pre-conditions & La missione deve essere creata. La squadra non deve essere impegnata in un'altra missione.\\
             Post-conditions & Ciascuna squadra ottiene una scheda relativa alla missione \\
             Normal flow & \dots \\
             Variations & \dots \\
@@ -185,13 +185,13 @@
         \begin{tabularx}{\textwidth}{l|X}
             Use case & \textbf{3.5 - Specifica codice di attivazione} \\
             \hline
-            History & \creationDate \\
+            History & \creationDate Ultima modifica il 06/03/24.\\
             Source & Estratto dallo statement iniziale \\
             Abstraction level & User-goal \\
             Description & La centrale specifica il codice di attivazione della missione. \\
             Scope & Applicativo telematico della sala di controllo\\
             Actors & Centrale, squadre di soccorso \\
-            Pre-conditions & La missione deve essere creata. \\
+            Pre-conditions & La missione deve essere creata. La squadra non deve essere impegnata in un'altra missione.\\
             Post-conditions & Ciascuna squadra ottiene la scheda con il codice di attivazione della missione. \\
             Normal flow & \dots \\
             Variations & \dots \\
@@ -269,7 +269,7 @@
         \begin{tabularx}{\textwidth}{l|X}
             Use case & \textbf{2.1 – Inserisci dati anagrafici}\\
             \hline
-            History & \creationDate \\
+            History & \creationDate Ultima modifica il 06/03/24.\\
             Source & Estratto dallo statement iniziale\\
             Abstraction level & User-goal\\
             Description & Il soccorritore annota i dati anagrafici del paziente\\
@@ -280,7 +280,7 @@
             Normal flow & \dots \\
             Variations & Vedi 2.2 \\
             Alternative flow & \dots \\
-            Non-functional requirements & \dots
+            Non-functional requirements & Se la connessione è presente, i dati vengono inviati automaticamente alla centrale.
         \end{tabularx}
         \label{tab:usecase2.1}
     \end{table}
@@ -290,7 +290,7 @@
         \begin{tabularx}{\textwidth}{l|X}
             Use case & \textbf{2.2 – Calcola dati anagrafici da codice fiscale}\\
             \hline
-            History & \creationDate \\
+            History & \creationDate Ultima modifica il 06/03/24.\\
             Source & Estratto dallo statement iniziale\\
             Abstraction level & Function \\
             Description & Il soccorritore compila i dati anagrafici del paziente automaticamente inserendo solamente il codice fiscale\\
@@ -301,7 +301,7 @@
             Normal flow & \dots \\
             Variations & \dots \\
             Alternative flow & \dots \\
-            Non-functional requirements & \dots
+            Non-functional requirements & Se la connessione è presente, i dati vengono inviati automaticamente alla centrale.
         \end{tabularx}
         \label{tab:usecase2.2}
     \end{table}
@@ -311,7 +311,7 @@
         \begin{tabularx}{\textwidth}{l|X}
             Use case & \textbf{2.3 – Inserisci parametri vitali}\\
             \hline
-            History & \creationDate \\
+            History & \creationDate Ultima modifica il 06/03/24.\\
             Source & Estratto dallo statement iniziale\\
             Abstraction level & User-goal\\
             Description & Il soccorritore inserisce i parametri vitali del paziente.\\
@@ -322,7 +322,7 @@
             Normal flow & \dots \\
             Variations & \dots \\
             Alternative flow & \dots \\
-            Non-functional requirements & \dots
+            Non-functional requirements & Se la connessione è presente, i dati vengono inviati automaticamente alla centrale.
         \end{tabularx}
         \label{tab:usecase2.3}
     \end{table}
@@ -332,7 +332,7 @@
         \begin{tabularx}{\textwidth}{l|X}
             Use case & \textbf{2.4 – Inserisci firma del paziente}\\
             \hline
-            History & \creationDate \\
+            History & \creationDate Ultima modifica il 06/03/24.\\
             Source & Estratto dallo statement iniziale\\
             Abstraction level & User-goal\\
             Description & Il soccorritore fa firmare il rifiuto di trasporto al paziente.\\
@@ -343,7 +343,7 @@
             Normal flow & \dots \\
             Variations & \dots \\
             Alternative flow & \dots \\
-            Non-functional requirements & \dots
+            Non-functional requirements & Se la connessione è presente, la firma viene inviata automaticamente alla centrale.
         \end{tabularx}
         \label{tab:usecase2.4}
     \end{table}
@@ -356,7 +356,7 @@
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
             Abstraction level & User-goal\\
-            Description & Il soccorritore sincronizza i dati e i parametri vitali con la centrale.\\
+            Description & Il soccorritore sincronizza manualmente i dati e i parametri vitali con la centrale.\\
             Scope & Applicativo telematico della squadra di soccorso\\
             Actors & Squadra\\
             Pre-conditions & \dots \\
@@ -621,7 +621,6 @@
         \label{tab:usecase2.18}
     \end{table}
 
-% TODO templates dell'autista una volta definiti
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
