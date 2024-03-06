@@ -39,7 +39,7 @@ public class MissionController
 
     public void syncPatientData(RescueTeam receivingTeam)
     {
-        //TODO send patient data to the receivingTeam via data access
+        missionDao.sendPatientData(receivingTeam, report.getPatientData());
     }
 
     public void closeMission()

@@ -16,5 +16,5 @@ public interface IMissionDao
     DataField getMissionData(MissionReport missionReport, String key);
     boolean closeMission(MissionReport missionReport);
     boolean sendMissionReport(MissionReport missionReport);
-    boolean sendPatientData(RescueTeam team);
+    boolean sendPatientData(RescueTeam team, Object patientData);
 }

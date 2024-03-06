@@ -81,6 +81,11 @@ public class MissionReport
         return dataPairs.get(key);
     }
 
+    public Object getPatientData()
+    {
+        return null;
+    }
+
     public void close()
     {
         isActive = false;
