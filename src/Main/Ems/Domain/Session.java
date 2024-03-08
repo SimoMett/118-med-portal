@@ -61,7 +61,7 @@ public class Session
         if(currentMission != null)
             throw new RuntimeException("Current mission is not null");
 
-        currentMission = currentMission;
+        currentMission = mission;
     }
 
     public VehiclesList getAllVehicles()
