@@ -58,7 +58,7 @@ public class Session
 
     public void setCurrentMission(MissionReport mission)
     {
-        if(currentMission != null)
+        if(currentMission != null && mission != null)
             throw new RuntimeException("Current mission is not null");
 
         currentMission = mission;
