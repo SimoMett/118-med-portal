@@ -56,7 +56,7 @@ public class DummyMissionDao implements IMissionDao
     }
 
     @Override
-    public boolean sendPatientData(RescueTeam team, Object patientData)
+    public boolean sendPatientData(RescueTeam team, DataField patientData)
     {
         return false;
     }

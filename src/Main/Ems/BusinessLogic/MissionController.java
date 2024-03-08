@@ -37,9 +37,9 @@ public class MissionController
         return missionDao.sendMissionReport(report);
     }
 
-    public void syncPatientData(RescueTeam receivingTeam)
+    public boolean sendPatientData(RescueTeam receivingTeam)
     {
-        missionDao.sendPatientData(receivingTeam, report.getPatientData());
+        return missionDao.sendPatientData(receivingTeam, report.getPatientData());
     }
 
     public void closeMission()
