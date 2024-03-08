@@ -3,7 +3,6 @@ package src.Main.Ems.DataAccess;
 import src.Main.Ems.Domain.Mission.DataField;
 import src.Main.Ems.Domain.Mission.IMissionReportFactory;
 import src.Main.Ems.Domain.Mission.MissionReport;
-import src.Main.Ems.Domain.RescueTeam.RescueTeam;
 import src.Main.Ems.Domain.RescueTeam.User;
 
 import java.util.List;
@@ -16,5 +15,6 @@ public interface IMissionDao
     DataField getMissionData(MissionReport missionReport, String key);
     boolean closeMission(MissionReport missionReport);
     boolean sendMissionReport(MissionReport missionReport);
-    boolean sendPatientData(RescueTeam team, DataField patientData);
+    boolean sendPatientData(String teamId, DataField patientData);
+    boolean acceptPatientData(String patientData);
 }

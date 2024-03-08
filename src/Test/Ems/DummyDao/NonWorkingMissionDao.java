@@ -47,7 +47,13 @@ public class NonWorkingMissionDao implements IMissionDao
     }
 
     @Override
-    public boolean sendPatientData(RescueTeam team, DataField patientData)
+    public boolean sendPatientData(String teamId, DataField patientData)
+    {
+        return false;
+    }
+
+    @Override
+    public boolean acceptPatientData(String patientData)
     {
         return false;
     }
