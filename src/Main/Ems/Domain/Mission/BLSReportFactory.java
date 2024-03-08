@@ -4,21 +4,6 @@ public class BLSReportFactory implements IMissionReportFactory
 {
     public enum BLSFields
     {
-        DATE,
-        LOCATION,
-        REFERENCE,
-
-        //Patient data
-        TAX_ID,
-        NAME,
-        SURNAME,
-        GENRE,
-        AGE,
-        DATE_OF_BIRTH,
-        PLACE_OF_BIRTH,
-        RESIDENCE_STREET,
-        CITY,
-
         //Medical parameters
         CONSCIOUSNESS,
         AIRWAYS,
@@ -63,18 +48,18 @@ public class BLSReportFactory implements IMissionReportFactory
 
     private static void populate(MissionReport missionReport)
     {
-        missionReport.initField(BLSFields.DATE.name(), new SimpleDataField(""));
-        missionReport.initField(BLSFields.LOCATION.name(), new SimpleDataField(""));
-        missionReport.initField(BLSFields.REFERENCE.name(), new SimpleDataField(""));
-        missionReport.initField(BLSFields.TAX_ID.name(), new SimpleDataField(""));
-        missionReport.initField(BLSFields.NAME.name(), new SimpleDataField(""));
-        missionReport.initField(BLSFields.SURNAME.name(), new SimpleDataField(""));
-        missionReport.initField(BLSFields.GENRE.name(), new SimpleDataField(""));
-        missionReport.initField(BLSFields.AGE.name(), new SimpleDataField(""));
-        missionReport.initField(BLSFields.DATE_OF_BIRTH.name(), new SimpleDataField(""));
-        missionReport.initField(BLSFields.PLACE_OF_BIRTH.name(), new SimpleDataField(""));
-        missionReport.initField(BLSFields.RESIDENCE_STREET.name(), new SimpleDataField(""));
-        missionReport.initField(BLSFields.CITY.name(), new SimpleDataField(""));
+        missionReport.initField(CommonFields.DATE.name(), new SimpleDataField(""));
+        missionReport.initField(CommonFields.LOCATION.name(), new SimpleDataField(""));
+        missionReport.initField(CommonFields.REFERENCE.name(), new SimpleDataField(""));
+        missionReport.initField(CommonFields.TAX_ID.name(), new SimpleDataField(""));
+        missionReport.initField(CommonFields.NAME.name(), new SimpleDataField(""));
+        missionReport.initField(CommonFields.SURNAME.name(), new SimpleDataField(""));
+        missionReport.initField(CommonFields.GENRE.name(), new SimpleDataField(""));
+        missionReport.initField(CommonFields.AGE.name(), new SimpleDataField(""));
+        missionReport.initField(CommonFields.DATE_OF_BIRTH.name(), new SimpleDataField(""));
+        missionReport.initField(CommonFields.PLACE_OF_BIRTH.name(), new SimpleDataField(""));
+        missionReport.initField(CommonFields.RESIDENCE_STREET.name(), new SimpleDataField(""));
+        missionReport.initField(CommonFields.CITY.name(), new SimpleDataField(""));
         missionReport.initField(BLSFields.CONSCIOUSNESS.name(), new SimpleDataField(""));
         missionReport.initField(BLSFields.AIRWAYS.name(), new SimpleDataField(""));
         missionReport.initField(BLSFields.BREATHING.name(), new SimpleDataField(""));

@@ -81,9 +81,9 @@ public class MissionReport
         return dataPairs.get(key);
     }
 
-    public Object getPatientData()
+    public DataField getPatientData()
     {
-        return null;
+        return this.getData(IMissionReportFactory.CommonFields.TAX_ID.name());
     }
 
     public void close()
