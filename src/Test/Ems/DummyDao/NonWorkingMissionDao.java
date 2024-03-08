@@ -4,7 +4,6 @@ import src.Main.Ems.DataAccess.IMissionDao;
 import src.Main.Ems.Domain.Mission.DataField;
 import src.Main.Ems.Domain.Mission.IMissionReportFactory;
 import src.Main.Ems.Domain.Mission.MissionReport;
-import src.Main.Ems.Domain.RescueTeam.RescueTeam;
 import src.Main.Ems.Domain.RescueTeam.User;
 
 import java.util.List;

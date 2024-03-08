@@ -71,7 +71,7 @@ public class Session
 
     public MissionsList getMissionsList() { return missionsList; }
 
-    private Session(Mode mode)
+    protected Session(Mode mode)
     {
         this.mode = mode;
         this.vehiclesList = new VehiclesList();

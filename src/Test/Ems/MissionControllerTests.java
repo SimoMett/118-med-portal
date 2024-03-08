@@ -6,7 +6,6 @@ import org.junit.Before;
 import org.junit.Test;
 import src.Main.Ems.BusinessLogic.MissionController;
 import src.Main.Ems.Domain.Mission.*;
-import src.Main.Ems.Domain.RescueTeam.RescueTeam;
 import src.Main.Ems.Domain.Session;
 import src.Test.Ems.DummyDao.DummyMissionDao;
 
@@ -25,6 +24,7 @@ public class MissionControllerTests
         IMissionReportFactory reportFactory = new BLSReportFactory();
         report = reportFactory.createReportModel("03/24/1");
         missionController = new MissionController(missionDao, report);
+        Session.instance().setCurrentMission(report);
         missionController.updateData(BLSFields.SKIN_COLOR.name(), "pale");
     }
 
@@ -72,12 +72,24 @@ public class MissionControllerTests
         assert missionController.saveReport();
     }
 
+    @Test(expected = NullPointerException.class)
+    public void patientDataSharingException()
+    {
+        //should throw exception because the receivingTeam has not been assign to the mission, therefore cannot receive patient data
+
+        assert missionController.sendPatientData("3451");
+    }
+
     @Test
     public void patientDataSharing()
     {
-        //TODO
-        RescueTeam receivingTeam = new RescueTeam();
-        missionController.syncPatientData(receivingTeam);
+        //fake stuff
+        DummyMissionDao.FakeSession receivingTeamSession = new DummyMissionDao.FakeSession(Session.Mode.BLS, new DummyMissionDao());
+        receivingTeamSession.setCurrentMission(report);
+        DummyMissionDao.fakeSession = receivingTeamSession;
+        //
+
+        assert missionController.sendPatientData(receivingTeamSession.getTeamId());
     }
 
     @After

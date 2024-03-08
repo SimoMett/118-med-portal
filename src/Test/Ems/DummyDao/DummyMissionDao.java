@@ -4,8 +4,8 @@ import src.Main.Ems.DataAccess.IMissionDao;
 import src.Main.Ems.Domain.Mission.DataField;
 import src.Main.Ems.Domain.Mission.IMissionReportFactory;
 import src.Main.Ems.Domain.Mission.MissionReport;
-import src.Main.Ems.Domain.RescueTeam.RescueTeam;
 import src.Main.Ems.Domain.RescueTeam.User;
+import src.Main.Ems.Domain.Session;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,9 +55,48 @@ public class DummyMissionDao implements IMissionDao
         return storage.add(missionReport);
     }
 
-    @Override
-    public boolean sendPatientData(RescueTeam team, DataField patientData)
+    public static class FakeSession extends Session
     {
-        return false;
+        private IMissionDao missionDao;
+        public FakeSession(Mode mode, IMissionDao fakeMissionDao)
+        {
+            super(mode);
+            this.missionDao = fakeMissionDao;
+        }
+
+        public IMissionDao getMissionDao()
+        {
+            return missionDao;
+        }
+
+        public String getTeamId()
+        {
+            return "3451";
+        }
+    }
+    public static FakeSession fakeSession;
+
+    @Override
+    public boolean sendPatientData(String teamId, DataField patientData)
+    {
+        //for sake of simplicity, send patient data to the device of the team with such teamId
+        //i.e. somehow invoke their IMissionDao.acceptPatientData(patientData)
+        return fakeSession.getMissionDao().acceptPatientData(patientData.toString());
+    }
+
+    @Override
+    public boolean acceptPatientData(String patientData)
+    {
+        boolean success = false;
+        try
+        {
+            fakeSession.getCurrentMission().updateData(IMissionReportFactory.CommonFields.TAX_ID.name(), patientData);
+            success = true;
+        }
+        catch (IllegalAccessException e)
+        {
+            e.printStackTrace();
+        }
+        return success;
     }
 }

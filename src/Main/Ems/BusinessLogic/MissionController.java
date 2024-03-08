@@ -3,7 +3,6 @@ package src.Main.Ems.BusinessLogic;
 import src.Main.Ems.DataAccess.IMissionDao;
 import src.Main.Ems.Domain.Mission.DataField;
 import src.Main.Ems.Domain.Mission.MissionReport;
-import src.Main.Ems.Domain.RescueTeam.RescueTeam;
 import src.Main.Ems.Domain.Session;
 
 public class MissionController
@@ -37,9 +36,9 @@ public class MissionController
         return missionDao.sendMissionReport(report);
     }
 
-    public boolean sendPatientData(RescueTeam receivingTeam)
+    public boolean sendPatientData(String receivingTeamId)
     {
-        return missionDao.sendPatientData(receivingTeam, report.getPatientData());
+        return missionDao.sendPatientData(receivingTeamId, report.getPatientData());
     }
 
     public void closeMission()
