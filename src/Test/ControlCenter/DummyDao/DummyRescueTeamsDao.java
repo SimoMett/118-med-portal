@@ -27,8 +27,11 @@ public class DummyRescueTeamsDao implements IRescueTeamsDao
     }
 
     @Override
-    public void abortMission(RescueTeam rescueTeam) {
-
+    public void abortMission(RescueTeam rescueTeam) throws RuntimeException
+    {
+        if(rescueTeam.getCurrentMission()==null)
+            throw new RuntimeException("current mission is null");
+        rescueTeam.changeCurrentMission(null, "");
     }
 
     @Override

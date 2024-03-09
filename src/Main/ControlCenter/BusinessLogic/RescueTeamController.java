@@ -17,7 +17,7 @@ public class RescueTeamController
     {
         return rescueTeamsDao.getAllTeams();
     }
-    public void abortCurrentMission(RescueTeam rescueTeam)
+    public void abortCurrentMission(RescueTeam rescueTeam) throws RuntimeException
     {
         rescueTeamsDao.abortMission(rescueTeam);
     }

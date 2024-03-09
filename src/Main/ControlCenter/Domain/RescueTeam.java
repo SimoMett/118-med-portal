@@ -30,7 +30,7 @@ public class RescueTeam
 
     public void changeCurrentMission(Mission newMission, String activationCode) throws RuntimeException
     {
-        if(currentMission!=null)
+        if(currentMission!=null && newMission != null)
             throw new RuntimeException("Rescue team already doing a mission. Cannot activate");
 
         currentMission = newMission;
