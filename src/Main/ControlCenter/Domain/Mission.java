@@ -4,14 +4,18 @@ import java.util.ArrayList;
 
 public class Mission //TODO
 {
+    private final String id;
     private String dispatch;
     private ArrayList<RescueTeam> assignedTeams;
 
-    public Mission(String dispatch)
+    public Mission(String id, String dispatch)
     {
+        this.id = id;
         this.dispatch = dispatch;
         this.assignedTeams = new ArrayList<>();
     }
+
+    public String getId() { return id; }
 
     public String getDispatch()
     {
