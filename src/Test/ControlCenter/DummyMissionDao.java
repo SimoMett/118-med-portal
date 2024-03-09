@@ -17,6 +17,12 @@ public class DummyMissionDao implements IMissionDao
     @Override
     public boolean updateMission(Mission mission, Object newInfo)
     {
-        return false;
+        return true;
+    }
+
+    @Override
+    public boolean updateDispatch(Mission mission, String newDispatch)
+    {
+        return true;
     }
 }

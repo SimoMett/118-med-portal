@@ -6,13 +6,13 @@ import src.Main.ControlCenter.Domain.RescueTeamsList;
 
 public interface IRescueTeamsDao
 {
-    RescueTeamsList getAllTeams();//TODO revisit
+    RescueTeamsList getAllTeams();
     /*public Object getTeamStatus(RescueTeam rescueTeam)
     {
         return null;
     }*/
     void setTeamStatus(RescueTeam rescueTeam, Object status);
-    boolean assignMission(RescueTeam rescueTeam, Mission mission, Object activationCode);
+    boolean assignMission(RescueTeam rescueTeam, Mission mission, String activationCode);
     void abortMission(RescueTeam rescueTeam);
     Object getTeamPosition(RescueTeam rescueTeam);
 }

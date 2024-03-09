@@ -7,7 +7,6 @@ import src.Main.ControlCenter.Domain.RescueTeamsList;
 
 public class DummyRescueTeamsDao implements IRescueTeamsDao
 {
-
     @Override
     public RescueTeamsList getAllTeams()
     {
@@ -22,8 +21,9 @@ public class DummyRescueTeamsDao implements IRescueTeamsDao
     }
 
     @Override
-    public boolean assignMission(RescueTeam rescueTeam, Mission mission, Object activationCode) {
-        return false;
+    public boolean assignMission(RescueTeam rescueTeam, Mission mission, String activationCode)
+    {
+        return true;
     }
 
     @Override
