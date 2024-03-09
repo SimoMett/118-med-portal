@@ -6,6 +6,7 @@ public class RescueTeam
     private Object status;
 
     private Mission currentMission;
+    private String currentActivationCode;
 
     public RescueTeam(Integer teamId)
     {
@@ -27,12 +28,13 @@ public class RescueTeam
         return status;
     }
 
-    public void changeCurrentMission(Mission newMission, Object activationCode) throws RuntimeException
+    public void changeCurrentMission(Mission newMission, String activationCode) throws RuntimeException
     {
         if(currentMission!=null)
             throw new RuntimeException("Rescue team already doing a mission. Cannot activate");
 
         currentMission = newMission;
+        currentActivationCode = activationCode;
     }
 
     public Mission getCurrentMission()

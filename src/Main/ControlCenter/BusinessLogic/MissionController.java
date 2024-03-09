@@ -17,22 +17,35 @@ public class MissionController
         this.rescueTeamsDao = rescueTeamsDao;
     }
 
-    public void createNewMission(String dispatch)
+    public String createNewMission(String dispatch)
     {
         Mission mission = this.missionDao.createMission(dispatch);
         if(mission != null)
             MissionsList.getInstance().addMission(mission);
+        return mission.getId();
     }
 
     public void updateInfo(Mission mission, Object newInfo)
     {
-        if(this.missionDao.updateMission(mission, newInfo))
+        if(missionDao.updateMission(mission, newInfo))
             mission.updateInfo(newInfo);
+        else
+            throw new RuntimeException("RescueTeamsDao failed data access");
     }
 
-    public void assignTeam(Mission mission, RescueTeam team, Object activationCode) throws RuntimeException
+    public void assignTeam(Mission mission, RescueTeam team, String activationCode) throws RuntimeException
     {
         if(rescueTeamsDao.assignMission(team, mission, activationCode))
             team.changeCurrentMission(mission, activationCode);
+        else
+            throw new RuntimeException("RescueTeamsDao failed data access");
+    }
+
+    public void updateDispatch(Mission mission, String newDispatch) throws RuntimeException
+    {
+        if(missionDao.updateDispatch(mission, newDispatch))
+            mission.updateDispatch(newDispatch);
+        else
+            throw new RuntimeException("RescueTeamsDao failed data access");
     }
 }

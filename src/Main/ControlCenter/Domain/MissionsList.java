@@ -1,6 +1,6 @@
 package src.Main.ControlCenter.Domain;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class MissionsList
 {
@@ -12,22 +12,21 @@ public class MissionsList
     }
 
     //attributes
-    private final ArrayList<Mission> missions;
+    private final HashMap<String, Mission> missions;
 
     //methods
     public void addMission(Mission mission)
     {
-        missions.add(mission);
+        missions.put(mission.getId(), mission);
     }
 
-    public Mission getMission(Object id)
+    public Mission getMission(String id)
     {
-        //get the mission with the given ID. (ID structure still to be defined)
-        return null;
+        return missions.get(id);
     }
 
     private MissionsList()
     {
-        this.missions = new ArrayList<>();
+        this.missions = new HashMap<>();
     }
 }
