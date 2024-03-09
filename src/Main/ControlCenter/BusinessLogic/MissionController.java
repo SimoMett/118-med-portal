@@ -1,25 +1,25 @@
 package src.Main.ControlCenter.BusinessLogic;
 
-import src.Main.ControlCenter.DataAccess.MissionDao;
-import src.Main.ControlCenter.DataAccess.RescueTeamsDao;
+import src.Main.ControlCenter.DataAccess.IMissionDao;
+import src.Main.ControlCenter.DataAccess.IRescueTeamsDao;
 import src.Main.ControlCenter.Domain.Mission;
 import src.Main.ControlCenter.Domain.MissionsList;
 import src.Main.ControlCenter.Domain.RescueTeam;
 
 public class MissionController
 {
-    private final MissionDao missionDao;
-    private final RescueTeamsDao rescueTeamsDao;
+    private final IMissionDao missionDao;
+    private final IRescueTeamsDao rescueTeamsDao;
 
-    public MissionController(MissionDao missionDao, RescueTeamsDao rescueTeamsDao)
+    public MissionController(IMissionDao missionDao, IRescueTeamsDao rescueTeamsDao)
     {
         this.missionDao = missionDao;
         this.rescueTeamsDao = rescueTeamsDao;
     }
 
-    public void createNewMission(String info)
+    public void createNewMission(String dispatch)
     {
-        Mission mission = this.missionDao.createMission(info);
+        Mission mission = this.missionDao.createMission(dispatch);
         if(mission != null)
             MissionsList.getInstance().addMission(mission);
     }

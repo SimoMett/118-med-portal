@@ -1,14 +1,14 @@
 package src.Main.ControlCenter.BusinessLogic;
 
-import src.Main.ControlCenter.DataAccess.RescueTeamsDao;
+import src.Main.ControlCenter.DataAccess.IRescueTeamsDao;
 import src.Main.ControlCenter.Domain.Mission;
 import src.Main.ControlCenter.Domain.RescueTeam;
 import src.Main.ControlCenter.Domain.RescueTeamsList;
 
 public class RescueTeamController
 {
-    private final RescueTeamsDao rescueTeamsDao;
-    public RescueTeamController(RescueTeamsDao rescueTeamsDao)
+    private final IRescueTeamsDao rescueTeamsDao;
+    public RescueTeamController(IRescueTeamsDao rescueTeamsDao)
     {
         this.rescueTeamsDao = rescueTeamsDao;
     }
