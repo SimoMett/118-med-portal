@@ -12,7 +12,7 @@ import src.Main.ControlCenter.Domain.RescueTeam;
 import src.Test.ControlCenter.DummyDao.DummyMissionDao;
 import src.Test.ControlCenter.DummyDao.DummyRescueTeamsDao;
 
-public class BusinessLogicTests
+public class ControllersTests
 {
     IMissionDao missionDao = new DummyMissionDao();
     IRescueTeamsDao rescueTeamsDao = new DummyRescueTeamsDao();
