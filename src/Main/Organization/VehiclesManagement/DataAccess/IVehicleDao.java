@@ -8,7 +8,7 @@ public interface IVehicleDao
 {
     public Vehicle registerNewVehicle(VehicleInfo vehicleInfo);
     public VehicleInfo getVehicleInfo(Vehicle vehicle);
-    public boolean updateVehicleData(Vehicle vehicle, Object key, Object val);//FIXME types
+    public boolean updateVehicleData(Vehicle vehicle, String key, String val);
     public boolean deleteVehicle(Vehicle vehicle);
     public VehiclesRegistry getVehiclesRegistry();
 }

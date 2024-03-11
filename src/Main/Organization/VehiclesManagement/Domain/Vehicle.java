@@ -25,9 +25,4 @@ public class Vehicle
     {
         attributesMap.replace(key, val);
     }
-
-    /*private void recreateHashMapFromInfo()
-    {
-
-    }*/
 }

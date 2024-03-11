@@ -25,7 +25,7 @@ public class DummyVehicleDao implements IVehicleDao
     }
 
     @Override
-    public boolean updateVehicleData(Vehicle vehicle, Object key, Object val)
+    public boolean updateVehicleData(Vehicle vehicle, String key, String val)
     {
         return false;
     }

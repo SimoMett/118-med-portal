@@ -24,12 +24,14 @@ public class ControllerTests
         assert vehicleList.contains(v);
 
         //get vehicle info test
-        VehicleInfo vInfo = vehicleController.getVehicleInfo(vehicleList.indexOf(v));
+        int vId = vehicleList.indexOf(v);
+        VehicleInfo vInfo = vehicleController.getVehicleInfo(vId);
         System.out.println(vInfo);
         assert vInfo.equals(new VehicleInfo("4157", "AA111AA", "112857"));
 
         //update info test
-        vehicleController.updateVehicleInfo(vehicleList.indexOf(v), "radioid", "113857");
+        vehicleController.updateVehicleInfo(vId, "radioId", "113857");
+        assert vInfo.equals(new VehicleInfo("4157", "AA111AA", "113857"));
     }
 
     public void userControllersTests()
