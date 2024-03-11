@@ -24,13 +24,13 @@ public class UsersRegistry
         return users.get(id);
     }
 
-    public void updateUserInfo(int id, Object key, Object val)
+    public void updateUserInfo(int id, String key, String val)
     {
         User u = users.get(id);
         u.updateInfo(key, val);
     }
 
-    public void updateUserInfo(User user, Object key, Object val) throws RuntimeException
+    public void updateUserInfo(User user, String key, String val) throws RuntimeException
     {
         if(users.contains(user))
             user.updateInfo(key, val);

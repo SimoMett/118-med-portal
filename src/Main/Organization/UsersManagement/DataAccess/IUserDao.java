@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public interface IUserDao
 {
     User registerUser(UserInfo userInfo);
-    boolean updateInfo(User user, Object key, Object val);
+    boolean updateInfo(User user, String key, String val);
     Object getUserCertificates(User user);
     ArrayList<User> searchUser(Object how);
     boolean deleteUser(User user);

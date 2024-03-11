@@ -37,7 +37,7 @@ public class UserController
         return null;
     }
 
-    public void updateUserInfo(int id, Object key, Object val)
+    public void updateUserInfo(int id, String key, String val)
     {
         //TODO error management
         User u = usersRegistry.getUser(id);
