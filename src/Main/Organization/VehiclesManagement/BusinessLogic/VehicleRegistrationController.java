@@ -14,10 +14,11 @@ public class VehicleRegistrationController
         this.vehicleDao = vehicleDao;
         this.vehiclesRegistry = vehicleDao.getVehiclesRegistry();
     }
-    public void registerNewVehicle(VehicleInfo vehicleInfo)
+    public Vehicle registerNewVehicle(VehicleInfo vehicleInfo)
     {
         Vehicle v = vehicleDao.registerNewVehicle(vehicleInfo);
         if(v != null)
             vehiclesRegistry.addVehicle(v);
+        return v;
     }
 }

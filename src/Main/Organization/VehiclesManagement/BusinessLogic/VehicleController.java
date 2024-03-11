@@ -5,7 +5,7 @@ import src.Main.Organization.VehiclesManagement.Domain.Vehicle;
 import src.Main.Organization.VehiclesManagement.Domain.VehiclesRegistry;
 import src.Main.Organization.VehiclesManagement.VehicleInfo;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class VehicleController
 {
@@ -18,10 +18,10 @@ public class VehicleController
         this.vehiclesRegistry = vehicleDao.getVehiclesRegistry();
     }
 
-    public VehicleInfo getVehicleInfo(int index)
+    public VehicleInfo getVehicleInfo(int id)
     {
         //TODO error management
-        return this.vehiclesRegistry.getVehicle(index).getInfo();
+        return this.vehiclesRegistry.getVehicle(id).getInfo();
     }
     public void updateVehicleInfo(int id, Object key, Object val)
     {
@@ -37,11 +37,8 @@ public class VehicleController
         if(this.vehicleDao.deleteVehicle(v))
             vehiclesRegistry.deleteVehicle(id);
     }
-    public void showAllVehicles()
+    public List<Vehicle> getAllVehicles()
     {
-        //Dumb front-end
-        ArrayList<Vehicle> vehiclesList = this.vehiclesRegistry.getAllVehicles();
-        for (int i = 0; i < vehiclesList.size(); i++)
-            System.out.println("[" + i + "] " + vehiclesList.get(i).getInfo().numberPlate());
+        return this.vehiclesRegistry.getAllVehicles();
     }
 }

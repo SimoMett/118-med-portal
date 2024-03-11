@@ -1,6 +1,8 @@
 package src.Main.Organization.VehiclesManagement.Domain;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class VehiclesRegistry
 {
@@ -21,9 +23,9 @@ public class VehiclesRegistry
         return vehicles.get(id);
     }
 
-    public ArrayList<Vehicle> getAllVehicles()
+    public List<Vehicle> getAllVehicles()
     {
-        return vehicles; //TODO return deep copy of vehicles instead
+        return Collections.unmodifiableList(vehicles);
     }
 
     public void updateInfo(int id, Object key, Object val)
