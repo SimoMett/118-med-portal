@@ -10,7 +10,7 @@ public class DummyRescueTeamsDao implements IRescueTeamsDao
     @Override
     public RescueTeamsList getAllTeams()
     {
-        RescueTeamsList rescueTeamsList = RescueTeamsList.getInstance();
+        RescueTeamsList rescueTeamsList = new RescueTeamsList();
         //TODO populate with operating teams
         return rescueTeamsList;
     }
