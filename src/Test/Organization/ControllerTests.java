@@ -4,6 +4,7 @@ import org.junit.Test;
 import src.Main.Organization.VehiclesManagement.BusinessLogic.VehicleController;
 import src.Main.Organization.VehiclesManagement.BusinessLogic.VehicleRegistrationController;
 import src.Main.Organization.VehiclesManagement.Domain.Vehicle;
+import src.Main.Organization.VehiclesManagement.Domain.VehiclesRegistry;
 import src.Main.Organization.VehiclesManagement.VehicleInfo;
 import src.Test.Organization.DummyDao.DummyVehicleDao;
 
@@ -14,12 +15,13 @@ public class ControllerTests
     @Test
     public void vehicleControllersTests()
     {
-        final DummyVehicleDao vehicleDao = new DummyVehicleDao();
-        final VehicleRegistrationController vehicleRegistrationController = new VehicleRegistrationController(vehicleDao);
+        final VehiclesRegistry vehiclesRegistry = new VehiclesRegistry();
+        final DummyVehicleDao vehicleDao = new DummyVehicleDao(vehiclesRegistry);
+        final VehicleRegistrationController vehicleRegistrationController = new VehicleRegistrationController(vehicleDao, vehiclesRegistry);
+        final VehicleController vehicleController = new VehicleController(vehicleDao);
 
         //vehicle registration test
         Vehicle v = vehicleRegistrationController.registerNewVehicle(new VehicleInfo("4157", "AA111AA", "112857"));
-        final VehicleController vehicleController = new VehicleController(vehicleDao);
         List<Vehicle> vehicleList = vehicleController.getAllVehicles();
         assert vehicleList.contains(v);
 
@@ -31,7 +33,12 @@ public class ControllerTests
 
         //update info test
         vehicleController.updateVehicleInfo(vId, "radioId", "113857");
+        vInfo = vehicleController.getVehicleInfo(vId);
         assert vInfo.equals(new VehicleInfo("4157", "AA111AA", "113857"));
+
+        //delete vehicle test
+        vehicleController.deleteVehicle(vId);
+        assert !vehicleList.contains(v);
     }
 
     public void userControllersTests()
