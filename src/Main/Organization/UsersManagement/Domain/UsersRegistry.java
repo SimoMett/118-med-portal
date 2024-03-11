@@ -20,7 +20,6 @@ public class UsersRegistry
 
     public User getUser(int id)
     {
-        //TODO error management
         return users.get(id);
     }
 
