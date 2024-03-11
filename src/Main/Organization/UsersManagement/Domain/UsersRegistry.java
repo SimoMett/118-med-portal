@@ -1,6 +1,8 @@
 package src.Main.Organization.UsersManagement.Domain;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class UsersRegistry
 {
@@ -28,9 +30,22 @@ public class UsersRegistry
         u.updateInfo(key, val);
     }
 
+    public void updateUserInfo(User user, Object key, Object val) throws RuntimeException
+    {
+        if(users.contains(user))
+            user.updateInfo(key, val);
+        else
+            throw new RuntimeException("Unknown user");
+    }
+
     public void deleteUser(int id)
     {
         users.remove(id);
+    }
+
+    public List<User> getAllUsers()
+    {
+        return Collections.unmodifiableList(users);
     }
 
     public ArrayList<User> searchUserByFilter(Object filter)
