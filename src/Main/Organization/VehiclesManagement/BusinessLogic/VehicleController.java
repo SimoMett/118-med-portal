@@ -22,7 +22,7 @@ public class VehicleController
     {
         return this.vehiclesRegistry.getVehicle(id).getInfo();
     }
-    public void updateVehicleInfo(int id, Object key, Object val) throws NullPointerException
+    public void updateVehicleInfo(int id, String key, String val) throws NullPointerException
     {
         Vehicle v = this.vehiclesRegistry.getVehicle(id);
         if(this.vehicleDao.updateVehicleData(v, key, val)) //   if updates on database is successful ...

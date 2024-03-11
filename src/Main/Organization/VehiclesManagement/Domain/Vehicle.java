@@ -6,21 +6,24 @@ import java.util.HashMap;
 
 public class Vehicle
 {
-    private final HashMap<Object, Object> attributesMap;
+    private final HashMap<String, String> attributesMap;
     private VehicleInfo info;
     public Vehicle(VehicleInfo info)
     {
         this.info = info;
         this.attributesMap = new HashMap<>();
+        this.attributesMap.put("id", String.valueOf(info.id()));
+        this.attributesMap.put("numberPlate", info.numberPlate());
+        this.attributesMap.put("radioId", String.valueOf(info.radioId()));
     }
 
     public VehicleInfo getInfo()
     {
         return info;
     }
-    public void updateInfo(Object key, Object val)
+    public void updateInfo(String key, String val) throws NullPointerException
     {
-        attributesMap.put(key, val);
+        attributesMap.replace(key, val);
     }
 
     /*private void recreateHashMapFromInfo()

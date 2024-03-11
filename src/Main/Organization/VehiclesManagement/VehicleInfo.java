@@ -1,6 +1,6 @@
 package src.Main.Organization.VehiclesManagement;
 
-public record VehicleInfo(int id, String numberPlate, int radioId)//TODO other info?
+public record VehicleInfo(String id, String numberPlate, String radioId)//TODO other info?
 {
     public VehicleInfo {}
 }

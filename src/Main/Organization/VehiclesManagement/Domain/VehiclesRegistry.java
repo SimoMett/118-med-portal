@@ -27,7 +27,7 @@ public class VehiclesRegistry
         return Collections.unmodifiableList(vehicles);
     }
 
-    public void updateInfo(int id, Object key, Object val) throws NullPointerException
+    public void updateInfo(int id, String key, String val) throws NullPointerException
     {
         Vehicle vehicle = vehicles.get(id);
         vehicle.updateInfo(key, val);
