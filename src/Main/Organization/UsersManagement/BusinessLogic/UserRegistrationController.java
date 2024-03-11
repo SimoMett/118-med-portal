@@ -14,10 +14,11 @@ public class UserRegistrationController
         this.userDao = userDao;
         this.usersRegistry = userDao.getUsersRegistry();
     }
-    public void registerNewUser(UserInfo userInfo)
+    public User registerNewUser(UserInfo userInfo)
     {
         User user = userDao.registerUser(userInfo);
         if(user!=null)
             usersRegistry.addUser(user);
+        return user;
     }
 }
