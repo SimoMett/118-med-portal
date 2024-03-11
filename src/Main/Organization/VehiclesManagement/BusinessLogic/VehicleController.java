@@ -22,17 +22,17 @@ public class VehicleController
     {
         return this.vehiclesRegistry.getVehicle(id).getInfo();
     }
-    public void updateVehicleInfo(int id, String key, String val) throws NullPointerException
+    public void updateVehicleInfo(int id, String key, String val) throws RuntimeException
     {
         Vehicle v = this.vehiclesRegistry.getVehicle(id);
-        if(this.vehicleDao.updateVehicleData(v, key, val)) //   if updates on database is successful ...
-            this.vehiclesRegistry.updateInfo(id, key, val); //      ... update domain model
+        if(!this.vehicleDao.updateVehicleData(v, key, val))
+            throw new RuntimeException("Dao error");
     }
     public void deleteVehicle(int id) throws RuntimeException
     {
         Vehicle v = vehiclesRegistry.getVehicle(id);
-        if(this.vehicleDao.deleteVehicle(v))
-            vehiclesRegistry.deleteVehicle(id);
+        if(!this.vehicleDao.deleteVehicle(v))
+            throw new RuntimeException("Dao error");
     }
     public List<Vehicle> getAllVehicles()
     {

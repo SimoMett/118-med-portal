@@ -29,12 +29,16 @@ public class VehiclesRegistry
 
     public void updateInfo(int id, String key, String val) throws NullPointerException
     {
-        Vehicle vehicle = vehicles.get(id);
-        vehicle.updateInfo(key, val);
+        vehicles.get(id).updateInfo(key, val);
     }
 
     public void deleteVehicle(int id)
     {
         this.vehicles.remove(id);
+    }
+
+    public void deleteVehicle(Vehicle vehicle)
+    {
+        this.vehicles.remove(vehicle);
     }
 }
