@@ -17,6 +17,7 @@ public class DummyVehicleDao implements IVehicleDao
     @Override
     public Vehicle registerNewVehicle(VehicleInfo vehicleInfo)
     {
+        //create vehicle in database (assuming successful)
         Vehicle v = new Vehicle(vehicleInfo);
         vehiclesRegistry.addVehicle(v);
         return v;
@@ -31,13 +32,16 @@ public class DummyVehicleDao implements IVehicleDao
     @Override
     public boolean updateVehicleData(Vehicle vehicle, String key, String val)
     {
+        // update info in database (assuming vehicle is present)
+        vehiclesRegistry.updateInfo(vehiclesRegistry.getAllVehicles().indexOf(vehicle), key, val);
         return true;
     }
 
     @Override
     public boolean deleteVehicle(Vehicle vehicle)
     {
-        //removing vehicle from database
+        //removing vehicle from database (assuming successful)
+        vehiclesRegistry.deleteVehicle(vehicle);
         return true;
     }
 
