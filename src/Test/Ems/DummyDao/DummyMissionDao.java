@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import static src.Test.TestsConstants.DEFAULT_DISPATCH;
+
 public class DummyMissionDao implements IMissionDao
 {
     private final ArrayList<MissionReport> storage = new ArrayList<>(1);
@@ -19,7 +21,7 @@ public class DummyMissionDao implements IMissionDao
     {
         Random random = new Random();
         MissionReport report = factory.createReportModel("03/24/"+random.nextInt(10000,90000));
-        report.updateDispatch("Male, 65, chest pain, several heart diseases. First floor of grand mall");
+        report.updateDispatch(DEFAULT_DISPATCH);
         //TODO update patient data if available
         return report;
     }
