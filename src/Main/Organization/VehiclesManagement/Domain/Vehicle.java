@@ -7,17 +7,24 @@ import java.util.HashMap;
 public class Vehicle
 {
     private final HashMap<Object, Object> attributesMap;
-    public Vehicle()
+    private VehicleInfo info;
+    public Vehicle(VehicleInfo info)
     {
+        this.info = info;
         this.attributesMap = new HashMap<>();
     }
 
     public VehicleInfo getInfo()
     {
-        return null;//
+        return info;
     }
     public void updateInfo(Object key, Object val)
     {
         attributesMap.put(key, val);
     }
+
+    /*private void recreateHashMapFromInfo()
+    {
+
+    }*/
 }
