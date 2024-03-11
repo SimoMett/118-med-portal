@@ -8,10 +8,14 @@ import src.Main.ControlCenter.Domain.RescueTeamsList;
 public class DummyRescueTeamsDao implements IRescueTeamsDao
 {
     @Override
-    public RescueTeamsList getAllTeams()
+    public RescueTeamsList getRescueTeamsList()
     {
         RescueTeamsList rescueTeamsList = new RescueTeamsList();
-        //TODO populate with operating teams
+        rescueTeamsList.add(new RescueTeam("BRAVO3450"));
+        rescueTeamsList.add(new RescueTeam("BRAVO3451"));
+        rescueTeamsList.add(new RescueTeam("BRAVO3452"));
+        rescueTeamsList.add(new RescueTeam("INDIA01"));
+        rescueTeamsList.add(new RescueTeam("ALFA07"));
         return rescueTeamsList;
     }
 

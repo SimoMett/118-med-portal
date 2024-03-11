@@ -6,7 +6,7 @@ import src.Main.ControlCenter.Domain.RescueTeamsList;
 
 public interface IRescueTeamsDao
 {
-    RescueTeamsList getAllTeams();
+    RescueTeamsList getRescueTeamsList();
     /*public Object getTeamStatus(RescueTeam rescueTeam)
     {
         return null;
