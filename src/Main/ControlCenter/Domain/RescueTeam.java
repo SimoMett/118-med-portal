@@ -2,18 +2,18 @@ package src.Main.ControlCenter.Domain;
 
 public class RescueTeam
 {
-    private final Integer id;
+    private final String id;
     private Object status;
 
     private Mission currentMission;
     private String currentActivationCode;
 
-    public RescueTeam(Integer teamId)
+    public RescueTeam(String teamId)
     {
         this.id = teamId;
     }
 
-    public Integer getId()
+    public String getId()
     {
         return id;
     }

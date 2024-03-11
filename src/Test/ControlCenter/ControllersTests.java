@@ -32,7 +32,7 @@ public class ControllersTests
     @Test
     public void assignMissionNoError()
     {
-        RescueTeam team = new RescueTeam(3450);
+        RescueTeam team = new RescueTeam("BRAVO3450");
         missionController.assignTeam(mission, team, "KC02G");
         assert rescueTeamController.getCurrentMission(team) == mission;
     }
@@ -40,7 +40,7 @@ public class ControllersTests
     @Test(expected = RuntimeException.class)
     public void assignMissionTeamBusy()
     {
-        RescueTeam team = new RescueTeam(3450);
+        RescueTeam team = new RescueTeam("BRAVO3450");
         missionController.assignTeam(mission, team, "KC02G");
         missionController.assignTeam(new Mission("03/23/1999", "dispatch2"), team, "KC02G");
     }
@@ -48,7 +48,7 @@ public class ControllersTests
     @Test
     public void updateDispatch()
     {
-        RescueTeam team = new RescueTeam(3450);
+        RescueTeam team = new RescueTeam("BRAVO3450");
         missionController.assignTeam(mission, team, "KC02G");
         missionController.updateDispatch(mission, "test dispatch2");
         assert mission.getDispatch().equals("test dispatch2");
@@ -57,7 +57,7 @@ public class ControllersTests
     @Test
     public void abortMission()
     {
-        RescueTeam team = new RescueTeam(3450);
+        RescueTeam team = new RescueTeam("BRAVO3450");
         missionController.assignTeam(mission, team, "KC02G");
         rescueTeamController.abortCurrentMission(team);
     }
@@ -65,7 +65,7 @@ public class ControllersTests
     @Test(expected = RuntimeException.class)
     public void abortMissionException()
     {
-        RescueTeam team = new RescueTeam(3450);
+        RescueTeam team = new RescueTeam("BRAVO3450");
         rescueTeamController.abortCurrentMission(team);
     }
 }
