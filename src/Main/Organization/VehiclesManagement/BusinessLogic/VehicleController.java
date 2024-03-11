@@ -18,21 +18,18 @@ public class VehicleController
         this.vehiclesRegistry = vehicleDao.getVehiclesRegistry();
     }
 
-    public VehicleInfo getVehicleInfo(int id)
+    public VehicleInfo getVehicleInfo(int id) throws NullPointerException
     {
-        //TODO error management
         return this.vehiclesRegistry.getVehicle(id).getInfo();
     }
-    public void updateVehicleInfo(int id, Object key, Object val)
+    public void updateVehicleInfo(int id, Object key, Object val) throws NullPointerException
     {
-        //TODO error management
         Vehicle v = this.vehiclesRegistry.getVehicle(id);
         if(this.vehicleDao.updateVehicleData(v, key, val)) //   if updates on database is successful ...
             this.vehiclesRegistry.updateInfo(id, key, val); //      ... update domain model
     }
-    public void deleteVehicle(int id)
+    public void deleteVehicle(int id) throws RuntimeException
     {
-        //TODO error management
         Vehicle v = vehiclesRegistry.getVehicle(id);
         if(this.vehicleDao.deleteVehicle(v))
             vehiclesRegistry.deleteVehicle(id);

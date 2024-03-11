@@ -17,9 +17,8 @@ public class VehiclesRegistry
         if(!vehicles.contains(vehicle))
             vehicles.add(vehicle);
     }
-    public Vehicle getVehicle(int id)
+    public Vehicle getVehicle(int id) throws NullPointerException
     {
-        //TODO error management
         return vehicles.get(id);
     }
 
@@ -28,9 +27,8 @@ public class VehiclesRegistry
         return Collections.unmodifiableList(vehicles);
     }
 
-    public void updateInfo(int id, Object key, Object val)
+    public void updateInfo(int id, Object key, Object val) throws NullPointerException
     {
-        //TODO error management
         Vehicle vehicle = vehicles.get(id);
         vehicle.updateInfo(key, val);
     }
