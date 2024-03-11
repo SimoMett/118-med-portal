@@ -5,11 +5,15 @@ import src.Main.Organization.VehiclesManagement.Domain.Vehicle;
 import src.Main.Organization.VehiclesManagement.Domain.VehiclesRegistry;
 import src.Main.Organization.VehiclesManagement.VehicleInfo;
 
-import java.util.ArrayList;
 
 public class DummyVehicleDao implements IVehicleDao
 {
-    private final VehiclesRegistry vehiclesRegistry = new VehiclesRegistry();
+    private final VehiclesRegistry vehiclesRegistry;
+
+    public DummyVehicleDao(VehiclesRegistry vehiclesRegistry)
+    {
+        this.vehiclesRegistry = vehiclesRegistry;
+    }
     @Override
     public Vehicle registerNewVehicle(VehicleInfo vehicleInfo)
     {
@@ -27,13 +31,14 @@ public class DummyVehicleDao implements IVehicleDao
     @Override
     public boolean updateVehicleData(Vehicle vehicle, String key, String val)
     {
-        return false;
+        return true;
     }
 
     @Override
     public boolean deleteVehicle(Vehicle vehicle)
     {
-        return false;
+        //removing vehicle from database
+        return true;
     }
 
     @Override

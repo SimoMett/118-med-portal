@@ -9,10 +9,10 @@ public class VehicleRegistrationController
 {
     private final IVehicleDao vehicleDao;
     private final VehiclesRegistry vehiclesRegistry;
-    public VehicleRegistrationController(IVehicleDao vehicleDao)
+    public VehicleRegistrationController(IVehicleDao vehicleDao, VehiclesRegistry vehiclesRegistry)
     {
         this.vehicleDao = vehicleDao;
-        this.vehiclesRegistry = vehicleDao.getVehiclesRegistry();
+        this.vehiclesRegistry = vehiclesRegistry;
     }
     public Vehicle registerNewVehicle(VehicleInfo vehicleInfo)
     {
