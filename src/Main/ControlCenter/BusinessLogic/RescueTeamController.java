@@ -3,7 +3,8 @@ package src.Main.ControlCenter.BusinessLogic;
 import src.Main.ControlCenter.DataAccess.IRescueTeamsDao;
 import src.Main.ControlCenter.Domain.Mission;
 import src.Main.ControlCenter.Domain.RescueTeam;
-import src.Main.ControlCenter.Domain.RescueTeamsList;
+
+import java.util.List;
 
 public class RescueTeamController
 {
@@ -13,9 +14,9 @@ public class RescueTeamController
         this.rescueTeamsDao = rescueTeamsDao;
     }
 
-    public RescueTeamsList getAllTeams()
+    public List<RescueTeam> getAllTeams()
     {
-        return rescueTeamsDao.getAllTeams();
+        return rescueTeamsDao.getRescueTeamsList().getAll();
     }
     public void abortCurrentMission(RescueTeam rescueTeam) throws RuntimeException
     {

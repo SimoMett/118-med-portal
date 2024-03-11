@@ -17,12 +17,12 @@ public class MissionController
         this.rescueTeamsDao = rescueTeamsDao;
     }
 
-    public String createNewMission(String dispatch)
+    public Mission createNewMission(String dispatch)
     {
         Mission mission = this.missionDao.createMission(dispatch);
         if(mission != null)
             MissionsList.getInstance().addMission(mission);
-        return mission.getId();
+        return mission;
     }
 
     public void updateInfo(Mission mission, Object newInfo)

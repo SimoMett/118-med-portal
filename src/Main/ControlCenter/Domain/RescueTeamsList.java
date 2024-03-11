@@ -1,6 +1,7 @@
 package src.Main.ControlCenter.Domain;
 
 import java.util.HashMap;
+import java.util.List;
 
 public class RescueTeamsList
 {
@@ -20,7 +21,7 @@ public class RescueTeamsList
         return rescueTeamHashMap.get(id);
     }
 
-    public Object getAll()
+    public List<RescueTeam> getAll()
     {
         return rescueTeamHashMap.values().stream().toList();
     }

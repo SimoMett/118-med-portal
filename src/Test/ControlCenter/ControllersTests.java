@@ -24,8 +24,8 @@ public class ControllersTests
     @Test
     public void createMission()
     {
-        String missionId = missionController.createNewMission("test dispatch");
-        mission = MissionsList.getInstance().getMission(missionId);
+        Mission mission = missionController.createNewMission("test dispatch");
+        mission = MissionsList.getInstance().getMission(mission.getId());
         assert mission!=null;
     }
 
