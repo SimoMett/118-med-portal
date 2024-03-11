@@ -21,8 +21,9 @@ public class Vehicle
     {
         return info;
     }
-    public void updateInfo(String key, String val) throws NullPointerException
+    public void updateInfo(String key, String val) throws RuntimeException
     {
         attributesMap.replace(key, val);
+        info = new VehicleInfo(attributesMap.get("id"), attributesMap.get("numberPlate"), attributesMap.get("radioId"));
     }
 }
