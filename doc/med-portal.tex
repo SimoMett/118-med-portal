@@ -10,12 +10,13 @@
 \usepackage[inkscapelatex=false]{svg}
 \usepackage[table]{colortbl}
 
-\title{Med Portal - applicativo di supporto nei servizi di emergenza per il personale 118}
+\title{Med Portal - Applicativo di supporto nei servizi di emergenza per il personale 118}
 \author{Matteo Simonetti}
 \date{}
-
+\hypersetup{linkcolor=black}
 \begin{document}
     \maketitle
+    \tableofcontents
 
     \section{Statement iniziale}
 
@@ -50,18 +51,16 @@
     Nel caso in cui il mezzo di soccorso deve fare rendez-vous con un altro mezzo (eg: elisoccorso), l’autista (o la squadra) del primo mezzo deve selezionare sull’applicativo la voce “Rendez-vous con altro mezzo” nel campo “Esito trattamento”. Questa procedura abilita l’invio tramite l’interfaccia grafica dello stato di rendez-vous.
     Durante interventi congiunti, le squadre attivate per la missione possono sincronizzarsi i dati anagrafici del paziente per evitare perdite di tempo. Per fare ciò bisogna seguire la seguente procedura: la squadra che invia i dati inserisce in un campo il numero della squadra ricevente, mentre quest’ultima deve avere la scheda della missione aperta. La squadra ricevente può o meno accettare i dati in arrivo.
 
-
-
     \subsection{Ruolo dell’associazione}
     Anche l’associazione ha delle credenziali che permettono l’uso della piattaforma. I responsabili possono gestire i mezzi disponibili, registrare nuovi soccorritori e consultare le schede di missione per fini di fatturazione.
     Per registrare un nuovo soccorritore bisogna inserire i dati anagrafici e una copia delle certificazioni da lui conseguite (incluse data di conseguimento e di scadenza).
     È possibile che un soccorritore sia iscritto a più associazioni. In tal caso l’inserimento di alcune certificazioni (tipo quelle rilasciate dal 118) non è necessario e verranno recuperate automaticamente dalla base dati.
     Comunque il passaggio della registrazione è obbligatorio. Questo per far sì che sia possibile tracciare le associazioni a cui il soccorritore appartiene (per esempio per fini di assicurazione da infortuni) e per impedire che altre associazioni utilizzino le credenziali di personale non associato.
 
-    \newpage
-
-    \section{Struttura e diagrammi}
+    \section{Relazione e diagrammi}
     \subsection{Casi d'uso}
+    Dallo statement iniziale si possono evidenziare quali sono gli attori principali che si interfacciano con il sistema, ovvero la centrale 118, la squadra di soccorso (composta da almeno un soccorritore e autista) e l'associazione di appartenenza della squadra.
+    Di seguito vengono riportati i diagrammi dei casi d'uso con i relativi templates.
     \subsubsection{Diagrammi}
 
     \begin{figure}
@@ -98,7 +97,7 @@
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{3.1 – Riceve informazioni del chiamante} \\
+            Use case & \textbf{1.1 – Riceve informazioni del chiamante} \\
             \hline
             History & \creationDate \\
             Source & Estratto dallo statement iniziale \\
@@ -113,13 +112,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase3.1}
+        \label{tab:usecase1.1}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{3.2 - Inizia nuova missione}\\
+            Use case & \textbf{1.2 - Inizia nuova missione}\\
             \hline
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
@@ -134,13 +133,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase3.2}
+        \label{tab:usecase1.2}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{3.3 - Inserisci informazioni reperite} \\
+            Use case & \textbf{1.3 - Inserisci informazioni reperite} \\
             \hline
             History & \creationDate \\
             Source & Estratto dallo statement iniziale \\
@@ -155,13 +154,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase3.3}
+        \label{tab:usecase1.3}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{3.4 - Assegna missione e invia scheda} \\
+            Use case & \textbf{1.4 - Assegna missione e invia scheda} \\
             \hline
             History & \creationDate Ultima modifica il 06/03/24.\\
             Source & Estratto dallo statement iniziale \\
@@ -176,13 +175,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase3.4}
+        \label{tab:usecase1.4}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{3.5 - Specifica codice di attivazione} \\
+            Use case & \textbf{1.5 - Specifica codice di attivazione} \\
             \hline
             History & \creationDate Ultima modifica il 06/03/24.\\
             Source & Estratto dallo statement iniziale \\
@@ -197,13 +196,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase3.5}
+        \label{tab:usecase1.5}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{3.6 - Aggiorna dispatch} \\
+            Use case & \textbf{1.6 - Aggiorna dispatch} \\
             \hline
             History & \creationDate \\
             Source & Proposto per migliorare l'interazione tra centrale e squadre di soccorso. \\
@@ -218,13 +217,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase3.6}
+        \label{tab:usecase1.6}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{3.8 - Osserva posizioni mezzi} \\
+            Use case & \textbf{1.7 - Osserva posizioni mezzi} \\
             \hline
             History & \creationDate \\
             Source & Estratto dallo statement iniziale \\
@@ -239,7 +238,7 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase3.8}
+        \label{tab:usecase1.7}
     \end{table}
 
     \begin{table}
@@ -413,7 +412,7 @@
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.10 – Seleziona mezzo}\\
+            Use case & \textbf{2.9 – Seleziona mezzo}\\
             \hline
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
@@ -428,18 +427,39 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
+        \label{tab:usecase2.9}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & \textbf{2.10 – Seleziona caposquadra}\\
+            \hline
+            History & \creationDate \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & Function\\
+            Description & La squadra cambia il caposquadra selezionando uno dei soccorritori loggati.\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Squadra\\
+            Pre-conditions & Almeno un soccorritore loggato. \\
+            Post-conditions & \dots \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
         \label{tab:usecase2.10}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.11 – Seleziona caposquadra}\\
+            Use case & \textbf{2.11 – Seleziona autista}\\
             \hline
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
             Abstraction level & Function\\
-            Description & La squadra cambia il caposquadra selezionando uno dei soccorritori loggati.\\
+            Description & La squadra cambia l’autista selezionando uno dei soccorritori loggati.\\
             Scope & Applicativo telematico della squadra di soccorso\\
             Actors & Squadra\\
             Pre-conditions & Almeno un soccorritore loggato. \\
@@ -455,28 +475,7 @@
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.12 – Seleziona autista}\\
-            \hline
-            History & \creationDate \\
-            Source & Estratto dallo statement iniziale\\
-            Abstraction level & Function\\
-            Description & La squadra cambia l’autista selezionando uno dei soccorritori loggati.\\
-            Scope & Applicativo telematico della squadra di soccorso\\
-            Actors & Squadra\\
-            Pre-conditions & Almeno un soccorritore loggato. \\
-            Post-conditions & \dots \\
-            Normal flow & \dots \\
-            Variations & \dots \\
-            Alternative flow & \dots \\
-            Non-functional requirements & \dots
-        \end{tabularx}
-        \label{tab:usecase2.12}
-    \end{table}
-
-    \begin{table}
-        \rowcolors{2}{\graycolor}{white}
-        \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.13 – Login}\\
+            Use case & \textbf{2.12 – Login}\\
             \hline
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
@@ -492,13 +491,13 @@
             Non-functional requirements & Viene aggiornata la lista delle missioni aperte, mostrando solamente
             quelle che coinvolgono i membri della squadra.
         \end{tabularx}
-        \label{tab:usecase2.13}
+        \label{tab:usecase2.12}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.14 – Recupera password}\\
+            Use case & \textbf{2.13 – Recupera password}\\
             \hline
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
@@ -513,13 +512,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase2.14}
+        \label{tab:usecase2.13}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.15 – Primo login}\\
+            Use case & \textbf{2.14 – Primo login}\\
             \hline
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
@@ -534,13 +533,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase2.15}
+        \label{tab:usecase2.14}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.16 – Cambia password}\\
+            Use case & \textbf{2.15 – Cambia password}\\
             \hline
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
@@ -555,13 +554,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase2.16}
+        \label{tab:usecase2.15}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.17 – Logout}\\
+            Use case & \textbf{2.16 – Logout}\\
             \hline
             History & \creationDate Ultima modifica il 21/02/24 \\
             Source & Estratto dallo statement iniziale\\
@@ -575,13 +574,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & Viene aggiornata la lista delle missioni aperte, mostrando solamente quelle che coinvolgono i membri della squadra.
         \end{tabularx}
-        \label{tab:usecase2.17}
+        \label{tab:usecase2.16}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.18 – Firma la scheda}\\
+            Use case & \textbf{2.17 – Firma la scheda}\\
             \hline
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
@@ -596,13 +595,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase2.18}
+        \label{tab:usecase2.17}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{4.1 – Apre scheda-missione}\\
+            Use case & \textbf{3.1 – Apre scheda-missione}\\
             \hline
             History & Creato il 22/02/24\\
             Source & Estratto dallo statement iniziale\\
@@ -617,13 +616,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase4.1}
+        \label{tab:usecase3.1}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{4.2 – Passa a nuova missione appena ricevuta}\\
+            Use case & \textbf{3.2 – Passa a nuova missione appena ricevuta}\\
             \hline
             History & Creato il 22/02/24\\
             Source & Estratto dallo statement iniziale\\
@@ -638,13 +637,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase4.2}
+        \label{tab:usecase3.2}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{4.3 – Invia stato missione}\\
+            Use case & \textbf{3.3 – Invia stato missione}\\
             \hline
             History & Creato il 22/02/24\\
             Source & Estratto dallo statement iniziale\\
@@ -659,13 +658,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase4.3}
+        \label{tab:usecase3.3}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{4.4 – Salva orario}\\
+            Use case & \textbf{3.4 – Salva orario}\\
             \hline
             History & Creato il 22/02/24\\
             Source & Proposto per gestire il caso in cui l'autista si possa dimenticare di inviare lo stato, o lo faccia troppo tardi.\\
@@ -680,13 +679,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase4.4}
+        \label{tab:usecase3.4}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{4.5 – Invia esito della missione}\\
+            Use case & \textbf{3.5 – Invia esito della missione}\\
             \hline
             History & Creato il 22/02/24\\
             Source & Estratto dallo statement iniziale\\
@@ -701,13 +700,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase4.5}
+        \label{tab:usecase3.5}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{4.6 – Imposta navigatore}\\
+            Use case & \textbf{3.6 – Imposta navigatore}\\
             \hline
             History & Creato il 22/02/24\\
             Source & Estratto dallo statement iniziale\\
@@ -722,13 +721,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase4.6}
+        \label{tab:usecase3.6}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{4.7 – Inserisci chilometraggio del mezzo}\\
+            Use case & \textbf{3.7 – Inserisci chilometraggio del mezzo}\\
             \hline
             History & Creato il 22/02/24\\
             Source & Estratto dallo statement iniziale\\
@@ -743,14 +742,14 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase4.7}
+        \label{tab:usecase3.7}
     \end{table}
 %%
     \def\organizationscope{Applicativo telematico dell'associazione}
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{1.1 - Gestisci mezzi} \\
+            Use case & \textbf{4.1 - Gestisci mezzi} \\
             \hline
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
@@ -765,13 +764,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase1.1}
+        \label{tab:usecase4.1}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{1.2 - Registra soccorritore} \\
+            Use case & \textbf{4.2 - Registra soccorritore} \\
             \hline
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
@@ -786,13 +785,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase1.2}
+        \label{tab:usecase4.2}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{1.3 - Inserisci certificazione} \\
+            Use case & \textbf{4.3 - Inserisci certificazione} \\
             \hline
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
@@ -807,13 +806,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase1.3}
+        \label{tab:usecase4.3}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{1.4 - Consulta schede-missione} \\
+            Use case & \textbf{4.4 - Consulta schede-missione} \\
             \hline
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
@@ -828,13 +827,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase1.4}
+        \label{tab:usecase4.4}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{1.5 - Reperisci certificazione} \\
+            Use case & \textbf{4.5 - Reperisci certificazione} \\
             \hline
             History & Creato il 21/02/24 \\
             Source & Estratto dallo statement iniziale\\
@@ -849,34 +848,46 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase1.5}
+        \label{tab:usecase4.5}
     \end{table}
 
     \subsubsection{Prototipo di interfaccia}
-    \subsection{Diagramma delle classi}
+    \subsection{Struttura e diagramma delle classi}
+    Per la realizzazione del progetto è stata scelta l'architettura 3-tier Business logic - Data access - Domain model.
+    La suddivisione dei packages è avvenuta tenendo conto dell'eventuale transizione da un'applicazione monolitica come è adesso ad una a microservizi.
+    In particolare i packages principali sono quelli emersi facendo un'analisi dei $bounded-context$, ovvero $ControlCenter$, $Ems$ e $Organization$.
+    Ognuno di questi è suddiviso nei sub-packages $BusinessLogic$, $DataAccess$ e $DomainModel$.
+    \newline In $BusinessLogic$ si trovano tutti i $controller$ che implementano ed espongono tutte le funzionalità elencate nei casi d'uso.
+    \newline In ogni contesto, il livello $DataAccess$ è composto da sole interfacce. Ciò rende la persistenza dei dati più flessibile al cambio di tipologia di database e il testing più semplice.
+    \newline Il $DomainModel$ è composto da tutte le classi e relazioni che caratterizzano il modello di dominio in questione.
 
+    \subsubsection{ControlCenter}
     \begin{figure}
         \centering
         \includesvg[width=6in]{diagrams/svg/ControlCenter!ControlCenter_0}
         \caption{Diagramma delle classi di controlcenter}
         \label{fig:uml-controlcenter}
     \end{figure}
-
+    In questo package sono presenti $RescueTeamController$ e $MissionController$. Il primo $controller$ fornisce metodi di gestione delle squadre di soccorso sul territorio,
+    l'altro invece espone metodi di creazione e gestione delle missioni.
+    Entrami i $controller$, siccome sono responsabili del salvataggio dei dati su database e sincronizzazione del $DomainModel$, dipendono da dei $DataAccessObject$, in questo caso dalle interfacce $IRescueTeamsDao$ e $IMissionDao$.
+    Il $DomainModel$ è caratterizzato da una $RescueTeamsList$ e da una $MissionsList$, che tengono traccia rispettivamente delle squadre di soccorso operative e delle missioni di soccorso attualmente in svolgimento.
+    Queste due classi non sono altro che dei $Wrapper$ di liste che contengono una collezione di $RescueTeam$ e $Mission$.
+    \subsubsection{Ems}
     \begin{figure}
         \centering
         \includesvg[width=6in]{diagrams/svg/Ems!Ems_1}
         \caption{Diagramma delle classi di ems}
         \label{fig:uml-ems}
     \end{figure}
-
-    \begin{figure}
-        \centering
-        \includesvg[width=6in]{diagrams/svg/Organization!Organization_3}
-        \caption{Diagramma delle classi di organization}
-        \label{fig:uml-organization}
-    \end{figure}
-
-    \subsubsection{Domain model}
+    Questo package è sicuramente quello più articolato di tutti poichè prevede un gran numero di possibili interazioni.\newline
+    È composto da cinque $controller$:
+    \newline $UserLoginController$ permette all'utente di effettuare il login, il cambio e recupero password.
+    \newline $TeamController$ permette di gestire la squadra e il mezzo di soccorso.
+    \newline $MissionController$ è responsabile della compilazione del report di missione e della sua sincronizzazione con la banca dati.
+    \newline $MissionsListController$ è un $controller$ semplice che si occupa di scaricare dal database la missione appena assegnata alla squadra.
+    \newline $SessionController$ gestisce l'apertura e la chiusura della sessione dell'applicativo della squadra.
+    \subsubsection{Domain model di Ems}
     \begin{figure}
         \centering
         \includesvg[width=5.4in]{diagrams/svg/Ems!EmsDomainModel_2}
@@ -884,6 +895,18 @@
         \label{fig:uml-ems-domainmodel}
     \end{figure}
 
+    \subsubsection{Organization}
+    \begin{figure}
+        \centering
+        \includesvg[width=6in]{diagrams/svg/Organization!Organization_3}
+        \caption{Diagramma delle classi di organization}
+        \label{fig:uml-organization}
+    \end{figure}
+    Qui la $BusinessLogic$ è composta da cinque $controller$: $VehicleRegistrationController$, $VehicleController$, $UserController$, $UserRegistrationController$ e $ReportsController$.
+    Ognuno di questi offre operazioni $CRUD$ sulle banche dati dei veicoli, utenti e report di missione, accedendovi tramite le interfacce $IVehicleDao$, $IUserDao$ e $IReportDao$.
+    Similmente al package $ControlCenter$, il modello di dominio è principalmente costituito da delle classi $Wrapper$ di liste di oggetti $Vehicle$ e $User$, che sono $VehiclesRegistry$ e $UsersRegistry$.
+    Per gli oggetti $Report$ invece si è ritenuto più opportuno non creare un $ReportRegistry$ poichè sui report di missione non si possono svolgere delle vere e proprie operazioni $CRUD$, se non quella di download.
+    Piuttosto si è preferito implementare nella lato $BusinessLogic$ un metodo di ricerca dei report che, dato un filtro (un oggetto che implementa l'interfaccia $SearchFilter$ per formare un pattern $Strategy$) e un parametro di ricerca, restituisce una lista di risultati.
     \section{Documentazione}
     \subsection{Codice}
 
