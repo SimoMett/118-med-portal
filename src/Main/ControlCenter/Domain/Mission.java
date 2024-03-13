@@ -2,7 +2,7 @@ package src.Main.ControlCenter.Domain;
 
 import java.util.ArrayList;
 
-public class Mission //TODO
+public class Mission
 {
     private final String id;
     private String dispatch;

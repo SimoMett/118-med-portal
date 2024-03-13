@@ -23,7 +23,6 @@ public class UserLoginController
         return result;
     }
 
-    //TODO error management
     public void recoverPassword(String email) throws IllegalArgumentException
     {
         userDao.recoverPassword(email);

@@ -10,7 +10,7 @@ public class TeamController
     public TeamController(RescueTeam rescueTeam)
     {
         this.rescueTeam = rescueTeam;
-        //TODO invoke data access and synchronize
+        //TODO invoke data access and synchronize?
     }
 
     public void changeVehicle(Vehicle newVehicle)

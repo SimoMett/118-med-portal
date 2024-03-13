@@ -57,7 +57,6 @@ public class MissionController
 
     public void invokeExternalFunctionality(Object func) throws RuntimeException
     {
-        //TODO
         //external functionalities like camera, tax ID decoder ...
         //func.invoke
     }
