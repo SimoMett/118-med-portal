@@ -1,5 +1,6 @@
 package src.Test.Organization.DummyDao;
 
+import src.Main.Organization.UsersManagement.BusinessLogic.SearchFilters.SearchFilter;
 import src.Main.Organization.UsersManagement.DataAccess.IUserDao;
 import src.Main.Organization.UsersManagement.Domain.User;
 import src.Main.Organization.UsersManagement.Domain.UsersRegistry;
@@ -39,16 +40,22 @@ public class DummyUserDao implements IUserDao
     }
 
     @Override
-    public ArrayList<User> searchUser(Object how)
+    public ArrayList<User> searchUser(SearchFilter searchFilter, String param)
     {
-        return null;
+        ArrayList<User> results = new ArrayList<>();
+        for(User u : usersRegistry.getAllUsers())
+        {
+            if(searchFilter.matches(u, param))
+                results.add(u);
+        }
+        return results;
     }
 
     @Override
     public boolean deleteUser(User user)
     {
         //removing user from database (assuming successful)
-        return false;
+        return usersRegistry.getAllUsers().contains(user);
     }
 
     @Override
