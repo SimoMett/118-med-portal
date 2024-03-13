@@ -1,6 +1,8 @@
 package src.Test.Organization;
 
+import org.junit.Before;
 import org.junit.Test;
+import src.Main.Organization.UsersManagement.BusinessLogic.SearchFilters.SearchFilters;
 import src.Main.Organization.UsersManagement.BusinessLogic.UserController;
 import src.Main.Organization.UsersManagement.BusinessLogic.UserRegistrationController;
 import src.Main.Organization.UsersManagement.Domain.User;
@@ -14,6 +16,7 @@ import src.Main.Organization.VehiclesManagement.VehicleInfo;
 import src.Test.Organization.DummyDao.DummyUserDao;
 import src.Test.Organization.DummyDao.DummyVehicleDao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ControllerTests
@@ -47,26 +50,47 @@ public class ControllerTests
         assert !vehicleList.contains(v);
     }
 
-    @Test
-    public void userControllersTests()
-    {
-        UsersRegistry usersRegistry = new UsersRegistry();
-        DummyUserDao userDao = new DummyUserDao(usersRegistry);
-        UserRegistrationController userRegistrationController = new UserRegistrationController(userDao);
-        UserController userController = new UserController(userDao);
+    UsersRegistry usersRegistry = new UsersRegistry();
+    DummyUserDao userDao = new DummyUserDao(usersRegistry);
+    UserController userController = new UserController(userDao);
 
-        //user registration test
+    @Before
+    @Test
+    public void userRegistrationTest()
+    {
+        UserRegistrationController userRegistrationController = new UserRegistrationController(userDao);
+
         User u = userRegistrationController.registerNewUser(new UserInfo("Mario Rossi", "asadwjfe2", "09/08/1985"));
         userRegistrationController.registerNewUser(new UserInfo("Giacomo Verdi", "fgsg332g", "13/08/1986"));
         userRegistrationController.registerNewUser(new UserInfo("Leonardo Da Vinci", "fwf3834f", "03/05/1987"));
         userRegistrationController.registerNewUser(new UserInfo("Raffaele Sanzio", "afnwje28", "02/08/1989"));
+        userRegistrationController.registerNewUser(new UserInfo("Vincenzo Verdi", "fndjfim394", "16/09/1984"));
+    }
 
+    @Test
+    public void userControllerTests()
+    {
         //get info test
-        System.out.println(userController.getUserInfo(usersRegistry.getAllUsers().indexOf(u)));
-        assert userController.getUserInfo(usersRegistry.getAllUsers().indexOf(u))!=null;
+        User u = new User(new UserInfo("Mario Rossi", "asadwjfe2", "09/08/1985"));
+        int uId = usersRegistry.getUserId(u);
+        assert uId != -1;
+        System.out.println(userController.getUserInfo(uId));
+        assert userController.getUserInfo(uId)!=null;
+
         //search test
-        //update info test (user info can really change? apart from certifications/licenses)
+        ArrayList<User> results = userController.searchUser(SearchFilters.BY_NAME, "Verdi");
+        assert !results.isEmpty();
+
+
         //delete user test
+        userController.deleteUser(uId);
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void deleteInvalidUser()
+    {
+        //delete invalid user test
+        userController.deleteUser(new User(new UserInfo("Tonio Trussardi", "tnattrue", "28/07/1970")));
     }
 
     public void reportsControllerTests()

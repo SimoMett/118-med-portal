@@ -1,5 +1,6 @@
 package src.Main.Organization.UsersManagement.BusinessLogic;
 
+import src.Main.Organization.UsersManagement.BusinessLogic.SearchFilters.SearchFilter;
 import src.Main.Organization.UsersManagement.DataAccess.IUserDao;
 import src.Main.Organization.UsersManagement.Domain.User;
 import src.Main.Organization.UsersManagement.Domain.UsersRegistry;
@@ -45,15 +46,22 @@ public class UserController
             u.updateInfo(key, val);
     }
 
-    public void deleteUser(int id)
+    public final void deleteUser(int id) throws RuntimeException
     {
-        //TODO error management
         User u = usersRegistry.getUser(id);
+        deleteUser(u);
+    }
+
+    public final void deleteUser(User u) throws RuntimeException
+    {
         if(userDao.deleteUser(u))
             usersRegistry.deleteUser(u);
+        else
+            throw new RuntimeException("Dao error");
     }
-    public ArrayList<User> searchUser(Object how)
+
+    public ArrayList<User> searchUser(SearchFilter how, String param)
     {
-        return null;
+        return userDao.searchUser(how, param);
     }
 }

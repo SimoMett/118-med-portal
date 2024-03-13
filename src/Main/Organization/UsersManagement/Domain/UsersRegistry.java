@@ -23,6 +23,16 @@ public class UsersRegistry
         return users.get(id);
     }
 
+    public int getUserId(User u)
+    {
+        for(int i=0; i<users.size(); i++)
+        {
+            if(users.get(i).getInfo().equals(u.getInfo()))
+                return i;
+        }
+        return -1;
+    }
+
     public void updateUserInfo(int id, String key, String val)
     {
         User u = users.get(id);
