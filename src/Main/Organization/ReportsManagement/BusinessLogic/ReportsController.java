@@ -14,9 +14,9 @@ public class ReportsController
         this.reportDao = reportDao;
     }
 
-    public List<Report> searchMission(Object param)
+    public List<Report> searchMission(SearchFilter filter, String param)
     {
-        return reportDao.searchMission(param);
+        return reportDao.searchMission(filter, param);
     }
 
     public List<Report> getLastReports(int count)

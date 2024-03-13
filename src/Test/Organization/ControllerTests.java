@@ -81,7 +81,6 @@ public class ControllerTests
         ArrayList<User> results = userController.searchUser(SearchFilters.BY_NAME, "Verdi");
         assert !results.isEmpty();
 
-
         //delete user test
         userController.deleteUser(uId);
     }
@@ -91,10 +90,5 @@ public class ControllerTests
     {
         //delete invalid user test
         userController.deleteUser(new User(new UserInfo("Tonio Trussardi", "tnattrue", "28/07/1970")));
-    }
-
-    public void reportsControllerTests()
-    {
-
     }
 }
