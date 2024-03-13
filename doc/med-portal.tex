@@ -31,27 +31,26 @@
     \subsection{Ruolo dell’autista}
     A questo punto l’autista della squadra invia lo stato di partenza dalla sede inserendo il chilometraggio del mezzo utilizzato. Facoltativamente, può poi scegliere di usufruire del navigatore.
     L’autista ha sempre l’obbligo di aggiornare il proprio stato quando arriva sull’obiettivo, rientra in pronto soccorso (con l’opportuno codice concordato con la centrale), finisce la missione e rientra in sede. Ogni stato che viene inviato viene registrato sulla scheda con allegati data e ora.
+    Quando l’autista invia lo stato “partenza da obiettivo”, la scheda della missione viene inviata al terminale del triage del pronto soccorso di destinazione, così da essere consultata dall’infermiere di turno.
     Alternativamente il paziente può rifiutare il trasporto. In tal caso, invece di andare in pronto soccorso, la missione finisce e la squadra rientra.
     Quando il mezzo è rientrato in sede, l’autista invia lo stato e firma la scheda inserendo il chilometraggio finale del mezzo. A quel punto la scheda rimane immutabile e a disposizione per essere consultata in seguito.
     Può succedere che la centrale invii una nuova missione alla squadra prima del loro rientro in sede.
     Allora l’autista, invece di inviare lo stato di rientro in sede, clicca su “Passa a prossima missione”. L’applicativo richiede di inserire il chilometraggio del mezzo, fa firmare la scheda e passa automaticamente sulla scheda della nuova missione.
 
     \subsection{Ruolo della squadra}
-    La squadra di soccorritori ha il compito di valutare la situazione del paziente, acquisendo parametri vitali e dati anagrafici (se disponibili). Tutti i dati devono essere scritti sulla piattaforma e sincronizzati con la centrale. In base ai parametri, la centrale comunica (via cavo/radio) il codice di rientro e il pronto soccorso di destinazione. Alternativamente il tecnico della centrale può decidere se impiegare risorse aggiuntive come un’altra ambulanza, auto-medica o elisoccorso.
-    Eventualmente il paziente può rifiutare il trasporto firmando digitalmente un modulo.
-    Nel caso in cui il mezzo di soccorso deve fare rendez-vous con un altro mezzo (eg: elisoccorso), l’autista (o la squadra) del primo mezzo deve selezionare sull’applicativo la voce “Rendez-vous con altro mezzo” nel campo “Esito trattamento”. Questa procedura abilita l’invio tramite l’interfaccia grafica dello stato di rendez-vous.
-
-    \subsection{Durante interventi congiunti}
-    Le squadre attivate per la missione possono sincronizzarsi i dati anagrafici e i parametri vitali del paziente per evitare perdite di tempo. Per fare ciò bisogna seguire la seguente procedura: la squadra che invia i dati inserisce in un campo il numero della squadra ricevente, mentre quest’ultima deve avere la scheda della missione aperta. La squadra ricevente può o meno accettare i dati in arrivo.
-
-    \subsection{Interazione con il triage}
-    Quando l’autista invia lo stato “partenza da obiettivo”, la scheda della missione viene inviata al terminale del triage del pronto soccorso di destinazione, così da essere consultata dall’infermiere di turno.
-
-    \subsection{Login della squadra}
+    \subsubsection{Login della squadra}
     A inizio turno la squadra smontante effettua il logout, mentre la squadra operativa fa il login.
     Ogni membro della squadra per effettuare il login deve inserire username (il proprio codice fiscale) e la  password personale. Il soccorritore dovrà essere regolarmente registrato sul portale dell’associazione. Nel caso di primo login la password sarà del tipo “nomecognome”, e successivamente l’utente verrà rimandato a una schermata dove dovrà decidere la propria password privata.
     Sempre tramite l’applicativo si devono specificare trai soccorritori chi è l’autista e chi è il caposquadra.
     Se non era stato fatto in precedenza, bisogna selezionare il mezzo tra quelli disponibili della propria associazione.
+
+    \subsubsection{L'intervento}
+    La squadra di soccorritori ha il compito di valutare la situazione del paziente, acquisendo parametri vitali e dati anagrafici (se disponibili). Tutti i dati devono essere scritti sulla piattaforma e sincronizzati con la centrale. In base ai parametri, la centrale comunica (via cavo/radio) il codice di rientro e il pronto soccorso di destinazione. Alternativamente il tecnico della centrale può decidere se impiegare risorse aggiuntive come un’altra ambulanza, auto-medica o elisoccorso.
+    Eventualmente il paziente può rifiutare il trasporto firmando digitalmente un modulo.
+    Nel caso in cui il mezzo di soccorso deve fare rendez-vous con un altro mezzo (eg: elisoccorso), l’autista (o la squadra) del primo mezzo deve selezionare sull’applicativo la voce “Rendez-vous con altro mezzo” nel campo “Esito trattamento”. Questa procedura abilita l’invio tramite l’interfaccia grafica dello stato di rendez-vous.
+    Durante interventi congiunti, le squadre attivate per la missione possono sincronizzarsi i dati anagrafici del paziente per evitare perdite di tempo. Per fare ciò bisogna seguire la seguente procedura: la squadra che invia i dati inserisce in un campo il numero della squadra ricevente, mentre quest’ultima deve avere la scheda della missione aperta. La squadra ricevente può o meno accettare i dati in arrivo.
+
+
 
     \subsection{Ruolo dell’associazione}
     Anche l’associazione ha delle credenziali che permettono l’uso della piattaforma. I responsabili possono gestire i mezzi disponibili, registrare nuovi soccorritori e consultare le schede di missione per fini di fatturazione.
