@@ -1,7 +1,6 @@
 package src.Main.Ems.DataAccess;
 
 import src.Main.Ems.Domain.RescueTeam.ITeamObserver;
-import src.Main.Ems.Domain.RescueTeam.RescueTeam;
 
 public interface ITeamDao extends ITeamObserver
 {
