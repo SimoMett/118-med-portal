@@ -11,7 +11,6 @@ public interface IRescueTeamsDao
     {
         return null;
     }*/
-    void setTeamStatus(RescueTeam rescueTeam, Object status);
     boolean assignMission(RescueTeam rescueTeam, Mission mission, String activationCode);
     void abortMission(RescueTeam rescueTeam);
     Object getTeamPosition(RescueTeam rescueTeam);

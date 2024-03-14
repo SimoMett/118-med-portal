@@ -9,23 +9,17 @@ import java.util.List;
 public class RescueTeamController
 {
     private final IRescueTeamsDao rescueTeamsDao;
+
     public RescueTeamController(IRescueTeamsDao rescueTeamsDao)
     {
         this.rescueTeamsDao = rescueTeamsDao;
     }
 
-    public List<RescueTeam> getAllTeams()
-    {
-        return rescueTeamsDao.getRescueTeamsList().getAll();
-    }
     public void abortCurrentMission(RescueTeam rescueTeam) throws RuntimeException
     {
         rescueTeamsDao.abortMission(rescueTeam);
     }
-    public void setTeamStatus(RescueTeam rescueTeam, Object status)
-    {
-        rescueTeamsDao.setTeamStatus(rescueTeam, status);
-    }
+
     public Object getTeamStatus(RescueTeam rescueTeam)
     {
         //By doing in this way, this controller misses all the updates regarding the current mission.
@@ -42,5 +36,10 @@ public class RescueTeamController
     {
         //Same thing said in "getTeamStatus" applies here too
         return rescueTeam.getCurrentMission();
+    }
+
+    public List<RescueTeam> getAllTeams()
+    {
+        return rescueTeamsDao.getRescueTeamsList().getAll();
     }
 }

@@ -20,11 +20,6 @@ public class DummyRescueTeamsDao implements IRescueTeamsDao
     }
 
     @Override
-    public void setTeamStatus(RescueTeam rescueTeam, Object status) {
-
-    }
-
-    @Override
     public boolean assignMission(RescueTeam rescueTeam, Mission mission, String activationCode)
     {
         return true;
@@ -39,7 +34,5 @@ public class DummyRescueTeamsDao implements IRescueTeamsDao
     }
 
     @Override
-    public Object getTeamPosition(RescueTeam rescueTeam) {
-        return null;
-    }
+    public Object getTeamPosition(RescueTeam rescueTeam) { return null; }
 }
