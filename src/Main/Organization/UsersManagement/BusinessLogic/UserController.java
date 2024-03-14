@@ -12,6 +12,7 @@ public class UserController
 {
     private final UsersRegistry usersRegistry;
     private final IUserDao userDao;
+
     public UserController(IUserDao userDao)
     {
         this.userDao = userDao;
@@ -36,14 +37,16 @@ public class UserController
         return null;
     }
 
-    public void updateUserInfo(int id, String key, String val) throws NullPointerException
+    public void updateUserInfo(int id, String key, String val) throws RuntimeException
     {
         User u = usersRegistry.getUser(id);
         if(userDao.updateInfo(u, key, val))
             u.updateInfo(key, val);
+        else
+            throw new RuntimeException("UserDao failed data access");
     }
 
-    public final void deleteUser(int id) throws RuntimeException
+    public void deleteUser(int id) throws RuntimeException
     {
         User u = usersRegistry.getUser(id);
         deleteUser(u);
@@ -54,11 +57,8 @@ public class UserController
         if(userDao.deleteUser(u))
             usersRegistry.deleteUser(u);
         else
-            throw new RuntimeException("Dao error");
+            throw new RuntimeException("UserDao failed data access");
     }
 
-    public ArrayList<User> searchUser(SearchFilter how, String param)
-    {
-        return userDao.searchUser(how, param);
-    }
+    public ArrayList<User> searchUser(SearchFilter how, String param) { return userDao.searchUser(how, param); }
 }

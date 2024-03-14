@@ -16,13 +16,14 @@ public class MissionController
         this.report = report;
     }
 
-    public boolean updateData(String key, Object val) throws IllegalAccessException
+    public void updateData(String key, Object val) throws RuntimeException, IllegalAccessException
     {
         //Update data locally (in the domain model) and remotely (via data access).
         //If data access fails (eg: lost connection) at least we have a local mission report to work with
         //In such case the user can trigger manually the synchronization with remote via 'saveReport()'
-        this.report.updateData(key, val);
-        return this.missionDao.updateMissionData(report, key, val);
+        report.updateData(key, val);
+        if(!missionDao.updateMissionData(report, key, val))
+            throw new RuntimeException("MissionDao failed data access");
     }
 
     public DataField get(String key) throws IllegalArgumentException
@@ -31,14 +32,16 @@ public class MissionController
         return this.report.getData(key);
     }
 
-    public boolean saveReport()
+    public void saveReport()
     {
-        return missionDao.sendMissionReport(report);
+        if(!missionDao.sendMissionReport(report))
+            throw new RuntimeException("MissionDao failed data access");
     }
 
-    public boolean sendPatientData(String receivingTeamId)
+    public void sendPatientData(String receivingTeamId) throws RuntimeException
     {
-        return missionDao.sendPatientData(receivingTeamId, report.getPatientData());
+        if(!missionDao.sendPatientData(receivingTeamId, report.getPatientData()))
+            throw new RuntimeException("MissionDao failed data access");
     }
 
     public void closeMission()
@@ -52,7 +55,8 @@ public class MissionController
             Session.instance().setCurrentMission(null);
 
         //Close mission via data access
-        missionDao.closeMission(report);
+        if(!missionDao.closeMission(report))
+            throw new RuntimeException("MissionDao failed data access");
     }
 
     public void invokeExternalFunctionality(Object func) throws RuntimeException

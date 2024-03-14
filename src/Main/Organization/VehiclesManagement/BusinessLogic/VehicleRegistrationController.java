@@ -9,16 +9,20 @@ public class VehicleRegistrationController
 {
     private final IVehicleDao vehicleDao;
     private final VehiclesRegistry vehiclesRegistry;
+
     public VehicleRegistrationController(IVehicleDao vehicleDao, VehiclesRegistry vehiclesRegistry)
     {
         this.vehicleDao = vehicleDao;
         this.vehiclesRegistry = vehiclesRegistry;
     }
+
     public Vehicle registerNewVehicle(VehicleInfo vehicleInfo)
     {
         Vehicle v = vehicleDao.registerNewVehicle(vehicleInfo);
         if(v != null)
             vehiclesRegistry.addVehicle(v);
+        else
+            throw new RuntimeException("VehicleDao failed data access");
         return v;
     }
 }

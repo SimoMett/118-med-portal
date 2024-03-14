@@ -7,10 +7,10 @@ import src.Main.Ems.Domain.RescueTeam.Vehicle;
 public class TeamController
 {
     private final RescueTeam rescueTeam;
+
     public TeamController(RescueTeam rescueTeam)
     {
         this.rescueTeam = rescueTeam;
-        //TODO invoke data access and synchronize?
     }
 
     public void changeVehicle(Vehicle newVehicle)
