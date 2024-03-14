@@ -1,5 +1,9 @@
 package src.Main.Ems.Domain;
 
+import src.Main.Ems.Domain.Mission.Factory.ALSReportFactory;
+import src.Main.Ems.Domain.Mission.Factory.BLSReportFactory;
+import src.Main.Ems.Domain.Mission.Factory.DriverReportFactory;
+import src.Main.Ems.Domain.Mission.Factory.IMissionReportFactory;
 import src.Main.Ems.Domain.Mission.MissionReport;
 import src.Main.Ems.Domain.Mission.MissionsList;
 import src.Main.Ems.Domain.RescueTeam.RescueTeam;
@@ -37,6 +41,7 @@ public class Session
     private final Mode mode;
     private final VehiclesList vehiclesList;
     private RescueTeam rescueTeam;
+    private final IMissionReportFactory reportFactory;
     private MissionsList missionsList;
     private MissionReport currentMission;
 
@@ -50,6 +55,8 @@ public class Session
     {
         return rescueTeam;
     }
+
+    public IMissionReportFactory getReportFactory() { return this.reportFactory; }
 
     public MissionReport getCurrentMission()
     {
@@ -77,5 +84,12 @@ public class Session
         this.vehiclesList = new VehiclesList();
         this.rescueTeam = new RescueTeam();
         this.missionsList = new MissionsList();
+        switch (mode)
+        {
+            case DRIVER -> this.reportFactory = new DriverReportFactory();
+            case BLS -> this.reportFactory = new BLSReportFactory();
+            case ALS -> this.reportFactory = new ALSReportFactory();
+            default -> throw new IllegalArgumentException("Unknown session mode provided");
+        }
     }
 }

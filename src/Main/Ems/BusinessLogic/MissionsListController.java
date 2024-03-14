@@ -21,13 +21,7 @@ public class MissionsListController
 
     public MissionReport openReceivedMission()
     {
-        IMissionReportFactory factory;
-        switch (Session.instance().getMode())
-        {
-            case BLS -> factory = new BLSReportFactory();
-            case ALS -> factory = new ALSReportFactory();
-            default -> factory = new DriverReportFactory();
-        }
+        IMissionReportFactory factory = Session.instance().getReportFactory();
         MissionReport mission = missionDao.getReceivedMission(factory);
         missionsList.add(mission);
         Session.instance().setCurrentMission(mission);

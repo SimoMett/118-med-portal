@@ -25,7 +25,7 @@ public class MissionControllerTests
     public void init() throws IllegalAccessException
     {
         Session.init(Session.Mode.BLS);
-        IMissionReportFactory reportFactory = new BLSReportFactory();
+        IMissionReportFactory reportFactory = Session.instance().getReportFactory();
         report = reportFactory.createReportModel("03/24/1");
         missionController = new MissionController(missionDao, report);
         Session.instance().setCurrentMission(report);
