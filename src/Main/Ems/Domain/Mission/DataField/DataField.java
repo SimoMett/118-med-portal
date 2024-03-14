@@ -1,4 +1,4 @@
-package src.Main.Ems.Domain.Mission;
+package src.Main.Ems.Domain.Mission.DataField;
 
 public abstract class DataField<T>
 {
@@ -20,7 +20,7 @@ public abstract class DataField<T>
 
     protected void allowEdit(boolean allow) { isLocked=!allow; }
 
-    protected void setImmutable()
+    public final void setImmutable()
     {
         isLocked = true;
         isImmutable = true;

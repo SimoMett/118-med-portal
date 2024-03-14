@@ -1,8 +1,8 @@
-package src.Main.Ems.Domain.Mission;
+package src.Main.Ems.Domain.Mission.DataField;
 
 public class GraphicalDataPair extends DataField
 {
-    private IImage image;
+    private IImageAdapter image;
     public GraphicalDataPair(Object key)
     {
         super(key);
@@ -14,12 +14,12 @@ public class GraphicalDataPair extends DataField
 
     }
 
-    public void updateImage(IImage newImage)
+    public void updateImage(IImageAdapter newImage)
     {
         this.image = newImage;
     }
 
-    public IImage getImage()
+    public IImageAdapter getImage()
     {
         return image;
     }

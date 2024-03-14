@@ -1,5 +1,8 @@
 package src.Main.Ems.Domain.Mission;
 
+import src.Main.Ems.Domain.Mission.DataField.DataField;
+import src.Main.Ems.Domain.Mission.Factory.IMissionReportFactory;
+
 import java.sql.Timestamp;
 import java.time.Instant;
 import java.util.Collections;
@@ -63,7 +66,7 @@ public class MissionReport
             throw new IllegalArgumentException("Provided invalid key for "+reportType.name()+" report: "+key);
 
         dataPairs.get(key).setValue(value);
-        // Although, a value can still be overwritten by replacing the entire DataField like in the line below
+        //FIXME a value can still be overwritten by replacing the entire DataField like in the line below
         //   -> dataPairs.replace(key, value);
 
         lastEdit = Timestamp.from(Instant.now());
@@ -89,8 +92,6 @@ public class MissionReport
     public void close()
     {
         isActive = false;
-        dataPairs.forEach( (key, val) -> {
-            val.setImmutable();
-        });
+        dataPairs.forEach( (k, val) -> val.setImmutable());
     }
 }

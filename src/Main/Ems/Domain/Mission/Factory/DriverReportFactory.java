@@ -1,4 +1,7 @@
-package src.Main.Ems.Domain.Mission;
+package src.Main.Ems.Domain.Mission.Factory;
+
+import src.Main.Ems.Domain.Mission.MissionReport;
+import src.Main.Ems.Domain.Mission.DataField.SimpleDataField;
 
 public class DriverReportFactory implements IMissionReportFactory
 {

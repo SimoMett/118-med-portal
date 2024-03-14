@@ -6,10 +6,14 @@ import org.junit.Before;
 import org.junit.Test;
 import src.Main.Ems.BusinessLogic.MissionController;
 import src.Main.Ems.Domain.Mission.*;
+import src.Main.Ems.Domain.Mission.DataField.DataField;
+import src.Main.Ems.Domain.Mission.DataField.SimpleDataField;
+import src.Main.Ems.Domain.Mission.Factory.BLSReportFactory;
+import src.Main.Ems.Domain.Mission.Factory.IMissionReportFactory;
 import src.Main.Ems.Domain.Session;
 import src.Test.Ems.DummyDao.DummyMissionDao;
 
-import src.Main.Ems.Domain.Mission.BLSReportFactory.BLSFields;
+import src.Main.Ems.Domain.Mission.Factory.BLSReportFactory.BLSFields;
 
 public class MissionControllerTests
 {

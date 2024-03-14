@@ -1,4 +1,6 @@
-package src.Main.Ems.Domain.Mission;
+package src.Main.Ems.Domain.Mission.Factory;
+
+import src.Main.Ems.Domain.Mission.MissionReport;
 
 public interface IMissionReportFactory
 {

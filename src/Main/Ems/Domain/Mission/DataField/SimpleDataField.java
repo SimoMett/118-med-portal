@@ -1,4 +1,4 @@
-package src.Main.Ems.Domain.Mission;
+package src.Main.Ems.Domain.Mission.DataField;
 
 public class SimpleDataField extends DataField<String>
 {

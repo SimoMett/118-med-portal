@@ -1,7 +1,7 @@
 package src.Main.Ems.DataAccess;
 
-import src.Main.Ems.Domain.Mission.DataField;
-import src.Main.Ems.Domain.Mission.IMissionReportFactory;
+import src.Main.Ems.Domain.Mission.DataField.DataField;
+import src.Main.Ems.Domain.Mission.Factory.IMissionReportFactory;
 import src.Main.Ems.Domain.Mission.MissionReport;
 import src.Main.Ems.Domain.RescueTeam.User;
 

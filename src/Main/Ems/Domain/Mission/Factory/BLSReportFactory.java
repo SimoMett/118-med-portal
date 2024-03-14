@@ -1,4 +1,8 @@
-package src.Main.Ems.Domain.Mission;
+package src.Main.Ems.Domain.Mission.Factory;
+
+import src.Main.Ems.Domain.Mission.DataField.GraphicalDataPair;
+import src.Main.Ems.Domain.Mission.MissionReport;
+import src.Main.Ems.Domain.Mission.DataField.SimpleDataField;
 
 public class BLSReportFactory implements IMissionReportFactory
 {
