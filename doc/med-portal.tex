@@ -60,39 +60,36 @@
     \section{Relazione e diagrammi}
     \subsection{Casi d'uso}
     Dallo statement iniziale si possono evidenziare quali sono gli attori principali che si interfacciano con il sistema, ovvero la centrale 118, la squadra di soccorso (composta da almeno un soccorritore e autista) e l'associazione di appartenenza della squadra.
-    Di seguito vengono riportati i diagrammi dei casi d'uso con i relativi templates.
-    %\subsubsection{Diagrammi} %FIXME?
+    Di seguito vengono riportati i diagrammi dei casi d'uso con i relativi templates e dei mockup di interfaccia grafica.
 
     \begin{figure}
         \centering
         %\includesvg[width=4in]{diagrams/svg/ControlCenter!UseCaseDiagram_Centrale_0}
-        \includegraphics[width=4in]{diagrams/png/uc-centrale.png}
+        \includegraphics[width=5in]{diagrams/png/uc-centrale.png}
         \caption{Diagramma casi d'uso per la centrale}
         \label{fig:uc-controlcenter}
     \end{figure}
     \begin{figure}
         \centering
         %\includesvg[width=5in]{diagrams/svg/Squadra!UseCaseDiagram_Squadra_1}
-        \includegraphics[width=5in]{diagrams/png/uc-soccorritore.png}
+        \includegraphics[width=6in]{diagrams/png/uc-soccorritore.png}
         \caption{Diagramma casi d'uso per la squadra}
         \label{fig:uc-rescueteam}
     \end{figure}
     \begin{figure}
         \centering
         %\includesvg[width=4in]{diagrams/svg/Autista!UseCaseDiagram_Autista_2}
-        \includegraphics[width=4in]{diagrams/png/uc-autista.png}
+        \includegraphics[width=5in]{diagrams/png/uc-autista.png}
         \caption{Diagramma casi d'uso per l'autista}
         \label{fig:uc-autista}
     \end{figure}
     \begin{figure}
         \centering
         %\includesvg[width=3in]{diagrams/svg/Organization!UseCaseDiagram_Associazione_3}
-        \includegraphics[width=3in]{diagrams/png/uc-associazione.png}
+        \includegraphics[width=4in]{diagrams/png/uc-associazione.png}
         \caption{Diagramma casi d'uso per l'organizzazione}
         \label{fig:uc-organization}
     \end{figure}
-
-    %\subsubsection{Templates} %FIXME?
 
     \def\graycolor{gray!15}
     \def\creationDate{Creato il 19/02/24.\space}
@@ -105,7 +102,7 @@
             History & \creationDate \\
             Source & Estratto dallo statement iniziale \\
             Abstraction level & User-goal \\
-            Description & La centrale riceve informazioni del chiamante e la posizione della chiamata se questa viene fatta con l’ausilio dell’app di geolocalizzazione. \\
+            Description & La centrale riceve informazioni del chiamante e la posizione della chiamata se questa viene fatta con l’ausilio dell’app di geolocalizzazione. Vedi punto A in figura \ref{fig:mockup-controlcenter}.\\
             Scope & Applicativo telematico della sala di controllo \\
             Actors & Centrale \\
             Pre-conditions & \dots \\
@@ -126,7 +123,7 @@
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
             Abstraction level & User-goal\\
-            Description & La centrale crea una nuova missione tramite l’interfaccia.\\
+            Description & La centrale crea una nuova missione tramite l’interfaccia. Vedi punto B in figura \ref{fig:mockup-controlcenter}.\\
             Scope & Applicativo telematico della sala di controllo \\
             Actors & Centrale\\
             Pre-conditions & \dots \\
@@ -147,7 +144,7 @@
             History & \creationDate \\
             Source & Estratto dallo statement iniziale \\
             Abstraction level & User-goal \\
-            Description & La centrale scrive il dispatch e le informazioni fornite dal chiamante che vengono successivamente allegate alla missione. \\
+            Description & La centrale scrive il dispatch e le informazioni fornite dal chiamante che vengono successivamente allegate alla missione. Vedi punto C in figura \ref{fig:mockup-controlcenter}.\\
             Scope & Applicativo telematico della sala di controllo \\
             Actors & Centrale \\
             Pre-conditions & La missione deve essere creata. \\
@@ -168,7 +165,7 @@
             History & \creationDate Ultima modifica il 06/03/24.\\
             Source & Estratto dallo statement iniziale \\
             Abstraction level & User-goal \\
-            Description & La centrale assegna la missione appena creata a una o più squadre di soccorso. \\
+            Description & La centrale assegna la missione appena creata a una o più squadre di soccorso. Vedi punto D in figura \ref{fig:mockup-controlcenter}.\\
             Scope & Applicativo telematico della sala di controllo \\
             Actors & Centrale, squadre di soccorso \\
             Pre-conditions & La missione deve essere creata. La squadra non deve essere impegnata in un'altra missione.\\
@@ -189,7 +186,7 @@
             History & \creationDate Ultima modifica il 06/03/24.\\
             Source & Estratto dallo statement iniziale \\
             Abstraction level & User-goal \\
-            Description & La centrale specifica il codice di attivazione della missione. \\
+            Description & La centrale specifica il codice di attivazione della missione. Vedi punto E in figura \ref{fig:mockup-controlcenter}.\\
             Scope & Applicativo telematico della sala di controllo\\
             Actors & Centrale, squadre di soccorso \\
             Pre-conditions & La missione deve essere creata. La squadra non deve essere impegnata in un'altra missione.\\
@@ -210,7 +207,7 @@
             History & \creationDate \\
             Source & Proposto per migliorare l'interazione tra centrale e squadre di soccorso. \\
             Abstraction level & User-goal \\
-            Description & La centrale aggiorna le informazioni nel dispatch della missione. \\
+            Description & La centrale aggiorna le informazioni nel dispatch della missione. Vedi punto F in figura \ref{fig:mockup-controlcenter}.\\
             Scope & Applicativo telematico della sala di controllo\\
             Actors & Centrale, squadre di soccorso \\
             Pre-conditions & La missione deve essere creata. \\
@@ -231,7 +228,7 @@
             History & \creationDate \\
             Source & Estratto dallo statement iniziale \\
             Abstraction level & User-goal \\
-            Description & La centrale può osservare la posizione attuale di ogni squadra. \\
+            Description & La centrale può osservare la posizione attuale di ogni squadra. Vedi mappa in figura \ref{fig:mockup-controlcenter}.\\
             Scope & Applicativo telematico della sala di controllo\\
             Actors & Centrale, squadre di soccorso \\
             Pre-conditions & \dots \\
@@ -854,7 +851,12 @@
         \label{tab:usecase4.5}
     \end{table}
 
-    \subsubsection{Prototipo di interfaccia}
+    \begin{figure}
+        \centering
+        \includesvg[width=5in]{diagrams/svg/mockup-controlcenter}
+        \caption{Interfaccia applicativo della centrale}
+        \label{fig:mockup-controlcenter}
+    \end{figure}
     \subsection{Struttura e diagramma delle classi}
     Per la realizzazione del progetto è stata scelta l'architettura 3-tier Business logic - Data access - Domain model.
     La suddivisione dei packages è avvenuta tenendo conto dell'eventuale transizione da un'applicazione monolitica come è adesso ad una a microservizi.
