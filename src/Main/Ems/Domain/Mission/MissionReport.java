@@ -11,11 +11,19 @@ import java.util.Set;
 
 public class MissionReport
 {
+    //static
     public enum ReportType
     {
         DRIVER,
         BLS,
         ALS
+    }
+
+    public static void throwIfInvalidMissionId(String id) throws NumberFormatException
+    {
+        String[] strings = id.split("/", 3);
+        for(String s : strings)
+            Integer.parseInt(s);
     }
 
     //attributes
@@ -30,6 +38,7 @@ public class MissionReport
     //methods
     public MissionReport(String missionId, ReportType type)
     {
+        throwIfInvalidMissionId(missionId);
         this.missionId = missionId;
         this.reportType = type;
         this.dateOfCreation = Timestamp.from(Instant.now());
