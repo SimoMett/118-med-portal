@@ -16,4 +16,10 @@ public class DummyTeamDao implements ITeamDao
     {
         return remoteTeam;
     }
+
+    @Override
+    public boolean fetchAllOpenedMission(RescueTeam team)
+    {
+        return false;
+    }
 }
