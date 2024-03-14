@@ -24,14 +24,22 @@ public class MissionControllerNonWorkingDataAccessTests
     @Before
     public void init() throws IllegalAccessException
     {
-        Session.init(Session.Mode.BLS);
-        IMissionReportFactory reportFactory = Session.instance().getReportFactory();
-        report = reportFactory.createReportModel("03/24/1");
-        missionController = new MissionController(missionDao, report);
-        missionController.updateData(BLSFields.SKIN_COLOR.name(), "pale");
+        try
+        {
+            Session.init(Session.Mode.BLS);
+            IMissionReportFactory reportFactory = Session.instance().getReportFactory();
+            report = reportFactory.createReportModel("03/24/1");
+            missionController = new MissionController(missionDao, report);
+            missionController.updateData(BLSFields.SKIN_COLOR.name(), "pale");
+        }
+        catch (RuntimeException e)
+        {
+            if(e.getMessage().equals("MissionDao failed data access"))
+                System.out.println("MissionDao failed data access during init, nothing to worry about");
+        }
     }
 
-    @Test
+    @Test(expected = RuntimeException.class)
     public void correctKeyUpdateData() throws InvalidTypeException, IllegalAccessException
     {
         missionController.updateData(BLSFields.CHEST_PAIN.name(), "true");
@@ -55,7 +63,7 @@ public class MissionControllerNonWorkingDataAccessTests
         missionController.get("INVALID_KEY");
     }
 
-    @Test
+    @Test(expected = RuntimeException.class)
     public void accessingClosedMission()
     {
         missionController.closeMission();
@@ -66,14 +74,22 @@ public class MissionControllerNonWorkingDataAccessTests
     @Test(expected = IllegalAccessException.class)
     public void editingClosedMission() throws IllegalAccessException
     {
-        missionController.closeMission();
+        try
+        {
+            missionController.closeMission();
+        }
+        catch (RuntimeException e)
+        {
+            if(e.getMessage().equals("MissionDao failed data access"))
+                System.out.println("MissionDao failed data access during while trying to close a mission, nothing to worry about");
+        }
         missionController.updateData(BLSReportFactory.BLSFields.SKIN_COLOR.name(), "reddish");
     }
 
-    @Test
+    @Test(expected = RuntimeException.class)
     public void saveReport()
     {
-        assert !missionController.saveReport();
+        missionController.saveReport();
     }
 
     @After

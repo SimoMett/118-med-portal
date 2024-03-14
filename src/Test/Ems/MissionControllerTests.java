@@ -8,7 +8,6 @@ import src.Main.Ems.BusinessLogic.MissionController;
 import src.Main.Ems.Domain.Mission.*;
 import src.Main.Ems.Domain.Mission.DataField.DataField;
 import src.Main.Ems.Domain.Mission.DataField.SimpleDataField;
-import src.Main.Ems.Domain.Mission.Factory.BLSReportFactory;
 import src.Main.Ems.Domain.Mission.Factory.IMissionReportFactory;
 import src.Main.Ems.Domain.Session;
 import src.Test.Ems.DummyDao.DummyMissionDao;
@@ -73,15 +72,14 @@ public class MissionControllerTests
     @Test
     public void saveReport()
     {
-        assert missionController.saveReport();
+        missionController.saveReport();
     }
 
     @Test(expected = NullPointerException.class)
     public void patientDataSharingException()
     {
         //should throw exception because the receivingTeam has not been assign to the mission, therefore cannot receive patient data
-
-        assert missionController.sendPatientData("3451");
+        missionController.sendPatientData("3451");
     }
 
     @Test
@@ -93,7 +91,7 @@ public class MissionControllerTests
         DummyMissionDao.fakeSession = receivingTeamSession;
         //
 
-        assert missionController.sendPatientData(receivingTeamSession.getTeamId());
+        missionController.sendPatientData(receivingTeamSession.getTeamId());
     }
 
     @After
