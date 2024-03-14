@@ -61,35 +61,38 @@
     \subsection{Casi d'uso}
     Dallo statement iniziale si possono evidenziare quali sono gli attori principali che si interfacciano con il sistema, ovvero la centrale 118, la squadra di soccorso (composta da almeno un soccorritore e autista) e l'associazione di appartenenza della squadra.
     Di seguito vengono riportati i diagrammi dei casi d'uso con i relativi templates.
-    \subsubsection{Diagrammi}
+    %\subsubsection{Diagrammi} %FIXME?
 
     \begin{figure}
         \centering
-        \includesvg[width=4in]{diagrams/svg/ControlCenter!UseCaseDiagram_Centrale_0}
+        %\includesvg[width=4in]{diagrams/svg/ControlCenter!UseCaseDiagram_Centrale_0}
+        \includegraphics[width=4in]{diagrams/png/uc-centrale.png}
         \caption{Diagramma casi d'uso per la centrale}
         \label{fig:uc-controlcenter}
     \end{figure}
     \begin{figure}
         \centering
-        \includesvg[width=5in]{diagrams/svg/Squadra!UseCaseDiagram_Squadra_1}
+        %\includesvg[width=5in]{diagrams/svg/Squadra!UseCaseDiagram_Squadra_1}
+        \includegraphics[width=5in]{diagrams/png/uc-soccorritore.png}
         \caption{Diagramma casi d'uso per la squadra}
         \label{fig:uc-rescueteam}
     \end{figure}
     \begin{figure}
         \centering
-        \includesvg[width=4in]{diagrams/svg/Autista!UseCaseDiagram_Autista_2}
+        %\includesvg[width=4in]{diagrams/svg/Autista!UseCaseDiagram_Autista_2}
+        \includegraphics[width=4in]{diagrams/png/uc-autista.png}
         \caption{Diagramma casi d'uso per l'autista}
         \label{fig:uc-autista}
     \end{figure}
     \begin{figure}
         \centering
-        \includesvg[width=3in]{diagrams/svg/Organization!UseCaseDiagram_Associazione_3}
+        %\includesvg[width=3in]{diagrams/svg/Organization!UseCaseDiagram_Associazione_3}
+        \includegraphics[width=3in]{diagrams/png/uc-associazione.png}
         \caption{Diagramma casi d'uso per l'organizzazione}
         \label{fig:uc-organization}
     \end{figure}
 
-
-    \subsubsection{Templates}
+    %\subsubsection{Templates} %FIXME?
 
     \def\graycolor{gray!15}
     \def\creationDate{Creato il 19/02/24.\space}
@@ -924,7 +927,12 @@
     In particolare, $User$ è una classe $Proxy$ in quanto un utente ha le certificazioni che potrebbero essere oggetti pesanti e quindi sarebbe preferibile poterle scaricare in un secondo momento e solo se necessarie.
     \newline Per gli oggetti $Report$ invece si è ritenuto più opportuno non creare un $ReportRegistry$ poichè sui report di missione non si possono svolgere delle vere e proprie operazioni $CRUD$, se non quella di download.
     Piuttosto si è preferito implementare nella lato $BusinessLogic$ un metodo di ricerca dei report che, dato un filtro (un oggetto che implementa l'interfaccia $SearchFilter$ per formare un pattern $Strategy$) e un parametro di ricerca, restituisce una lista di risultati.
-    \section{Documentazione}
-    \subsection{Codice}
+    %\section{Documentazione del codice}
+    %\subsection{ControlCenter}
+    %\subsubsection{MissionController}
+    %\subsubsection{RescueTeamController}
+    %\subsection{Ems}
+    %\subsection{Organization}
+
 
 \end{document}
