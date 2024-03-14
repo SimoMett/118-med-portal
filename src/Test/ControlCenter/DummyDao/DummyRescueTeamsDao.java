@@ -4,6 +4,7 @@ import src.Main.ControlCenter.DataAccess.IRescueTeamsDao;
 import src.Main.ControlCenter.Domain.Mission;
 import src.Main.ControlCenter.Domain.RescueTeam;
 import src.Main.ControlCenter.Domain.RescueTeamsList;
+import src.Main.ControlCenter.MissionStatus;
 
 public class DummyRescueTeamsDao implements IRescueTeamsDao
 {
@@ -35,4 +36,14 @@ public class DummyRescueTeamsDao implements IRescueTeamsDao
 
     @Override
     public Object getTeamPosition(RescueTeam rescueTeam) { return null; }
+
+    protected void updateTeamMissionStatus(RescueTeam rescueTeam)
+    {
+        //TODO get current team status
+        MissionStatus nearlyReceivedStatus = null;
+
+        if(rescueTeam.getStatus() == MissionStatus.MISSION_END)
+            rescueTeam.changeCurrentMission(null, null);
+        rescueTeam.updateStatus(nearlyReceivedStatus);
+    }
 }

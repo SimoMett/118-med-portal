@@ -1,9 +1,11 @@
 package src.Main.ControlCenter.Domain;
 
+import src.Main.ControlCenter.MissionStatus;
+
 public class RescueTeam
 {
     private final String id;
-    private Object status;
+    private MissionStatus status;
 
     private Mission currentMission;
     private String currentActivationCode;
@@ -18,12 +20,12 @@ public class RescueTeam
         return id;
     }
 
-    public void setStatus(Object newStatus)
+    public void updateStatus(MissionStatus newStatus)
     {
         status = newStatus;
     }
 
-    public Object getStatus()
+    public MissionStatus getStatus()
     {
         return status;
     }
