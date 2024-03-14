@@ -1,7 +1,6 @@
-package src.Main.Ems.DataAccess;
+package src.Main.Ems.ORM;
 
 import src.Main.Ems.BusinessLogic.Credentials;
-import src.Main.Ems.Domain.RescueTeam.User;
 
 public interface IUserDao
 {

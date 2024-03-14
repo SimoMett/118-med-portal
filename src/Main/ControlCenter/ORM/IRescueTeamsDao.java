@@ -1,4 +1,4 @@
-package src.Main.ControlCenter.DataAccess;
+package src.Main.ControlCenter.ORM;
 
 import src.Main.ControlCenter.Domain.Mission;
 import src.Main.ControlCenter.Domain.RescueTeam;

@@ -1,6 +1,6 @@
 package src.Main.ControlCenter.BusinessLogic;
 
-import src.Main.ControlCenter.DataAccess.IRescueTeamsDao;
+import src.Main.ControlCenter.ORM.IRescueTeamsDao;
 import src.Main.ControlCenter.Domain.Mission;
 import src.Main.ControlCenter.Domain.RescueTeam;
 import src.Main.ControlCenter.MissionStatus;

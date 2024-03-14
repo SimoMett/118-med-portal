@@ -1,8 +1,8 @@
 package src.Test.Ems.DummyDao;
 
 import src.Main.Ems.BusinessLogic.Credentials;
-import src.Main.Ems.DataAccess.IUserDao;
-import src.Main.Ems.DataAccess.LoginResult;
+import src.Main.Ems.ORM.IUserDao;
+import src.Main.Ems.ORM.LoginResult;
 import src.Main.Ems.Domain.RescueTeam.User;
 
 import java.util.ArrayList;

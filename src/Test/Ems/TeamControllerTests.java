@@ -6,7 +6,7 @@ import org.junit.Test;
 import src.Main.Ems.BusinessLogic.Credentials;
 import src.Main.Ems.BusinessLogic.TeamController;
 import src.Main.Ems.BusinessLogic.UserLoginController;
-import src.Main.Ems.DataAccess.LoginResult;
+import src.Main.Ems.ORM.LoginResult;
 import src.Main.Ems.Domain.RescueTeam.User;
 import src.Main.Ems.Domain.RescueTeam.Vehicle;
 import src.Main.Ems.Domain.Session;

@@ -1,4 +1,4 @@
-package src.Main.Organization.ReportsManagement.DataAccess;
+package src.Main.Organization.ReportsManagement.ORM;
 
 import src.Main.Organization.ReportsManagement.BusinessLogic.SearchFilter;
 import src.Main.Organization.ReportsManagement.Domain.Report;

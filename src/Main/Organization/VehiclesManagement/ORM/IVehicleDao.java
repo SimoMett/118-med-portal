@@ -1,4 +1,4 @@
-package src.Main.Organization.VehiclesManagement.DataAccess;
+package src.Main.Organization.VehiclesManagement.ORM;
 
 import src.Main.Organization.VehiclesManagement.VehicleInfo;
 import src.Main.Organization.VehiclesManagement.Domain.Vehicle;
