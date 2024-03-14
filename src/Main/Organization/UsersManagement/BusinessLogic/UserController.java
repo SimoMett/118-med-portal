@@ -18,15 +18,13 @@ public class UserController
         usersRegistry = userDao.getUsersRegistry();
     }
 
-    public UserInfo getUserInfo(int id)
+    public UserInfo getUserInfo(int id) throws NullPointerException
     {
-        //TODO error management
         return usersRegistry.getUser(id).getInfo();
     }
 
-    public Object getUserCertificates(int id)
+    public Object getUserCertificates(int id) throws NullPointerException
     {
-        //TODO error management
         User u = usersRegistry.getUser(id);
         Object certificates = u.getCertificates();
         if(certificates == null)
@@ -38,9 +36,8 @@ public class UserController
         return null;
     }
 
-    public void updateUserInfo(int id, String key, String val)
+    public void updateUserInfo(int id, String key, String val) throws NullPointerException
     {
-        //TODO error management
         User u = usersRegistry.getUser(id);
         if(userDao.updateInfo(u, key, val))
             u.updateInfo(key, val);
