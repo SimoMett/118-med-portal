@@ -81,7 +81,7 @@ public class MissionControllerNonWorkingDataAccessTests
         catch (RuntimeException e)
         {
             if(e.getMessage().equals("MissionDao failed data access"))
-                System.out.println("MissionDao failed data access during while trying to close a mission, nothing to worry about");
+                System.out.println("MissionDao failed data access while trying to close a mission, nothing to worry about");
         }
         missionController.updateData(BLSReportFactory.BLSFields.SKIN_COLOR.name(), "reddish");
     }
