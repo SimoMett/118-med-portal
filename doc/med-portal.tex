@@ -244,12 +244,54 @@
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.1 – Inserisci dati anagrafici}\\
+            Use case & \textbf{2.1 – Riceve scheda missione}\\
+            \hline
+            History & \creationDate \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & User-goal\\
+            Description & La squadra riceve la scheda missione\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Squadra\\
+            Pre-conditions & \dots \\
+            Post-conditions & \dots \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase2.1}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & \textbf{2.2 – Apre scheda missione}\\
+            \hline
+            History & \creationDate \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & Function\\
+            Description & La squadra apre la scheda missione per iniziare la compilazione dei dati/parametri.\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Squadra\\
+            Pre-conditions & \dots \\
+            Post-conditions & \dots \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase2.2}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & \textbf{2.3 – Inserisci dati anagrafici}\\
             \hline
             History & \creationDate Ultima modifica il 06/03/24.\\
             Source & Estratto dallo statement iniziale\\
             Abstraction level & User-goal\\
-            Description & Il soccorritore annota i dati anagrafici del paziente\\
+            Description & Il soccorritore annota i dati anagrafici del paziente. Vedi punto A in figura \ref{fig:mockup-soccorritore}.\\
             Scope & Applicativo telematico della squadra di soccorso\\
             Actors & Squadra\\
             Pre-conditions & \dots \\
@@ -259,60 +301,60 @@
             Alternative flow & \dots \\
             Non-functional requirements & Se la connessione è presente, i dati vengono inviati automaticamente alla centrale.
         \end{tabularx}
-        \label{tab:usecase2.1}
-    \end{table}
-
-    \begin{table}
-        \rowcolors{2}{\graycolor}{white}
-        \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.2 – Calcola dati anagrafici da codice fiscale}\\
-            \hline
-            History & \creationDate Ultima modifica il 06/03/24.\\
-            Source & Estratto dallo statement iniziale\\
-            Abstraction level & Function \\
-            Description & Il soccorritore compila i dati anagrafici del paziente automaticamente inserendo solamente il codice fiscale\\
-            Scope & Applicativo telematico della squadra di soccorso\\
-            Actors & Squadra\\
-            Pre-conditions & \dots \\
-            Post-conditions & \dots \\
-            Normal flow & \dots \\
-            Variations & \dots \\
-            Alternative flow & \dots \\
-            Non-functional requirements & Se la connessione è presente, i dati vengono inviati automaticamente alla centrale.
-        \end{tabularx}
-        \label{tab:usecase2.2}
-    \end{table}
-
-    \begin{table}
-        \rowcolors{2}{\graycolor}{white}
-        \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.3 – Inserisci parametri vitali}\\
-            \hline
-            History & \creationDate Ultima modifica il 06/03/24.\\
-            Source & Estratto dallo statement iniziale\\
-            Abstraction level & User-goal\\
-            Description & Il soccorritore inserisce i parametri vitali del paziente.\\
-            Scope & Applicativo telematico della squadra di soccorso\\
-            Actors & Squadra\\
-            Pre-conditions & \dots \\
-            Post-conditions & \dots \\
-            Normal flow & \dots \\
-            Variations & \dots \\
-            Alternative flow & \dots \\
-            Non-functional requirements & Se la connessione è presente, i dati vengono inviati automaticamente alla centrale.
-        \end{tabularx}
         \label{tab:usecase2.3}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.4 – Inserisci firma del paziente}\\
+            Use case & \textbf{2.4 – Calcola dati anagrafici da codice fiscale}\\
+            \hline
+            History & \creationDate Ultima modifica il 06/03/24.\\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & Function \\
+            Description & Il soccorritore compila i dati anagrafici del paziente automaticamente inserendo solamente il codice fiscale. Vedi punto B in figura \ref{fig:mockup-soccorritore}.\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Squadra\\
+            Pre-conditions & \dots \\
+            Post-conditions & \dots \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & Se la connessione è presente, i dati vengono inviati automaticamente alla centrale.
+        \end{tabularx}
+        \label{tab:usecase2.4}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & \textbf{2.5 – Inserisci parametri vitali}\\
             \hline
             History & \creationDate Ultima modifica il 06/03/24.\\
             Source & Estratto dallo statement iniziale\\
             Abstraction level & User-goal\\
-            Description & Il soccorritore fa firmare il rifiuto di trasporto al paziente.\\
+            Description & Il soccorritore inserisce i parametri vitali del paziente. Vedi punto C in figura \ref{fig:mockup-soccorritore}.\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Squadra\\
+            Pre-conditions & \dots \\
+            Post-conditions & \dots \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & Se la connessione è presente, i dati vengono inviati automaticamente alla centrale.
+        \end{tabularx}
+        \label{tab:usecase2.5}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & \textbf{2.6 – Inserisci firma del paziente}\\
+            \hline
+            History & \creationDate Ultima modifica il 06/03/24.\\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & User-goal\\
+            Description & Il soccorritore fa firmare il rifiuto di trasporto al paziente. Vedi punto D in figura \ref{fig:mockup-soccorritore}.\\
             Scope & Applicativo telematico della squadra di soccorso\\
             Actors & Squadra\\
             Pre-conditions & Esito trattamento “rifiuto trasporto”. \\
@@ -322,60 +364,18 @@
             Alternative flow & \dots \\
             Non-functional requirements & Se la connessione è presente, la firma viene inviata automaticamente alla centrale.
         \end{tabularx}
-        \label{tab:usecase2.4}
-    \end{table}
-
-    \begin{table}
-        \rowcolors{2}{\graycolor}{white}
-        \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.5 – Sincronizza dati e parametri con la centrale}\\
-            \hline
-            History & \creationDate \\
-            Source & Estratto dallo statement iniziale\\
-            Abstraction level & User-goal\\
-            Description & Il soccorritore sincronizza manualmente i dati e i parametri vitali con la centrale.\\
-            Scope & Applicativo telematico della squadra di soccorso\\
-            Actors & Squadra\\
-            Pre-conditions & \dots \\
-            Post-conditions & \dots \\
-            Normal flow & \dots \\
-            Variations & \dots \\
-            Alternative flow & \dots \\
-            Non-functional requirements & \dots
-        \end{tabularx}
-        \label{tab:usecase2.5}
-    \end{table}
-
-    \begin{table}
-        \rowcolors{2}{\graycolor}{white}
-        \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.6 – Condividi dati e parametri con altre squadre}\\
-            \hline
-            History & \creationDate Ultima modifica il 08/03/24\\
-            Source & Estratto dallo statement iniziale\\
-            Abstraction level & User-goal\\
-            Description & Il soccorritore condivide i dati anagrafici e parametri vitali con altre squadre giunte in supporto.\\
-            Scope & Applicativo telematico della squadra di soccorso\\
-            Actors & Squadra\\
-            Pre-conditions & La squadra ricevente deve essere assegnata alla stessa missione \\
-            Post-conditions & \dots \\
-            Normal flow & a. Inserire numero della squadra ricevente\newline b. La squadra ricevente accetta o rifiuta i dati ricevuti.\\
-            Variations & \dots \\
-            Alternative flow & \dots \\
-            Non-functional requirements & \dots
-        \end{tabularx}
         \label{tab:usecase2.6}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.7 – Riceve scheda missione}\\
+            Use case & \textbf{2.7 – Sincronizza dati e parametri con la centrale}\\
             \hline
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
             Abstraction level & User-goal\\
-            Description & La squadra riceve la scheda missione\\
+            Description & Il soccorritore sincronizza manualmente i dati e i parametri vitali con la centrale. Vedi punto E in figura \ref{fig:mockup-soccorritore}.\\
             Scope & Applicativo telematico della squadra di soccorso\\
             Actors & Squadra\\
             Pre-conditions & \dots \\
@@ -391,17 +391,17 @@
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.8 – Apre scheda missione}\\
+            Use case & \textbf{2.8 – Condividi dati con altre squadre}\\
             \hline
-            History & \creationDate \\
+            History & \creationDate Ultima modifica il 08/03/24\\
             Source & Estratto dallo statement iniziale\\
-            Abstraction level & Function\\
-            Description & La squadra apre la scheda missione per iniziare la compilazione dei dati/parametri.\\
+            Abstraction level & User-goal\\
+            Description & Il soccorritore condivide i dati anagrafici con altre squadre giunte in supporto. Vedi punto F in figura \ref{fig:mockup-soccorritore}.\\
             Scope & Applicativo telematico della squadra di soccorso\\
             Actors & Squadra\\
-            Pre-conditions & \dots \\
+            Pre-conditions & La squadra ricevente deve essere assegnata alla stessa missione \\
             Post-conditions & \dots \\
-            Normal flow & \dots \\
+            Normal flow & a. Inserire numero della squadra ricevente\newline b. La squadra ricevente accetta o rifiuta i dati ricevuti.\\
             Variations & \dots \\
             Alternative flow & \dots \\
             Non-functional requirements & \dots
@@ -412,7 +412,28 @@
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.9 – Seleziona mezzo}\\
+            Use case & \textbf{2.9 – Firma la scheda}\\
+            \hline
+            History & \creationDate \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & Function\\
+            Description & La squadra firma e chiude la scheda della missione. Vedi punto G in figura \ref{fig:mockup-soccorritore}.\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Squadra\\
+            Pre-conditions & Tutti i campi devono essere compilati \\
+            Post-conditions & La scheda rimane immutabile \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase2.9}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & \textbf{2.10 – Seleziona mezzo}\\
             \hline
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
@@ -427,39 +448,18 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase2.9}
-    \end{table}
-
-    \begin{table}
-        \rowcolors{2}{\graycolor}{white}
-        \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.10 – Seleziona caposquadra}\\
-            \hline
-            History & \creationDate \\
-            Source & Estratto dallo statement iniziale\\
-            Abstraction level & Function\\
-            Description & La squadra cambia il caposquadra selezionando uno dei soccorritori loggati.\\
-            Scope & Applicativo telematico della squadra di soccorso\\
-            Actors & Squadra\\
-            Pre-conditions & Almeno un soccorritore loggato. \\
-            Post-conditions & \dots \\
-            Normal flow & \dots \\
-            Variations & \dots \\
-            Alternative flow & \dots \\
-            Non-functional requirements & \dots
-        \end{tabularx}
         \label{tab:usecase2.10}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.11 – Seleziona autista}\\
+            Use case & \textbf{2.11 – Seleziona caposquadra}\\
             \hline
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
             Abstraction level & Function\\
-            Description & La squadra cambia l’autista selezionando uno dei soccorritori loggati.\\
+            Description & La squadra cambia il caposquadra selezionando uno dei soccorritori loggati.\\
             Scope & Applicativo telematico della squadra di soccorso\\
             Actors & Squadra\\
             Pre-conditions & Almeno un soccorritore loggato. \\
@@ -475,7 +475,28 @@
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.12 – Login}\\
+            Use case & \textbf{2.12 – Seleziona autista}\\
+            \hline
+            History & \creationDate \\
+            Source & Estratto dallo statement iniziale\\
+            Abstraction level & Function\\
+            Description & La squadra cambia l’autista selezionando uno dei soccorritori loggati.\\
+            Scope & Applicativo telematico della squadra di soccorso\\
+            Actors & Squadra\\
+            Pre-conditions & Almeno un soccorritore loggato. \\
+            Post-conditions & \dots \\
+            Normal flow & \dots \\
+            Variations & \dots \\
+            Alternative flow & \dots \\
+            Non-functional requirements & \dots
+        \end{tabularx}
+        \label{tab:usecase2.12}
+    \end{table}
+
+    \begin{table}
+        \rowcolors{2}{\graycolor}{white}
+        \begin{tabularx}{\textwidth}{l|X}
+            Use case & \textbf{2.13 – Login}\\
             \hline
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
@@ -491,13 +512,13 @@
             Non-functional requirements & Viene aggiornata la lista delle missioni aperte, mostrando solamente
             quelle che coinvolgono i membri della squadra.
         \end{tabularx}
-        \label{tab:usecase2.12}
+        \label{tab:usecase2.13}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.13 – Recupera password}\\
+            Use case & \textbf{2.14 – Recupera password}\\
             \hline
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
@@ -512,13 +533,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase2.13}
+        \label{tab:usecase2.14}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.14 – Primo login}\\
+            Use case & \textbf{2.15 – Primo login}\\
             \hline
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
@@ -533,13 +554,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase2.14}
+        \label{tab:usecase2.15}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.15 – Cambia password}\\
+            Use case & \textbf{2.16 – Cambia password}\\
             \hline
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
@@ -554,13 +575,13 @@
             Alternative flow & \dots \\
             Non-functional requirements & \dots
         \end{tabularx}
-        \label{tab:usecase2.15}
+        \label{tab:usecase2.16}
     \end{table}
 
     \begin{table}
         \rowcolors{2}{\graycolor}{white}
         \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.16 – Logout}\\
+            Use case & \textbf{2.17 – Logout}\\
             \hline
             History & \creationDate Ultima modifica il 21/02/24 \\
             Source & Estratto dallo statement iniziale\\
@@ -573,27 +594,6 @@
             Variations & \dots \\
             Alternative flow & \dots \\
             Non-functional requirements & Viene aggiornata la lista delle missioni aperte, mostrando solamente quelle che coinvolgono i membri della squadra.
-        \end{tabularx}
-        \label{tab:usecase2.16}
-    \end{table}
-
-    \begin{table}
-        \rowcolors{2}{\graycolor}{white}
-        \begin{tabularx}{\textwidth}{l|X}
-            Use case & \textbf{2.17 – Firma la scheda}\\
-            \hline
-            History & \creationDate \\
-            Source & Estratto dallo statement iniziale\\
-            Abstraction level & Function\\
-            Description & La squadra firma e chiude la scheda della missione.\\
-            Scope & Applicativo telematico della squadra di soccorso\\
-            Actors & Squadra\\
-            Pre-conditions & Tutti i campi devono essere compilati \\
-            Post-conditions & La scheda rimane immutabile \\
-            Normal flow & \dots \\
-            Variations & \dots \\
-            Alternative flow & \dots \\
-            Non-functional requirements & \dots
         \end{tabularx}
         \label{tab:usecase2.17}
     \end{table}
@@ -648,7 +648,7 @@
             History & Creato il 22/02/24\\
             Source & Estratto dallo statement iniziale\\
             Abstraction level & User-goal\\
-            Description & L'autista invia lo stato di missione ogni qualvolta il mezzo si muova.\\
+            Description & L'autista invia lo stato di missione ogni qualvolta il mezzo si muova. Vedi punto A in figura \ref{fig:mockup-autista}.\\
             Scope & Applicativo telematico dell'autista della squadra di soccorso\\
             Actors & Autista\\
             Pre-conditions & \dots \\
@@ -669,7 +669,7 @@
             History & Creato il 22/02/24\\
             Source & Proposto per gestire il caso in cui l'autista si possa dimenticare di inviare lo stato, o lo faccia troppo tardi.\\
             Abstraction level & User-goal \\
-            Description & Salva o modifica l'orario di invio di uno stato\\
+            Description & Salva o modifica l'orario di invio di uno stato. Vedi punto B in figura \ref{fig:mockup-autista}.\\
             Scope & Applicativo telematico dell'autista della squadra di soccorso\\
             Actors & Autista\\
             Pre-conditions & Per modificare l'orario di uno stato è necessario aver inviato tale stato.\\
@@ -690,7 +690,7 @@
             History & Creato il 22/02/24\\
             Source & Estratto dallo statement iniziale\\
             Abstraction level & User-goal\\
-            Description & Invia l'esito della missione quando la squadra sta per abbandonare l'obiettivo.\\
+            Description & Invia l'esito della missione quando la squadra sta per abbandonare l'obiettivo. Vedi punto C in figura \ref{fig:mockup-autista}.\\
             Scope & Applicativo telematico dell'autista della squadra di soccorso\\
             Actors & Autista\\
             Pre-conditions & Stato "arrivo su obiettivo" raggiunto. \\
@@ -732,7 +732,7 @@
             History & Creato il 22/02/24\\
             Source & Estratto dallo statement iniziale\\
             Abstraction level & Function\\
-            Description & Inserisce chilometraggio del mezzo\\
+            Description & Inserisce chilometraggio del mezzo. Vedi punto D in figura \ref{fig:mockup-autista}.\\
             Scope & Applicativo telematico dell'autista della squadra di soccorso\\
             Actors & Autista\\
             Pre-conditions & \dots \\
@@ -859,13 +859,13 @@
     \end{figure}
     \begin{figure}
         \centering
-        \includesvg[width=4in]{diagrams/svg/mockup-soccorritore}
+        \includesvg[width=4.5in]{diagrams/svg/mockup-soccorritore}
         \caption{Interfaccia applicativo della squadra}
         \label{fig:mockup-soccorritore}
     \end{figure}
     \begin{figure}
         \centering
-        \includesvg[width=4in]{diagrams/svg/mockup-autista}
+        \includesvg[width=2.5in]{diagrams/svg/mockup-autista}
         \caption{Interfaccia applicativo dell'autista}
         \label{fig:mockup-autista}
     \end{figure}
