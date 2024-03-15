@@ -1,10 +1,13 @@
 package src.Main.ControlCenter.Domain;
 
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 
 public class Mission
 {
     private final String id;
+    private final String timeOfCreation;
     private String dispatch;
     private ArrayList<RescueTeam> assignedTeams;
 
@@ -13,6 +16,12 @@ public class Mission
         this.id = id;
         this.dispatch = dispatch;
         this.assignedTeams = new ArrayList<>();
+        this.timeOfCreation = Instant.now().truncatedTo(ChronoUnit.SECONDS).toString();
+    }
+
+    public String getTimeOfCreation()
+    {
+        return timeOfCreation;
     }
 
     public String getId() { return id; }

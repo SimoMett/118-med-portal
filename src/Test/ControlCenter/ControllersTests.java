@@ -27,6 +27,7 @@ public class ControllersTests
         mission = missionController.createNewMission("test dispatch");
         mission = MissionsList.getInstance().getMission(mission.getId());
         assert mission!=null;
+        assert !mission.getTimeOfCreation().isEmpty();
     }
 
     @Test
