@@ -1,11 +1,10 @@
 package src.Main.Ems.Domain.Mission;
 
-import src.Main.Ems.Domain.RescueTeam.ITeamObserver;
-import src.Main.Ems.Domain.RescueTeam.RescueTeam;
-
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-public class MissionsList implements ITeamObserver
+public class MissionsList
 {
     private final ArrayList<MissionReport> list = new ArrayList<>();
     public void add(MissionReport mission)
@@ -23,9 +22,8 @@ public class MissionsList implements ITeamObserver
         return null;
     }
 
-    @Override
-    public void onRescueTeamChange(RescueTeam team)
+    public List<MissionReport> getAll()
     {
-
+        return Collections.unmodifiableList(list);
     }
 }
