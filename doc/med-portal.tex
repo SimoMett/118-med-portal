@@ -870,7 +870,7 @@
         \label{fig:mockup-autista}
     \end{figure}
     \subsection{Struttura e diagramma delle classi}
-    Per la realizzazione del progetto è stata scelta l'architettura 3-tier Business logic - Data access - Domain model.
+    Per la realizzazione del progetto è stata scelta l'architettura 3-tier Business logic - Object-relational mapper - Domain model.
     La suddivisione dei packages è avvenuta tenendo conto dell'eventuale transizione da un'applicazione monolitica come è adesso ad una a microservizi.
     In particolare i packages principali sono quelli emersi facendo un'analisi dei $bounded-context$, ovvero $ControlCenter$, $Ems$ e $Organization$.
     Ognuno di questi è suddiviso nei sub-packages $BusinessLogic$, $DataAccess$ e $DomainModel$.
@@ -881,11 +881,12 @@
     \subsubsection{ControlCenter}
     \begin{figure}
         \centering
-        \includesvg[width=6in]{diagrams/svg/ControlCenter!ControlCenter_0}
+        %\includesvg[width=6in]{diagrams/svg/ControlCenter!ControlCenter_0}
+        \includegraphics[width=6in]{diagrams/png/uml-controlcenter.png}
         \caption{Diagramma delle classi di ControlCenter}
         \label{fig:uml-controlcenter}
     \end{figure}
-    In questo package sono presenti $RescueTeamController$ e $MissionController$. Il primo $controller$ fornisce metodi di gestione delle squadre di soccorso sul territorio,
+    In questo package (figura \ref{fig:uml-controlcenter}) sono presenti $RescueTeamController$ e $MissionController$. Il primo $controller$ fornisce metodi di gestione delle squadre di soccorso sul territorio,
     l'altro invece espone metodi di creazione e gestione delle missioni.
     Entrami i $controller$, siccome sono responsabili del salvataggio dei dati su database e sincronizzazione del $DomainModel$, dipendono da dei $DataAccessObject$, in questo caso dalle interfacce $IRescueTeamsDao$ e $IMissionDao$.
     Il $DomainModel$ è caratterizzato da una $RescueTeamsList$ e da una $MissionsList$, che tengono traccia rispettivamente delle squadre di soccorso operative e delle missioni di soccorso attualmente in svolgimento.
@@ -893,11 +894,12 @@
     \subsubsection{Ems}
     \begin{figure}
         \centering
-        \includesvg[width=6in]{diagrams/svg/Ems!Ems_1}
+        %\includesvg[width=6in]{diagrams/svg/Ems!Ems_1}
+        \includegraphics[width=6in]{diagrams/png/uml-ems.png}
         \caption{Diagramma delle classi di Ems}
         \label{fig:uml-ems}
     \end{figure}
-    Questo package è sicuramente quello più articolato di tutti poichè prevede un gran numero di possibili interazioni.
+    Questo package, riportato in figura \ref{fig:uml-ems}, è sicuramente quello più articolato di tutti poichè prevede un gran numero di possibili interazioni.
     È composto da cinque $controller$:
     \newline $UserLoginController$ permette all'utente di effettuare il login, il cambio e recupero password.
     Per offrire queste operazione, questa classe invoca direttamente i metodi di un'istanza di $IUserDao$.
@@ -916,7 +918,7 @@
         \caption{Domain model del package Ems}
         \label{fig:uml-ems-domainmodel}
     \end{figure}
-    Nel $DomainModel$ ci sono le classi $Session$ e $VehiclesList$ ed è suddiviso nei subpackage $RescueTeam$ e $Mission$.
+    Nel $DomainModel$ in figura \ref{fig:uml-ems-domainmodel} ci sono le classi $Session$ e $VehiclesList$ ed è suddiviso nei subpackage $RescueTeam$ e $Mission$.
     $VehiclesList$ è una lista di $Vehicle$. $Session$ è un $Singleton$ che tiene un riferimento della squadra corrente e delle missioni.
     A seconda della modalità del dispositivo (ALS, BLSD, o Autista), la $Session$ va inizializzata di conseguenza.
     $RescueTeam$ contiene l'omonima classe e le classi accessorie che caratterizzano una squadra di soccorso, ovvero $User$ e $Vehicle$.
@@ -935,7 +937,7 @@
         \caption{Diagramma delle classi di Organization}
         \label{fig:uml-organization}
     \end{figure}
-    Qui la $BusinessLogic$ è composta da cinque $controller$: $VehicleRegistrationController$, $VehicleController$, $UserController$, $UserRegistrationController$ e $ReportsController$.
+    Qui, in figura \ref{fig:uml-organization}, la $BusinessLogic$ è composta da cinque $controller$: $VehicleRegistrationController$, $VehicleController$, $UserController$, $UserRegistrationController$ e $ReportsController$.
     Ognuno di questi offre operazioni $CRUD$ sulle banche dati dei veicoli, utenti e report di missione, accedendovi tramite le interfacce $IVehicleDao$, $IUserDao$ e $IReportDao$.
     Similmente al package $ControlCenter$, il modello di dominio è principalmente costituito da delle classi $Wrapper$ di liste di oggetti $Vehicle$ e $User$, che sono $VehiclesRegistry$ e $UsersRegistry$.
     In particolare, $User$ è una classe $Proxy$ in quanto un utente ha le certificazioni che potrebbero essere oggetti pesanti e quindi sarebbe preferibile poterle scaricare in un secondo momento e solo se necessarie.
