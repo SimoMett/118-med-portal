@@ -25,7 +25,7 @@ public class User
 
     public Object getCertificates()
     {
-        return null;
+        return certificates;
     }
 
     public void updateInfo(String key, String val) throws RuntimeException
@@ -36,6 +36,6 @@ public class User
 
     public void storeCertificates(Object certificates)
     {
-
+        this.certificates = certificates;
     }
 }

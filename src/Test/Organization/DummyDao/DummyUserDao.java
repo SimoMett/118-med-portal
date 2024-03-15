@@ -34,9 +34,15 @@ public class DummyUserDao implements IUserDao
     }
 
     @Override
+    public boolean updateCertificates(User user, Object certificates)
+    {
+        return true;
+    }
+
+    @Override
     public Object getUserCertificates(User user)
     {
-        return null;
+        return new Object();
     }
 
     @Override

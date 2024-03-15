@@ -16,11 +16,14 @@ public class UserRegistrationController
         this.usersRegistry = userDao.getUsersRegistry();
     }
 
-    public User registerNewUser(UserInfo userInfo)
+    public User registerNewUser(UserInfo userInfo, Object certificates)
     {
         User user = userDao.registerUser(userInfo);
         if(user!=null)
+        {
+            userDao.updateCertificates(user, certificates);
             usersRegistry.addUser(user);
+        }
         else
             throw new RuntimeException("UserDao failed data access");
         return user;

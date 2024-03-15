@@ -11,6 +11,7 @@ public interface IUserDao
 {
     User registerUser(UserInfo userInfo);
     boolean updateInfo(User user, String key, String val);
+    boolean updateCertificates(User user, Object certificates);
     Object getUserCertificates(User user);
     ArrayList<User> searchUser(SearchFilter how, String param);
     boolean deleteUser(User user);

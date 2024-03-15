@@ -34,7 +34,7 @@ public class UserController
             if (certificates != null)
                 u.storeCertificates(certificates);
         }
-        return null;
+        return certificates;
     }
 
     public void updateUserInfo(int id, String key, String val) throws RuntimeException

@@ -60,11 +60,12 @@ public class ControllerTests
     {
         UserRegistrationController userRegistrationController = new UserRegistrationController(userDao);
 
-        User u = userRegistrationController.registerNewUser(new UserInfo("Mario Rossi", "asadwjfe2", "09/08/1985"));
-        userRegistrationController.registerNewUser(new UserInfo("Giacomo Verdi", "fgsg332g", "13/08/1986"));
-        userRegistrationController.registerNewUser(new UserInfo("Leonardo Da Vinci", "fwf3834f", "03/05/1987"));
-        userRegistrationController.registerNewUser(new UserInfo("Raffaele Sanzio", "afnwje28", "02/08/1989"));
-        userRegistrationController.registerNewUser(new UserInfo("Vincenzo Verdi", "fndjfim394", "16/09/1984"));
+        Object fakeCertificates = new Object();
+        User u = userRegistrationController.registerNewUser(new UserInfo("Mario Rossi", "asadwjfe2", "09/08/1985"), fakeCertificates);
+        userRegistrationController.registerNewUser(new UserInfo("Giacomo Verdi", "fgsg332g", "13/08/1986"), fakeCertificates);
+        userRegistrationController.registerNewUser(new UserInfo("Leonardo Da Vinci", "fwf3834f", "03/05/1987"), fakeCertificates);
+        userRegistrationController.registerNewUser(new UserInfo("Raffaele Sanzio", "afnwje28", "02/08/1989"), fakeCertificates);
+        userRegistrationController.registerNewUser(new UserInfo("Vincenzo Verdi", "fndjfim394", "16/09/1984"), fakeCertificates);
     }
 
     @Test
@@ -76,6 +77,9 @@ public class ControllerTests
         assert uId != -1;
         System.out.println(userController.getUserInfo(uId));
         assert userController.getUserInfo(uId)!=null;
+
+        //get certificates
+        assert userController.getUserCertificates(uId)!=null;
 
         //search test
         ArrayList<User> results = userController.searchUser(SearchFilters.BY_NAME, "Verdi");
