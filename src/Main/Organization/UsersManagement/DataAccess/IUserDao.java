@@ -1,4 +1,4 @@
-package src.Main.Organization.UsersManagement.ORM;
+package src.Main.Organization.UsersManagement.DataAccess;
 
 import src.Main.Organization.UsersManagement.BusinessLogic.SearchFilters.SearchFilter;
 import src.Main.Organization.UsersManagement.UserInfo;

@@ -1,6 +1,6 @@
 package src.Test.Organization.DummyDao;
 
-import src.Main.Organization.VehiclesManagement.ORM.IVehicleDao;
+import src.Main.Organization.VehiclesManagement.DataAccess.IVehicleDao;
 import src.Main.Organization.VehiclesManagement.Domain.Vehicle;
 import src.Main.Organization.VehiclesManagement.Domain.VehiclesRegistry;
 import src.Main.Organization.VehiclesManagement.VehicleInfo;

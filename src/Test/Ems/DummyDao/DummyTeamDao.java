@@ -1,6 +1,6 @@
 package src.Test.Ems.DummyDao;
 
-import src.Main.Ems.ORM.ITeamDao;
+import src.Main.Ems.DataAccess.ITeamDao;
 import src.Main.Ems.Domain.RescueTeam.RescueTeam;
 
 public class DummyTeamDao implements ITeamDao

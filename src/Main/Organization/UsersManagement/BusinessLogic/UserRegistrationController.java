@@ -1,6 +1,6 @@
 package src.Main.Organization.UsersManagement.BusinessLogic;
 
-import src.Main.Organization.UsersManagement.ORM.IUserDao;
+import src.Main.Organization.UsersManagement.DataAccess.IUserDao;
 import src.Main.Organization.UsersManagement.Domain.User;
 import src.Main.Organization.UsersManagement.Domain.UsersRegistry;
 import src.Main.Organization.UsersManagement.UserInfo;

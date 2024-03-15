@@ -1,6 +1,6 @@
 package src.Test.ControlCenter.DummyDao;
 
-import src.Main.ControlCenter.ORM.IMissionDao;
+import src.Main.ControlCenter.DataAccess.IMissionDao;
 import src.Main.ControlCenter.Domain.Mission;
 
 import java.util.Random;

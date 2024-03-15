@@ -1,6 +1,6 @@
 package src.Test.Ems.DummyDao;
 
-import src.Main.Ems.ORM.IMissionDao;
+import src.Main.Ems.DataAccess.IMissionDao;
 import src.Main.Ems.Domain.Mission.DataField.DataField;
 import src.Main.Ems.Domain.Mission.Factory.IMissionReportFactory;
 import src.Main.Ems.Domain.Mission.MissionReport;

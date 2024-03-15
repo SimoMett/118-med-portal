@@ -1,7 +1,7 @@
 package src.Main.Ems.BusinessLogic;
 
-import src.Main.Ems.ORM.IUserDao;
-import src.Main.Ems.ORM.LoginResult;
+import src.Main.Ems.DataAccess.IUserDao;
+import src.Main.Ems.DataAccess.LoginResult;
 import src.Main.Ems.Domain.Session;
 
 public class UserLoginController

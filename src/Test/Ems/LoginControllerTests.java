@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import src.Main.Ems.BusinessLogic.Credentials;
 import src.Main.Ems.BusinessLogic.UserLoginController;
-import src.Main.Ems.ORM.LoginResult;
+import src.Main.Ems.DataAccess.LoginResult;
 import src.Main.Ems.Domain.Session;
 import src.Test.Ems.DummyDao.DummyUserDao;
 

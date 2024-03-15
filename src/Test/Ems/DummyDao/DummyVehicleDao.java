@@ -1,6 +1,6 @@
 package src.Test.Ems.DummyDao;
 
-import src.Main.Ems.ORM.IVehicleDao;
+import src.Main.Ems.DataAccess.IVehicleDao;
 import src.Main.Ems.Domain.RescueTeam.Vehicle;
 import src.Main.Ems.Domain.VehiclesList;
 

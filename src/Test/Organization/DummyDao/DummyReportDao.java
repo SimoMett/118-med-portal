@@ -1,7 +1,7 @@
 package src.Test.Organization.DummyDao;
 
 import src.Main.Organization.ReportsManagement.BusinessLogic.SearchFilter;
-import src.Main.Organization.ReportsManagement.ORM.IReportDao;
+import src.Main.Organization.ReportsManagement.DataAccess.IReportDao;
 import src.Main.Organization.ReportsManagement.Domain.Report;
 
 import java.util.List;
