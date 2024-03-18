@@ -198,10 +198,12 @@
 
     \newpage
     \subsection{Testing}
+    I test sono stati implementati con JUnit 4.
     I target principali dei test sono tutte le classi che compongono la $BusinessLogic$ di tutto l'ecosistema.
     I test formulati hanno l'obiettivo di verificare che ogni sottosistema risponda correttamente all'utente nelle situazioni normali e che fallisca correttamente nelle situazioni
     anomale identificate negli "Alternative flow" e "Non-functional requirements" dei templates dei casi d'uso.
-    I test sono stati implementati con JUnit 4.
+    A titolo di esempio si menzionano le classi $LoginControllerTests$ e \newline $MissionControllerNonWorkingDataAccessTests$.
+
 
     \section{Appendice}
     \subsection{Use-case templates}
@@ -638,7 +640,7 @@
             Post-conditions & \dots \\
             Normal flow & a. Inserisce nome utente e password\newline b. Login effettuato \\
             Variations & \dots\\
-            Alternative flow & a1. Password errata. Ritorna al punto (a) \newline a2. Password scaduta. Cambia password: vedi 2.15  \\
+            Alternative flow & a1. Password errata. Ritorna al punto (a) \newline a2. Password scaduta. Cambia password: vedi 2.16  \\
             Non-functional requirements & Viene aggiornata la lista delle missioni aperte, mostrando solamente
             quelle che coinvolgono i membri della squadra.
         \end{tabularx}
@@ -679,7 +681,7 @@
             Actors & Soccorritore\\
             Pre-conditions & Il soccorritore deve essere registrato presso l’associazione. \\
             Post-conditions & \dots \\
-            Normal flow & a. Inserisce nome utente e password provvisoria\newline b. Cambia password: vedi 2.15.\newline c. Effettua login con la nuova password: vedi 2.12 \\
+            Normal flow & a. Inserisce nome utente e password provvisoria\newline b. Cambia password: vedi 2.16.\newline c. Effettua login con la nuova password: vedi 2.13 \\
             Variations & \dots \\
             Alternative flow & \dots \\
             Non-functional requirements & \dots
