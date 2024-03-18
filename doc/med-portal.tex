@@ -207,18 +207,20 @@
     \subsection{Use-case templates}
     Di seguito vengono mostrati gli use-case templates descritti con la seguente struttura:
     \begin{itemize}
-        \item History:
-        \item Source:
-        \item Abstraction level:
-        \item Description:
-        \item Scope:
-        \item Actors:
-        \item Pre-conditions:
-        \item Post-conditions:
-        \item Normal flow:
-        \item Variations:
-        \item Alternative flow:
-        \item Non-functional requirements:
+        \item History: Storia della creazione e modifiche apportate al template.
+        \item Source: Da dove è stato estratto il template.
+        \item Abstraction level: Livello di astrazione. "User-goal" specifica la funzionalità offerta all'utente.
+        "Function" è un livello più basso e specifica una possibile interazione con il sistema.
+        "Summary" è un livello più alto di "User-goal" e rappresenta un insieme di funzionalità.
+        \item Description: Breve descrizione.
+        \item Scope: Quale sotto-sistema risponde a questo caso d'uso.
+        \item Actors: Gli attori coinvolti.
+        \item Pre-conditions: Condizioni necessarie per far realizzare lo use-case.
+        \item Post-conditions: Condizioni necessarie verificate al termine dello use-case.
+        \item Normal flow: Flusso delle operazioni in condizioni normali.
+        \item Variations: Flusso alternativo delle operazioni che adempiono allo stesso caso d'uso.
+        \item Alternative flow: Flusso delle operazioni in situazioni anomale.
+        \item Non-functional requirements: Requisiti di qualità
     \end{itemize}
     \def\graycolor{gray!15}
     \def\creationDate{Creato il 19/02/24.\space}
@@ -758,7 +760,7 @@
             Description & L'autista apre la scheda missione appena ricevuta per iniziare la compilazione e invio stati.\\
             Scope & Applicativo telematico dell'autista della squadra di soccorso\\
             Actors & Autista\\
-            Pre-conditions & Stato di "rientro in sede" ancora non inviato \\
+            Pre-conditions & Stato di "rientro in sede" ancora non inviato. \\
             Post-conditions & \dots \\
             Normal flow & a. Inserire il chilometraggio attuale del veicolo\newline b. Aprire scheda-missione (4.1)\\
             Variations & \dots \\
@@ -839,7 +841,7 @@
             History & Creato il 22/02/24\\
             Source & Estratto dallo statement iniziale\\
             Abstraction level & User-goal\\
-            Description & Imposta navigatore per raggiungere l'obiettivo o la destinazione\\
+            Description & Imposta navigatore per raggiungere l'obiettivo o la destinazione.\\
             Scope & Applicativo telematico dell'autista della squadra di soccorso\\
             Actors & Autista\\
             Pre-conditions & \dots \\
@@ -882,10 +884,10 @@
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
             Abstraction level & Summary\\
-            Description & Operazioni CRUD sul database dei veicoli dell’associazione \\
+            Description & Operazioni CRUD sul database dei veicoli dell’associazione. \\
             Scope & \organizationscope\\
             Actors & Associazione\\
-            Pre-conditions & Deve essere effettuato l'accesso\\
+            Pre-conditions & Deve essere effettuato l'accesso.\\
             Post-conditions & \dots \\
             Normal flow & \dots \\
             Variations & \dots \\
@@ -903,10 +905,10 @@
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
             Abstraction level & User-goal\\
-            Description & L’associazione registra un nuovo soccorritore con i dati anagrafici e email\\
+            Description & L’associazione registra un nuovo soccorritore con i dati anagrafici e email.\\
             Scope & \organizationscope\\
             Actors & Associazione\\
-            Pre-conditions & Deve essere effettuato l'accesso\\
+            Pre-conditions & Deve essere effettuato l'accesso.\\
             Post-conditions & \dots\\
             Normal flow & \dots \\
             Variations & \dots \\
@@ -924,7 +926,7 @@
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
             Abstraction level & User-goal\\
-            Description & L’associazione inserisce le certificazioni ottenute dal soccorritore appena registrato\\
+            Description & L’associazione inserisce le certificazioni ottenute dal soccorritore appena registrato.\\
             Scope & \organizationscope\\
             Actors & Associazione\\
             Pre-conditions & Deve essere effettuato l'accesso. Il soccorritore deve essere registrato.\\
@@ -945,7 +947,7 @@
             History & \creationDate \\
             Source & Estratto dallo statement iniziale\\
             Abstraction level & User-goal\\
-            Description & L’associazione scarica tramite un identificativo tutto il report della missione\\
+            Description & L’associazione scarica tramite un identificativo tutto il report della missione.\\
             Scope & \organizationscope\\
             Actors & Associazione\\
             Pre-conditions & Deve essere effettuato l'accesso.\\
