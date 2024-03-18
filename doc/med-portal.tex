@@ -876,7 +876,7 @@
     Per la realizzazione del progetto è stata scelta l'architettura 3-tier Business logic - Object-relational mapper - Domain model.
     La suddivisione dei packages è avvenuta tenendo conto dell'eventuale transizione da un'applicazione monolitica come è adesso ad una a microservizi.
     In particolare i packages principali sono quelli emersi facendo un'analisi dei $bounded-context$, ovvero $ControlCenter$, $Ems$ e $Organization$.
-    Ognuno di questi è suddiviso nei sub-packages $BusinessLogic$, $DataAccess$ e $DomainModel$.
+    Ognuno di questi è suddiviso nei packages $BusinessLogic$, $DataAccess$ e $DomainModel$.
     \newline In $BusinessLogic$ si trovano tutti i $controller$ che implementano ed espongono tutte le funzionalità elencate nei casi d'uso.
     \newline In ogni contesto, il livello $DataAccess$ è composto da sole interfacce. Ciò rende la persistenza dei dati più flessibile al cambio di tipologia di database e il testing più semplice.
     \newline Il $DomainModel$ è composto da tutte le classi e relazioni che caratterizzano il modello di dominio in questione.
@@ -891,7 +891,7 @@
     \end{figure}
     In questo package (figura \ref{fig:uml-controlcenter}) sono presenti $RescueTeamController$ e $MissionController$. La prima classe fornisce metodi di gestione delle squadre di soccorso sul territorio,
     la seconda espone metodi di creazione e gestione delle missioni.
-    Entrami i $controller$, siccome sono responsabili del salvataggio dei dati su database e sincronizzazione del $DomainModel$, dipendono da dei $DataAccessObject$, in questo caso dalle interfacce $IRescueTeamsDao$ e $IMissionDao$.
+    Entrambi i $controller$, siccome sono responsabili del salvataggio dei dati su database e sincronizzazione del $DomainModel$, dipendono da dei $DataAccessObject$, in questo caso dalle interfacce $IRescueTeamsDao$ e $IMissionDao$.
     Il $DomainModel$ è caratterizzato da una $RescueTeamsList$ e da una $MissionsList$, che tengono traccia rispettivamente delle squadre di soccorso operative e delle missioni di soccorso attualmente in svolgimento.
     Queste due classi non sono altro che dei $Wrapper$ di liste che contengono una collezione di $RescueTeam$ e $Mission$.
     \subsubsection{Ems}
@@ -906,8 +906,8 @@
     È composto da cinque $controller$:
     \begin{itemize}
         \item $UserLoginController$ permette all'utente di effettuare il login, il cambio e recupero password.
-        Per offrire queste operazione, questa classe invoca direttamente i metodi di un'istanza di $IUserDao$.
-        Quest'ultima si occupa della creazione di un $User$ se il login va a buon fine.
+        Per offrire queste operazioni, questa classe invoca direttamente i metodi di un'istanza di $IUserDao$.
+        Quest'ultima si occupa della creazione di un oggetto $User$ se il login va a buon fine.
         \item $TeamController$ permette di gestire la squadra e il mezzo di soccorso.
         \item $MissionController$ è responsabile della compilazione del $MissionReport$ e della sua sincronizzazione con la banca dati.
         \item $MissionsListController$ è un $controller$ semplice che si occupa di scaricare dal database la missione appena assegnata alla squadra.
@@ -929,8 +929,8 @@
     $RescueTeam$ contiene l'omonima classe e le classi accessorie che caratterizzano una squadra di soccorso, ovvero $User$ e $Vehicle$.
     La classe $RescueTeam$ costituisce il $Subject$ del design pattern $Observer$, poiché quando viene modifica è necessario notificare la centrale di controllo tramite un oggetto che implementa $ITeamDao$.
     \newline Il package $Mission$ contiene $MissionReport$ e le classi responsabili della sua creazione e gestione.
-    \newline Come è stato detto precedentemente, il tipo di $MissionReport$ da inizializzare è legato alla modalità con cui è stata avviata la $Session$,
-    quindi viene istanziata la giusta $Factory$ che si occupa di creare un report e aggiungerci i giusti $DataField$, che sono i possibili campi che la squadra può compilare.
+    \newline Come è stato detto precedentemente, il tipo di $MissionReport$ da inizializzare è legato alla modalità con cui è stata avviata la $Session$.
+    Quindi nel suo costruttore viene istanziata la giusta $Factory$ che si occupa di creare un report e aggiungerci i giusti $DataField$, che sono i possibili campi che la squadra può compilare.
     Per esempio, una squadra $BLSD$ non può avere sulla scheda il campo relativo alla somministrazione farmaci, oppure l'autista non può scrivere sulla sua scheda i parametri vitali del paziente.
     I $DataField$ possono essere campi semplici di tipo $SimpleDataField$ o contenere un elemento grafico, cioè dei $GraphicalDataPair$.
     Quest'ultimi contengono un riferimento a un'interfaccia $Adapter$ per poter gestire gli elementi grafici delle varie librerie/framework per le $GUI$.
