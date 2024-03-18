@@ -33,6 +33,7 @@ public class LoginControllerTests
         Credentials credentials = new Credentials("mariorossi24", "abcd");
         LoginResult result = userLoginController.logInUser(credentials);
         assert !result.success;
+        assert result.message.equals("Wrong password");
 
         System.out.println(result.message);
     }
@@ -43,6 +44,7 @@ public class LoginControllerTests
         Credentials credentials = new Credentials("carlo27", "RossiM123");
         LoginResult result = userLoginController.logInUser(credentials);
         assert !result.success;
+        assert result.message.equals("Username not found");
 
         System.out.println(result.message);
     }
