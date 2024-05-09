@@ -171,7 +171,7 @@
     $VehiclesList$ è una lista di $Vehicle$. $Session$ è un $Singleton$ che tiene un riferimento alla squadra corrente e alla missione in corso.
     A seconda della modalità del dispositivo (ALS, BLSD, o Autista), la $Session$ va inizializzata di conseguenza.
     $RescueTeam$ contiene l'omonima classe e le classi accessorie che caratterizzano una squadra di soccorso, ovvero $User$ e $Vehicle$.
-    La classe $RescueTeam$ costituisce il $Subject$ del design pattern $Observer$, poiché quando viene modifica è necessario notificare la centrale di controllo tramite un oggetto che implementa $ITeamDao$.
+    La classe $RescueTeam$ costituisce il $Subject$ del design pattern $Observer$, poiché quando viene modificata è necessario notificare la centrale di controllo tramite un oggetto che implementa $ITeamDao$.
     \newline Il package $Mission$ contiene $MissionReport$ e le classi responsabili della sua creazione e gestione.
     \newline Come è stato detto precedentemente, il tipo di $MissionReport$ da inizializzare è legato alla modalità con cui è stata avviata la $Session$.
     Quindi nel suo costruttore viene istanziata la giusta $Factory$ che si occupa di creare un report e aggiungerci i giusti $DataField$, che sono i possibili campi che la squadra può compilare.
