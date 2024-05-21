@@ -174,7 +174,7 @@
     La classe $RescueTeam$ costituisce il $Subject$ del design pattern $Observer$, poiché quando viene modificata è necessario notificare la centrale di controllo tramite un oggetto che implementa $ITeamDao$.
     \newline Il package $Mission$ contiene $MissionReport$ e le classi responsabili della sua creazione e gestione.
     \newline Come è stato detto precedentemente, il tipo di $MissionReport$ da inizializzare è legato alla modalità con cui è stata avviata la $Session$.
-    Quindi nel suo costruttore viene istanziata la giusta $Factory$ che si occupa di creare un report e aggiungerci i giusti $DataField$, che sono i possibili campi che la squadra può compilare.
+    Quindi nel costruttore di $Session$ viene istanziata la giusta $Factory$ che si occupa di creare un report e aggiungerci i giusti $DataField$, che sono i possibili campi che la squadra può compilare.
     Per esempio, una squadra $BLSD$ non può avere sulla scheda il campo relativo alla somministrazione farmaci, oppure l'autista non può scrivere sulla sua scheda i parametri vitali del paziente.
     I $DataField$ possono essere campi semplici di tipo $SimpleDataField$ o contenere un elemento grafico, cioè dei $GraphicalDataPair$.
     Quest'ultimi contengono un riferimento a un'interfaccia $Adapter$ per poter gestire gli elementi grafici delle varie librerie/framework per le $GUI$.
