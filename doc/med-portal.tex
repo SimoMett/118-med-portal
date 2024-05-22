@@ -176,7 +176,9 @@
     \newline Come è stato detto precedentemente, il tipo di $MissionReport$ da inizializzare è legato alla modalità con cui è stata avviata la $Session$.
     Quindi nel costruttore di $Session$ viene istanziata la giusta $Factory$ che si occupa di creare un report e aggiungerci i giusti $DataField$, che sono i possibili campi che la squadra può compilare.
     Per esempio, una squadra $BLSD$ non può avere sulla scheda il campo relativo alla somministrazione farmaci, oppure l'autista non può scrivere sulla sua scheda i parametri vitali del paziente.
-    I $DataField$ possono essere campi semplici di tipo $SimpleDataField$ o contenere un elemento grafico, cioè dei $GraphicalDataPair$.
+    Questa scelta di usare una lista di $DataField$ permette di avere un $MissionReport$ senza valori cablati e quindi svincolato dalle informazioni che si possono inserire, permettendo flessibilità con il front-end qualora si vogliano aggiungere o rimuove dei campi da compilare.
+    \newline In questa implementazione le $Factory$ hanno un prototipo di $MissionReport$ $hard-coded$, ma nulla vieta di implementare una versione più dinamica che, per esempio, può leggere i campi da inizializzare da un file o dalla rete.
+    \newline I $DataField$ possono essere campi semplici di tipo $SimpleDataField$ o contenere un elemento grafico, cioè dei $GraphicalDataPair$.
     Quest'ultimi contengono un riferimento a un'interfaccia $Adapter$ per poter gestire gli elementi grafici delle varie librerie/framework per le $GUI$.
     La classe $DataField$ è astratta e liberamente estendibile.
 
