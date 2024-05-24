@@ -71,14 +71,14 @@
     \begin{figure}[!h]
         \centering
         %\includesvg[width=4in]{diagrams/svg/ControlCenter!UseCaseDiagram_Centrale_0}
-        \includegraphics[width=5.5in]{diagrams/png/uc-centrale.png}
+        \includegraphics[width=5in]{diagrams/png/uc-centrale.png}
         \caption{Diagramma casi d'uso per la centrale}
         \label{fig:uc-controlcenter}
     \end{figure}
     \begin{figure}
         \centering
         %\includesvg[width=5in]{diagrams/svg/Squadra!UseCaseDiagram_Squadra_1}
-        \includegraphics[width=6.5in]{diagrams/png/uc-soccorritore.png}
+        \includegraphics[width=6.3in]{diagrams/png/uc-soccorritore.png}
         \caption{Diagramma casi d'uso per la squadra}
         \label{fig:uc-rescueteam}
     \end{figure}
@@ -92,7 +92,7 @@
     \begin{figure}
         \centering
         %\includesvg[width=3in]{diagrams/svg/Organization!UseCaseDiagram_Associazione_3}
-        \includegraphics[width=4.5in]{diagrams/png/uc-associazione.png}
+        \includegraphics[width=4.3in]{diagrams/png/uc-associazione.png}
         \caption{Diagramma casi d'uso per l'organizzazione}
         \label{fig:uc-organization}
     \end{figure}
@@ -123,6 +123,7 @@
     Ognuno di questi è suddiviso nei packages $BusinessLogic$, $DataAccess$ e $DomainModel$.
     \newline In $BusinessLogic$ si trovano tutti i $controller$ che implementano ed espongono tutte le funzionalità elencate nei casi d'uso.
     \newline In ogni contesto, il livello $DataAccess$ è composto da sole interfacce. Ciò rende la persistenza dei dati più flessibile al cambio di tipologia di database e il testing più semplice.
+    Infatti la fase di test avviene utilizzando delle $mock-implementation$ che emulano l'accesso ai dati.
     \newline Il $DomainModel$ è composto da tutte le classi e relazioni che caratterizzano il modello di dominio in questione.
 
     \subsubsection{ControlCenter}
